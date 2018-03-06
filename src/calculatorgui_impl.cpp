@@ -104,8 +104,9 @@ void FunDlg::OnCategorySelect( wxCommandEvent& event )
 void FunDlg::OnClose( wxCommandEvent& event )
 {
     //this->Destroy();
+//SaltyPaws - works in win	
     this->Hide();
-	//Rasbats version
+//Rasbats version
     //this->Close();
 }
 
@@ -343,7 +344,7 @@ void FunDlg::OnToggle( wxCommandEvent& event ){
     this->Fit();
 }
 //SaltyPaws includes this
-//Does not work, must be def in class first
+//Does not work for win, must be def in class first
 /*
 Dlg::~Dlg()
 {
@@ -558,7 +559,7 @@ wxString Dlg::OnCalculate( void )
 
     if (error_check)
         {
-// SaltyPaws version -works			
+// SaltyPaws version -works for win			
         m_result->SetValue(wxEmptyString);
 // Rasbats version
 //		m_result->SetValue(_T(""));
@@ -580,7 +581,7 @@ wxString Dlg::OnCalculate( void )
            // mystring.Replace(wxT(","),wxT("."),TRUE);//dont think this is required when not using locale --->test
            // MuParser.SetExpr((mu::string_type) mystring.mb_str()); //This works in linux, but causes compiler error in windows
              MuParser.SetExpr(WxString2StdString(mystring));//Store the answer in ans
-//SaltyPaws version
+//SaltyPaws version -works for win
            	mystring=Report_Value(Muparser_result,m_iCalc_Reporting);//Format result as per setting.
 	
 //Rasbats version
@@ -607,7 +608,7 @@ wxString Dlg::OnCalculate( void )
         if((!this->m_Help->GetValue()) || (error_check)) //print result in messagebox if not history box or error
             m_result->SetValue(mystring.c_str());
         else
-// SaltyPaws version			
+// SaltyPaws version works for win			
         m_result->SetValue(wxEmptyString);
 // Rasbats version
 //        m_result->SetValue(_T(""));
@@ -724,7 +725,7 @@ wxString Dlg::Report_Value(double in_Value, int in_mode){
         case 1:
             //printf("Precise, thousands separator\n");
             //setlocale(LC_ALL,""); //Causes Serious errors in OPENCPN, rounding all tracks waypoints and incoming data.
-//SaltyPaws version			
+//SaltyPaws version	works for win		
          return ThousandSeparator(wxString::Format(wxT("%'.15g"), in_Value));
 //Rasbats version
 /*
@@ -745,7 +746,7 @@ wxString Dlg::Report_Value(double in_Value, int in_mode){
             break;
         case 4:
             //printf("Scientific\n");
-//SaltyPaws version	
+//SaltyPaws version	works for win
             return wxString::Format(wxT("%.15le"), in_Value);		
 //Rasbats version
 /*
