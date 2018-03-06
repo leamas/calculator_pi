@@ -27,6 +27,8 @@
 
 #include "calculatorgui_impl.h"
 
+
+
 bool UTF82WC(const std::string  source, std::wstring & outstr)
 {
 	wxMBConvUTF8 conv;
@@ -798,10 +800,23 @@ std::string Dlg::WxString2StdString(wxString wxString_in){
     return std::string(wxString_in.mb_str());
 }
 */
+
+
 mu::string_type Dlg::WxString2StdString(wxString wxString_in){
 	std::string s = wxString_in.mb_str();
 	std::wstring ws;
 	UTF82WC(s, ws);
+
+	//Translate the macros to C++ at a single point in the application
+#ifdef linux
+	return mu::string_type(s);
+#elif APPLE
+	return mu::string_type(s);
+#elif __WIN32
+	return mu::string_type(s);
+#endif
+
+	//do something general
 
 	return mu::string_type(ws);
 }

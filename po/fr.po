@@ -105,31 +105,40 @@ msgid ""
 "or yourvariable=Ans)"
 msgstr ""
 #
+#
 #~ msgid "\r\n"
 #~ msgstr "\r\n"
+#
 #
 #~ msgid "\""
 #~ msgstr "\""
 #
+#
 #~ msgid "\"No\""
 #~ msgstr "\"Non\""
+#
 #
 #~ msgid "'"
 #~ msgstr "'"
 #
+#
 #~ msgid "*.*"
 #~ msgstr "*.*"
 #
+#
 #~ msgid "/PlugIns/ROUTE"
 #~ msgstr "/PlugIns/ROUTE"
+#
 #
 #~ msgid "Actuell"
 #~ msgstr ""
 #~ "Stock\n"
 #~ "actuel"
 #
+#
 #~ msgid "Add Line"
 #~ msgstr "Ajouter une ligne"
+#
 #
 #~ msgid ""
 #~ "Append a row\n"
@@ -138,76 +147,100 @@ msgstr ""
 #~ "Ajouter une ligne\n"
 #~ "Supprimer une ligne = Touche <Del>"
 #
+#
 #~ msgid "Balance"
 #~ msgstr ""
 #~ "Complément\n"
 #~ "nécessaire"
 #
+#
 #~ msgid "Brent's method not converging, check result"
 #~ msgstr "Brent's method not converging, check result"
+#
 #
 #~ msgid "Buy"
 #~ msgstr "Acheter"
 #
+#
 #~ msgid "Buy it"
 #~ msgstr "Acheter ceci"
+#
 #
 #~ msgid "C"
 #~ msgstr "C"
 #
+#
 #~ msgid "Choose a file"
 #~ msgstr "Choisir un fichier"
+#
 #
 #~ msgid "Convert to Degree"
 #~ msgstr "Convertir en degré"
 #
+#
 #~ msgid "DILG1"
 #~ msgstr "DILG1"
+#
 #
 #~ msgid "Dashboard"
 #~ msgstr "Tableau de bord"
 #
+#
 #~ msgid "Decimal Degree"
 #~ msgstr "Degré décimal"
+#
 #
 #~ msgid "E"
 #~ msgstr "E"
 #
+#
 #~ msgid "End     "
 #~ msgstr "Fin"
+#
 #
 #~ msgid "End of Route"
 #~ msgstr "Fin de la route"
 #
+#
 #~ msgid "Enter Searchstring:"
 #~ msgstr "Entrer le texte cherché :"
+#
 #
 #~ msgid "Error in calculation. Please check input!"
 #~ msgstr "Erreur dans le calcul. Vérifier vos entrées."
 #
+#
 #~ msgid "Error occured, aborting GCL calc!"
 #~ msgstr "Une erreur s'est produite. Calcul avorté du grand cercle"
+#
 #
 #~ msgid "Export"
 #~ msgstr "Exporter"
 #
+#
 #~ msgid "Export GPX file as"
 #~ msgstr "Exporter comme un fichier GPX"
+#
 #
 #~ msgid "Export Great Circle GPX file as"
 #~ msgstr "Exporter la route orthodromique comme un fichier GPX"
 #
+#
 #~ msgid "Export Rhumb Line GPX file as"
 #~ msgstr "Exporter la route loxodromique comme un fichier GPX"
+#
 #
 #~ msgid "FindIt"
 #~ msgstr "FindIt"
 #
+#
 #~ msgid "FindIt Options"
 #~ msgstr "Options du FindIt"
 #
+#
 #~ msgid "Great Circle"
 #~ msgstr "Routes directes"
+#
 #
 #~ msgid ""
 #~ "Great Circle\n"
@@ -216,12 +249,14 @@ msgstr ""
 #~ "Orthodromie\n"
 #~ "Longueur"
 #
+#
 #~ msgid ""
 #~ "Great Circle\n"
 #~ "Route"
 #~ msgstr ""
 #~ "Routes naturelles\n"
 #~ " "
+#
 #
 #~ msgid ""
 #~ "Great Circle     \n"
@@ -230,14 +265,18 @@ msgstr ""
 #~ "Orthodromie   \n"
 #~ "Longueur"
 #
+#
 #~ msgid "Great Circle (shortest) GPX"
 #~ msgstr "Orthodromie (Plus courte)   ---> GPX"
+#
 #
 #~ msgid "If Value of Column \"Balance\" = 0, set Value to"
 #~ msgstr "Si valeur de la colonne \"à acheter\"= 0, écrire"
 #
+#
 #~ msgid "If Value of Column \"Buy\" = No, set Value to"
 #~ msgstr "Si la valeur de la colonne \"Acheter\"= Non, écrire"
+#
 #
 #~ msgid ""
 #~ "If the logbook-plugin is installed send a list\n"
@@ -246,17 +285,22 @@ msgstr ""
 #~ "Si le complément \"Journal de bord\" est installé, transférer une liste\n"
 #~ "avec les articles cochés à 'Livre de bord / Maintenance / Pièces achetées''"
 #
+#
 #~ msgid "Input"
 #~ msgstr "Entrée"
+#
 #
 #~ msgid "InputFilename"
 #~ msgstr "Nom de fichier source"
 #
+#
 #~ msgid "Interval"
 #~ msgstr "Intervalle"
 #
+#
 #~ msgid "Lat "
 #~ msgstr "Lat."
+#
 #
 #~ msgid ""
 #~ "Latitude  \n"
@@ -265,11 +309,14 @@ msgstr ""
 #~ "Latitude   \n"
 #~ "Limite"
 #
+#
 #~ msgid "Lattitude  "
 #~ msgstr "Latitude"
 #
+#
 #~ msgid "Limited Circle"
 #~ msgstr "Route limitée"
+#
 #
 #~ msgid ""
 #~ "Limited Circle\n"
@@ -277,6 +324,7 @@ msgstr ""
 #~ msgstr ""
 #~ "Route limitée\n"
 #~ "Longueur"
+#
 #
 #~ msgid ""
 #~ "Limited Circle\n"
@@ -285,67 +333,88 @@ msgstr ""
 #~ "Route limitée\n"
 #~ "(en latitude N ou S)"
 #
+#
 #~ msgid "Limited Circle GPX"
 #~ msgstr "Route avec limite ---> GPX"
+#
 #
 #~ msgid "Location"
 #~ msgstr "Emplacement"
 #
+#
 #~ msgid "Locations"
 #~ msgstr "Emplacement"
+#
 #
 #~ msgid "Lon"
 #~ msgstr "Lon"
 #
+#
 #~ msgid "Longitude"
 #~ msgstr "Longitude"
+#
 #
 #~ msgid "Material"
 #~ msgstr "Matériel"
 #
+#
 #~ msgid "Menu"
 #~ msgstr "Menu"
+#
 #
 #~ msgid "N"
 #~ msgstr "N"
 #
+#
 #~ msgid "NM"
 #~ msgstr "NM"
+#
 #
 #~ msgid "Naming"
 #~ msgstr "Nom"
 #
+#
 #~ msgid "No Lat Limit!"
 #~ msgstr "Pas de limite de latitude"
+#
 #
 #~ msgid "OutputFilename"
 #~ msgstr "Nom de fichier but"
 #
+#
 #~ msgid "Preferences"
 #~ msgstr "Préférences"
+#
 #
 #~ msgid "Priority"
 #~ msgstr "Priorité"
 #
+#
 #~ msgid "Progress:"
 #~ msgstr "Progression :"
 #
+#
 #~ msgid "Provisions"
 #~ msgstr "Provisions"
+#
 #
 #~ msgid "Quota"
 #~ msgstr ""
 #~ "Stock\n"
 #~ "nécessaire"
 #
+#
 #~ msgid "ROUTE"
 #~ msgstr "Route"
+#
 #
 #~ msgid "ROUTE replay"
 #~ msgstr "Refaire un route"
 #
+#
 #~ msgid "Result"
 #~ msgstr "Résultat"
+#
 #
 #~ msgid ""
 #~ "Rhumb Line\n"
@@ -354,6 +423,7 @@ msgstr ""
 #~ "Loxodromie\n"
 #~ "Longueur"
 #
+#
 #~ msgid ""
 #~ "Rhumb Line     \n"
 #~ "Distance"
@@ -361,14 +431,18 @@ msgstr ""
 #~ "Loxodromie   \n"
 #~ "Longueur"
 #
+#
 #~ msgid "Rhumb Line (fixed heading) GPX"
 #~ msgstr "Loxodromie (Cap constant) ---> GPX"
+#
 #
 #~ msgid "Route"
 #~ msgstr "Route"
 #
+#
 #~ msgid "Route Plotting plugin for OpenCPN"
 #~ msgstr "Complément \"Créateur de routes pour openCPN\""
+#
 #
 #~ msgid ""
 #~ "Route Plotting plugin for OpenCPN\n"
@@ -378,47 +452,62 @@ msgstr ""
 #~ "Créateur de routes orthodromiques, de routes loxodromiques et de routes "
 #~ "limitées en latitude."
 #
+#
 #~ msgid "S"
 #~ msgstr "S"
+#
 #
 #~ msgid "Separate more than one string with a blank"
 #~ msgstr "Separer chaque mot cherché par un espace"
 #
+#
 #~ msgid "Show FindIt Icon"
 #~ msgstr "Afficher l'icône du complément FindIt"
+#
 #
 #~ msgid "Speed:"
 #~ msgstr "Vitesse :"
 #
+#
 #~ msgid "Start  "
 #~ msgstr "Début"
+#
 #
 #~ msgid "Start Latitude>Limit!"
 #~ msgstr "Latitude de début > Latitude limite"
 #
+#
 #~ msgid "Start of Route"
 #~ msgstr "Début de la route"
+#
 #
 #~ msgid "Stowage PlugIn for OpenCPN\n"
 #~ msgstr "Complément \"Gestionnaire d'organisation interne\"\n"
 #
+#
 #~ msgid "Text"
 #~ msgstr "Texte"
+#
 #
 #~ msgid "To Buy"
 #~ msgstr "A acheter"
 #
+#
 #~ msgid "Unit"
 #~ msgstr "Unité"
+#
 #
 #~ msgid "Units"
 #~ msgstr "Unités"
 #
+#
 #~ msgid "Use last row values  as default for new row"
 #~ msgstr "Dupliquer la ligne précédente"
 #
+#
 #~ msgid "W"
 #~ msgstr "O"
+#
 #
 #~ msgid ""
 #~ "Waypoint\n"
@@ -427,20 +516,26 @@ msgstr ""
 #~ "Distance entre\n"
 #~ "waypoint"
 #
+#
 #~ msgid "Yes"
 #~ msgstr "Oui"
+#
 #
 #~ msgid "\\u00b0"
 #~ msgstr "\\u00b0"
 #
+#
 #~ msgid "\\u00b0 ' \""
 #~ msgstr "\\u00b0 ' \""
+#
 #
 #~ msgid "blank"
 #~ msgstr "Blanc"
 #
+#
 #~ msgid "error in input range validation"
 #~ msgstr "Erreur de validation de donnée entrée"
+#
 #
 #~ msgid "opencpn-route_pi"
 #~ msgstr "opencpn-route_pi"
