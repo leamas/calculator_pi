@@ -343,14 +343,13 @@ void FunDlg::OnToggle( wxCommandEvent& event ){
     this->Fit();
 }
 //SaltyPaws includes this
-/*
+
 Dlg::~Dlg()
 {
     if (m_pFunctiondialog)
         m_pFunctiondialog->Destroy();
     m_pFunctiondialog = NULL;
 }
-*/
 
 Dlg::Dlg( wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style ) : DlgDef( parent, id, title, pos, size, style )
 {
