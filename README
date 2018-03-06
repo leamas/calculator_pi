@@ -1,3 +1,7 @@
+Version 1.8
+===========
+Testing for cross-compiling.
+
 Version 1.7
 ===========
 This version compiles using VS2013. Formatting using thousands is bypassed. Simple formatting of answers only.

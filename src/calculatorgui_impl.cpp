@@ -812,11 +812,7 @@ mu::string_type Dlg::WxString2StdString(wxString wxString_in){
 	return mu::string_type(s);
 #elif APPLE
 	return mu::string_type(s);
-#elif __WIN32
-	return mu::string_type(s);
-#endif
-
-	//do something general
-
+#elif _WIN32
 	return mu::string_type(ws);
+#endif
 }
