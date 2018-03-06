@@ -803,7 +803,7 @@ std::string Dlg::WxString2StdString(wxString wxString_in){
 
 
 mu::string_type Dlg::WxString2StdString(wxString wxString_in){
-	std::string s = wxString_in.mb_str();
+	std::string s = std::string(wxString_in.mb_str());
 	std::wstring ws;
 	UTF82WC(s, ws);
 
