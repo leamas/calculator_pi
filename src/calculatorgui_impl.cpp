@@ -343,13 +343,15 @@ void FunDlg::OnToggle( wxCommandEvent& event ){
     this->Fit();
 }
 //SaltyPaws includes this
-
+//Does not work, must be def in class first
+/*
 Dlg::~Dlg()
 {
     if (m_pFunctiondialog)
         m_pFunctiondialog->Destroy();
     m_pFunctiondialog = NULL;
 }
+*/
 
 Dlg::Dlg( wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style ) : DlgDef( parent, id, title, pos, size, style )
 {
@@ -557,9 +559,9 @@ wxString Dlg::OnCalculate( void )
     if (error_check)
         {
 // SaltyPaws version			
-//        m_result->SetValue(wxEmptyString);
+        m_result->SetValue(wxEmptyString);
 // Rasbats version
-		m_result->SetValue(_T(""));
+//		m_result->SetValue(_T(""));
         return wxT("");
         }
     else
