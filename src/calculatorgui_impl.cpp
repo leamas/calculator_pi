@@ -159,7 +159,7 @@ void FunDlg::OnItemSelect(void)
     this->m_Function->Wrap(400); ///Width of description can be put in settings
     this->m_Description->Wrap(400); ///Width of description can be put in settings
     this->Fit();
-    this->m_Function_Result->SetValue(_(""));
+    this->m_Function_Result->SetValue(_T(""));
     }
 
     void FunDlg::PopulatePuldown(wxString& Input_Units, wxChoice* Pulldown, wxPanel *Panel)
@@ -543,7 +543,7 @@ wxString Dlg::OnCalculate( void )
 
     if (error_check)
         {
-        m_result->SetValue(_(""));
+        m_result->SetValue(_T(""));
         return wxT("");
         }
     else
@@ -583,7 +583,7 @@ wxString Dlg::OnCalculate( void )
         if((!this->m_Help->GetValue()) || (error_check)) //print result in messagebox if not history box or error
             m_result->SetValue(mystring.c_str());
         else
-            m_result->SetValue(_(""));
+            m_result->SetValue(_T(""));
 
         Text.Right(Text.Length()-3);
 
