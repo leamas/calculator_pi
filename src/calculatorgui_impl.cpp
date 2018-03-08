@@ -62,8 +62,8 @@ FunDlg::FunDlg( wxWindow* parent, wxWindowID id, const wxString& title, const wx
 
 void FunDlg::LoadFunctions(wxString Category, wxString Unit)
 {
-
-    //Clear Pulldown
+    
+	//Clear Pulldown
     this->m_Function_Dropdown->Clear();
     //Load functions into pulldown
     for ( unsigned int count = 0; count < testf.m_Formula.GetCount() ; count++)
@@ -103,11 +103,7 @@ void FunDlg::OnCategorySelect( wxCommandEvent& event )
 
 void FunDlg::OnClose( wxCommandEvent& event )
 {
-    //this->Destroy();
-//SaltyPaws - works in win	
-    this->Hide();
-//Rasbats version
-    //this->Close();
+    this->Close();
 }
 
 void FunDlg::OnItemSelect( wxCommandEvent& event )
@@ -163,9 +159,7 @@ void FunDlg::OnItemSelect(void)
     this->m_Function->Wrap(400); ///Width of description can be put in settings
     this->m_Description->Wrap(400); ///Width of description can be put in settings
     this->Fit();
-  //  this->m_Function_Result->SetValue(wxEmptyString);
-	//Rasbats version
-	this->m_Function_Result->SetValue(_T(""));
+    this->m_Function_Result->SetValue(_T(""));
     }
 
     void FunDlg::PopulatePuldown(wxString& Input_Units, wxChoice* Pulldown, wxPanel *Panel)
@@ -343,16 +337,6 @@ void FunDlg::OnToggle( wxCommandEvent& event ){
     this->m_Description->Show(this->m_checkBox8->GetValue());
     this->Fit();
 }
-//SaltyPaws includes this
-//Does not work for win, must be def in class first
-/*
-Dlg::~Dlg()
-{
-    if (m_pFunctiondialog)
-        m_pFunctiondialog->Destroy();
-    m_pFunctiondialog = NULL;
-}
-*/
 
 Dlg::Dlg( wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style ) : DlgDef( parent, id, title, pos, size, style )
 {
@@ -559,10 +543,7 @@ wxString Dlg::OnCalculate( void )
 
     if (error_check)
         {
-// SaltyPaws version -works for win			
-        m_result->SetValue(wxEmptyString);
-// Rasbats version
-//		m_result->SetValue(_T(""));
+        m_result->SetValue(_T(""));
         return wxT("");
         }
     else
@@ -581,13 +562,7 @@ wxString Dlg::OnCalculate( void )
            // mystring.Replace(wxT(","),wxT("."),TRUE);//dont think this is required when not using locale --->test
            // MuParser.SetExpr((mu::string_type) mystring.mb_str()); //This works in linux, but causes compiler error in windows
              MuParser.SetExpr(WxString2StdString(mystring));//Store the answer in ans
-//SaltyPaws version -works for win
-           	mystring=Report_Value(Muparser_result,m_iCalc_Reporting);//Format result as per setting.
-	
-//Rasbats version
-/*
 			 mystring = Report_Value(Muparser_result, m_iCalc_Reporting); // m_iCalc_Reporting);//Format result as per setting.
-*/			 
             Muparser_result = MuParser.Eval();//Evaluate for ans
 
         }
@@ -608,10 +583,8 @@ wxString Dlg::OnCalculate( void )
         if((!this->m_Help->GetValue()) || (error_check)) //print result in messagebox if not history box or error
             m_result->SetValue(mystring.c_str());
         else
-// SaltyPaws version works for win			
-        m_result->SetValue(wxEmptyString);
-// Rasbats version
-//        m_result->SetValue(_T(""));
+            m_result->SetValue(_T(""));
+
         Text.Right(Text.Length()-3);
 
         if (!error_check )
@@ -725,12 +698,7 @@ wxString Dlg::Report_Value(double in_Value, int in_mode){
         case 1:
             //printf("Precise, thousands separator\n");
             //setlocale(LC_ALL,""); //Causes Serious errors in OPENCPN, rounding all tracks waypoints and incoming data.
-//SaltyPaws version	works for win		
-         return ThousandSeparator(wxString::Format(wxT("%'.15g"), in_Value));
-//Rasbats version
-/*
-	        return ThousandSeparator(wxString::Format(wxT("%.15g"), in_Value));		
-*/
+            return ThousandSeparator(wxString::Format(wxT("%.15g"), in_Value));
             //return Temp_String;
             break;
 
@@ -746,12 +714,7 @@ wxString Dlg::Report_Value(double in_Value, int in_mode){
             break;
         case 4:
             //printf("Scientific\n");
-//SaltyPaws version	works for win
-            return wxString::Format(wxT("%.15le"), in_Value);		
-//Rasbats version
-/*
-	        return wxString::Format(wxT("%.15e"), in_Value);
-*/			
+            return wxString::Format(wxT("%.15e"), in_Value);
             break;
         case 5:
             //printf("Humanise\n");
