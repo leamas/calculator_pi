@@ -412,7 +412,7 @@ this->m_Input_unit9.Add(_T(""));
 this->m_ShortDesc.Add(_("Humidex"));
 this->m_LongDesc.Add(_("Humidex is an index to indicate how hot or humid the weather feels to the average person. It is derived by combining temperature and humidity values into one number to reflect the perceived temperature. For example, a humidex of 40 means that the sensation of heat when the temperature is 30 degrees and the air is humid feels more or less the same as when the temperature is 40 degrees and the air is dry. "));
 this->m_Category.Add(_("Weather"));
-this->m_Source.Add(_("http://http://climate.weather.gc.ca/glossary_e.html"));
+this->m_Source.Add(_("http://climate.weather.gc.ca/glossary_e.html"));
 this->m_Formula.Add(_("humidex = (T_air) + (0.5555)*(((6.11 * (exp(5417.7530 * ((1 / 273.16) - (1 / dewpoint))))) - 10))"));
 this->m_Result_Unit.Add(_("Celsius"));
 this->m_Input_parameter.Add(_("T_air"));
