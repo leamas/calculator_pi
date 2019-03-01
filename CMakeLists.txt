@@ -12,7 +12,13 @@ SET(PACKAGE_NAME calculator_pi)
 SET(CPACK_PACKAGE_CONTACT "SaltyPaws ")
 
 SET(VERSION_MAJOR "1")
-SET(VERSION_MINOR "8")
+SET(VERSION_MINOR "8.1")
+
+#SET(CMAKE_BUILD_TYPE Debug)
+SET( wxWidgets_USE_DEBUG OFF)
+SET( wxWidgets_USE_UNICODE ON)
+SET( wxWidgets_USE_UNIVERSAL OFF)
+SET( wxWidgets_USE_STATIC OFF)
 
 INCLUDE("cmake/PluginConfigure.cmake")
 
