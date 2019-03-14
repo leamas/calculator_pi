@@ -64,6 +64,18 @@ calculator_pi::calculator_pi(void *ppimgr)
 {
       // Create the PlugIn icons
       initialize_images();
+
+	  wxString shareLocn = *GetpSharedDataLocation() +
+		  _T("plugins") + wxFileName::GetPathSeparator() +
+		  _T("calculator_pi") + wxFileName::GetPathSeparator()
+		  + _T("data") + wxFileName::GetPathSeparator();
+	  wxImage panelIcon(shareLocn + _T("calculator_panel_icon.png"));
+	  if (panelIcon.IsOk())
+		  m_panelBitmap = wxBitmap(panelIcon);
+	  else
+		  wxLogMessage(_T("    calculator_pi panel icon NOT loaded"));
+	  m_bShowCalculator = false;
+	  
 }
 
 int calculator_pi::Init(void)
@@ -87,14 +99,15 @@ int calculator_pi::Init(void)
       //    And load the configuration items
       LoadConfig();
 
-      //    This PlugIn needs a 2 toolbar icons, so request their insertion
-      m_Calculator_tool_id  = InsertPlugInTool(_T(""), _img_calc, _img_calc, wxITEM_NORMAL,
-            _("Calculator"), _T(""), NULL,
-             CALCULATOR_TOOL_POSITION, 0, this);
-     if((bool)m_bshowfunction_Open_CPN_BAR) {
-      m_CalculatorFX_tool_id  = InsertPlugInTool(_T(""), _img_calc_fx, _img_calc_fx, wxITEM_NORMAL,
-            _("Functions"), _T(""), NULL,
-             CALCULATOR_TOOL_POSITION, 0, this);}
+#ifdef CALCULATOR_USE_SVG
+	  m_Calculator_tool_id = InsertPlugInToolSVG(_T("Calculator"), _svg_calculator, _svg_calculator , _svg_calculator_toggled,
+		  wxITEM_CHECK, _("calculator"), _T(""), NULL, CALCULATOR_TOOL_POSITION, 0, this);
+	  
+#else
+	  m_Calculator_tool_id = InsertPlugInTool(_T(""), _img_calc, _img_calc, wxITEM_NORMAL,
+		  _("Calculator"), _T(""), NULL,
+		  CALCULATOR_TOOL_POSITION, 0, this);	  
+#endif
 
       m_pDialog = NULL;
 
@@ -110,7 +123,14 @@ bool calculator_pi::DeInit(void)
       //    Record the dialog position
       if (NULL != m_pDialog)
       {
-            //Capture dialog position
+		  if (NULL != m_pDialog->m_pFunctiondialog)
+		  {
+			  m_pDialog->m_pFunctiondialog->Close();
+			  delete m_pDialog->m_pFunctiondialog;
+			  m_pDialog->m_pFunctiondialog = NULL;
+		  }
+
+		  //Capture dialog position
             wxPoint p = m_pDialog->GetPosition();
             SetCalculatorDialogX(p.x);
             SetCalculatorDialogY(p.y);
@@ -122,7 +142,11 @@ bool calculator_pi::DeInit(void)
             m_pDialog->Close();
             delete m_pDialog;
             m_pDialog = NULL;
+
+			m_bShowCalculator = false;
+			SetToolbarItemState(m_Calculator_tool_id, m_bShowCalculator);
       }
+  
       SaveConfig();
       return true;
 }
@@ -149,7 +173,7 @@ int calculator_pi::GetPlugInVersionMinor()
 
 wxBitmap *calculator_pi::GetPlugInBitmap()
 {
-      return _img_calc;
+      return &m_panelBitmap;
 }
 
 wxString calculator_pi::GetCommonName()
@@ -189,7 +213,7 @@ void calculator_pi::OnToolbarToolCallback(int id)
 
     if(NULL == m_pDialog)
     {
-        m_pDialog = new Dlg(m_parent_window);
+        m_pDialog = new Dlg(m_parent_window, this);
         //m_pDialog->set_Parentwindow(*m_parent_window);
         this->SettingsPropagate();
         m_pDialog->set_Buttons();
@@ -216,15 +240,25 @@ void calculator_pi::OnToolbarToolCallback(int id)
         else{
             m_pDialog->Fit();
             }
-}
-    if (id == m_Calculator_tool_id)
-    {
-        m_pDialog->Show(!m_pDialog->IsShown());
-    }
-    if (id==m_CalculatorFX_tool_id)
-    {
-        m_pDialog->OnFunction();
-    }
+	}
+
+	m_bShowCalculator = !m_bShowCalculator;
+
+	//    Toggle dialog? 
+	if (m_bShowCalculator) {
+		m_pDialog->Show();
+	}
+	else {
+		m_pDialog->Hide();
+		if (!m_pDialog->m_pFunctiondialog) {
+			m_pDialog->m_pFunctiondialog->Hide();
+		}
+	}
+	// Toggle is handled by the toolbar but we must keep plugin manager b_toggle updated
+	// to actual status to ensure correct status upon toolbar rebuild
+	SetToolbarItemState(m_Calculator_tool_id, m_bShowCalculator);
+
+	
     #ifdef DEBUG
     printf("Toolbar ID: %i\n",id);
     printf("Toolbar ID (from init): %i and %i\n",m_Calculator_tool_id,m_CalculatorFX_tool_id);
@@ -343,8 +377,7 @@ void calculator_pi::ShowPreferencesDialog( wxWindow* parent )
       dialog->m_logresults->SetValue(m_blogresults);
 
       dialog->m_Calc_Reporting->SetSelection(m_iCalc_Reporting);
-      dialog->m_showhistoryP->SetValue(m_bshowhistoryP);
-      dialog->m_showfunction_Open_CPN_BAR->SetValue(m_bshowfunction_Open_CPN_BAR);
+      dialog->m_showhistoryP->SetValue(m_bshowhistoryP);      
 
       if(dialog->ShowModal() == wxID_OK)
       {
@@ -362,7 +395,7 @@ void calculator_pi::ShowPreferencesDialog( wxWindow* parent )
 
             m_iCalc_Reporting= dialog->m_Calc_Reporting->GetCurrentSelection();
             m_bshowhistoryP= dialog->m_showhistoryP->GetValue();
-            m_bshowfunction_Open_CPN_BAR= dialog->m_showfunction_Open_CPN_BAR->GetValue();
+            
 
 
             if (m_pDialog != NULL )
@@ -415,4 +448,21 @@ void calculator_pi::SettingsPropagate(void){
 
 }
 
+void calculator_pi::OnCalculatorDialogClose()
+{
+	m_bShowCalculator = false;
+	SetToolbarItemState(m_Calculator_tool_id, m_bShowCalculator);
+	m_pDialog->Hide();
+
+	if (NULL != m_pDialog->m_pFunctiondialog)
+	{
+		m_pDialog->m_pFunctiondialog->Hide();		
+	}
+
+	SaveConfig();
+
+
+	RequestRefresh(m_parent_window); // refresh main window
+
+}
 

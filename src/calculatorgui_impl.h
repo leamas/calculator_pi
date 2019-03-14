@@ -94,8 +94,11 @@ class FunDlg : public FunDlgDef
 class Dlg : public DlgDef
 {
 public:
-        Dlg( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Calculator by SaltyPaws"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( -1,-1 ), long style = wxCAPTION|wxDEFAULT_DIALOG_STYLE|wxMAXIMIZE_BOX|wxRESIZE_BORDER );
-        mu::Parser MuParser; //MuParser class.  Here all the functions and variables are stored.
+	Dlg(wxWindow *parent, calculator_pi *ppi);
+	~Dlg();
+
+	    calculator_pi *pPlugIn;
+		mu::Parser MuParser; //MuParser class.  Here all the functions and variables are stored.
 
         void OnCalculate( wxCommandEvent& event );
         wxString OnCalculate( void );
@@ -106,6 +109,7 @@ public:
         void OnTest(wxCommandEvent& event);
         void OnTest( wxListEvent& event );
         #endif // DEBUG
+		void OnClose(wxCloseEvent& event);
         void OnFunction( wxCommandEvent& event );
         void OnFunction ( void );
         void OnFunctionCalc ( void );
@@ -139,6 +143,9 @@ public:
         wxString Report_Value(double in_Value, int in_mode);
         wxString double2wxT(double in_Value);
         wxString ThousandSeparator(wxString Number_in);
+		
+		FunDlg            *m_pFunctiondialog;
+
 
 private:
         wxPoint xy;
@@ -162,7 +169,7 @@ private:
         bool              m_bshowfunction_Open_CPN_BAR;
 
         HlpDlg            *m_pHelpdialog;
-        FunDlg            *m_pFunctiondialog;
+        
 
 };
 

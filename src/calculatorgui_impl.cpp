@@ -103,7 +103,7 @@ void FunDlg::OnCategorySelect( wxCommandEvent& event )
 
 void FunDlg::OnClose( wxCommandEvent& event )
 {
-    this->Close();
+	this->Close();
 }
 
 void FunDlg::OnItemSelect( wxCommandEvent& event )
@@ -338,10 +338,12 @@ void FunDlg::OnToggle( wxCommandEvent& event ){
     this->Fit();
 }
 
-Dlg::Dlg( wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style ) : DlgDef( parent, id, title, pos, size, style )
+Dlg::Dlg(wxWindow *parent, calculator_pi *ppi)
+	: DlgDef(parent)
 {
-
-    MuParser.ClearConst();
+	pPlugIn = ppi;
+    
+	MuParser.ClearConst();
 	MuParser.DefineConst(WxString2StdString(_T("pi")), 3.141592653589793238462643);
 	MuParser.DefineConst(WxString2StdString(_T("e")), 2.718281828459045235360287);
 	MuParser.DefineConst(WxString2StdString(_T("dtr")), 0.0174532925199433);
@@ -360,6 +362,15 @@ Dlg::Dlg( wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint&
     MemoryFull=false;
     m_pHelpdialog=NULL;
     m_pFunctiondialog=NULL; //So we can check that the Function Function dialog has been opened.
+}
+Dlg::~Dlg()
+{
+
+}
+
+void Dlg::OnClose(wxCloseEvent& event)
+{
+	pPlugIn->OnCalculatorDialogClose();
 }
 
 void Dlg::OnFunctionCalc( void )

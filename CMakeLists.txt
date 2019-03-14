@@ -11,8 +11,8 @@ PROJECT(calculator_pi)
 SET(PACKAGE_NAME calculator_pi)
 SET(CPACK_PACKAGE_CONTACT "SaltyPaws ")
 
-SET(VERSION_MAJOR "1")
-SET(VERSION_MINOR "8.1")
+SET(VERSION_MAJOR "2")
+SET(VERSION_MINOR "0")
 
 #SET(CMAKE_BUILD_TYPE Debug)
 SET( wxWidgets_USE_DEBUG OFF)
@@ -20,7 +20,17 @@ SET( wxWidgets_USE_UNICODE ON)
 SET( wxWidgets_USE_UNIVERSAL OFF)
 SET( wxWidgets_USE_STATIC OFF)
 
+SET(NAME_SUFFIX "ov50")
+set (CMAKE_CXX_STANDARD 11)
+
+#SET(CMAKE_BUILD_TYPE Debug)
+OPTION(CALCULATOR_USE_SVG "Use SVG graphics" ON)
+
 INCLUDE("cmake/PluginConfigure.cmake")
+
+IF(CALCULATOR_USE_SVG)
+  ADD_DEFINITIONS(-DCALCULATOR_USE_SVG)
+ENDIF(CALCULATOR_USE_SVG)
 
 SET(SRC_CALCULATOR
 	src/calculator_pi.h
@@ -35,7 +45,7 @@ SET(SRC_CALCULATOR
 	src/functions.cpp
 	src/units_conversion.h
 	src/units_conversion.cpp
-	src/OpenCPN/ocpn_plugin.h
+	src/ocpn_plugin.h
 	src/VariableFactory.h
 	src/VariableFactory.cpp
 	)
