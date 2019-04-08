@@ -6,37 +6,41 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: calculator_pi 1.8\n"
+"Project-Id-Version: calculator_pi 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-06 15:21+0000\n"
+"POT-Creation-Date: 2019-04-08 11:25+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/calculator_pi.cpp:92 src/calculator_pi.cpp:157 src/calculatorgui.h:68
-#: src/calculatorgui.h:274
+#: src/calculator_pi.cpp:76
+msgid "    calculator_pi panel icon NOT loaded"
+msgstr ""
+
+#: src/calculator_pi.cpp:104
+msgid "calculator"
+msgstr ""
+
+#: src/calculator_pi.cpp:108 src/calculator_pi.cpp:181 src/calculatorgui.h:69
+#: src/calculatorgui.h:352
 msgid "Calculator"
 msgstr ""
 
-#: src/calculator_pi.cpp:96
-msgid "Functions"
-msgstr ""
-
-#: src/calculator_pi.cpp:162
+#: src/calculator_pi.cpp:186
 msgid "Calculator Plugin"
 msgstr ""
 
-#: src/calculator_pi.cpp:167
+#: src/calculator_pi.cpp:191
 msgid ""
 "This is a light weight yet powerful calculator plugin for OpenCPN.\n"
 "  Would you like to know your hull speed?"
 msgstr ""
 
-#: src/calculator_pi.cpp:330
+#: src/calculator_pi.cpp:364
 msgid "Calculator Preferences"
 msgstr ""
 
@@ -49,306 +53,186 @@ msgid "Help!!!!"
 msgstr ""
 
 #: src/calculatorgui_impl.h:76
+msgid "Degree Conversions"
+msgstr ""
+
+#: src/calculatorgui_impl.h:90
 msgid "Extra Functions"
 msgstr ""
 
-#: src/calculatorgui_impl.h:97
-msgid "Calculator by SaltyPaws"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:83 src/calculatorgui.cpp:618
-#: src/calculatorgui.cpp:630
+#: src/calculatorgui_impl.cpp:88 src/calculatorgui.cpp:638
+#: src/calculatorgui.cpp:650
 msgid "All"
 msgstr ""
 
-#: src/calculatorgui_impl.cpp:436
+#: src/calculatorgui_impl.cpp:133
+msgid ""
+"LWL = Length of water line\n"
+"Vhull = Hull speed"
+msgstr ""
+
+#: src/calculatorgui_impl.cpp:137 src/calculatorgui_impl.cpp:141
+msgid "fetch = distance over water that the wind blows"
+msgstr ""
+
+#: src/calculatorgui_impl.cpp:145
+msgid ""
+"Height_observer is the height of the observer\n"
+"Height_object is the height of the object"
+msgstr ""
+
+#: src/calculatorgui_impl.cpp:499
 msgid "Test"
 msgstr ""
 
-#: src/calculatorgui_impl.cpp:440
+#: src/calculatorgui_impl.cpp:503
 msgid "Mouse"
 msgstr ""
 
-#: src/calculatorgui_impl.cpp:444
+#: src/calculatorgui_impl.cpp:507
 msgid "List"
 msgstr ""
 
-#: src/calculatorgui_impl.cpp:495
+#: src/calculatorgui_impl.cpp:558
 msgid "Error"
 msgstr ""
 
-#: src/calculatorgui_impl.cpp:499
-msgid "clear"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:499
-msgid "Clear"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:499
-msgid "CLEAR"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:503
-msgid "HideHelp"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:503
-msgid "hidehelp"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:503
-msgid "HIDEHELP"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:503
-msgid "ShowHelp"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:503
-msgid "showhelp"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:503
-msgid "SHOWHELP"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:509
-msgid "HideHistory"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:509
-msgid "hidehistory"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:509
-msgid "HIDEHISTORY"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:509
-msgid "ShowHistory"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:509
-msgid "showhistory"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:509
-msgid "SHOWHISTORY"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:515
-msgid "HideCalculate"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:515
-msgid "hidecalculate"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:515
-msgid "HIDECALCULATE"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:515
-msgid "ShowCalculate"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:515
-msgid "showcalculate"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:515
-msgid "SHOWCALCULATE"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:521
-msgid "HideFunction"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:521
-msgid "hidefunction"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:521
-msgid "HIDEFUNCTION"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:521
-msgid "showfunction"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:521
-msgid "ShowFunction"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:521
-msgid "SHOWFUNCTION"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:527 src/calculatorgui.cpp:46
-msgid "Help"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:527
-msgid "HELP"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:527
-msgid "help"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:532 src/calculatorgui.cpp:40
-msgid "Function"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:532
-msgid "function"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:532
-msgid "FUNCTION"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:537
-msgid "history"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:537 src/calculatorgui.cpp:43
-msgid "History"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:537
-msgid "HISTORY"
-msgstr ""
-
-#: src/calculatorgui_impl.cpp:581
+#: src/calculatorgui_impl.cpp:644
 msgid "Calculator INPUT:"
 msgstr ""
 
-#: src/calculatorgui_impl.cpp:581
+#: src/calculatorgui_impl.cpp:644
 msgid " Calculator output:"
 msgstr ""
 
-#: src/calculatorgui.cpp:34 src/calculatorgui.cpp:912
+#: src/calculatorgui.cpp:33 src/calculatorgui.cpp:937
 msgid "Calculate"
 msgstr ""
 
-#: src/calculatorgui.cpp:118
+#: src/calculatorgui.cpp:39 src/calculatorgui.cpp:671
+msgid "Function"
+msgstr ""
+
+#: src/calculatorgui.cpp:42
+msgid "History"
+msgstr ""
+
+#: src/calculatorgui.cpp:45
+msgid "Help"
+msgstr ""
+
+#: src/calculatorgui.cpp:119
 msgid "Calculator Reporting"
 msgstr ""
 
-#: src/calculatorgui.cpp:120
+#: src/calculatorgui.cpp:121
 msgid "Precise (Default)"
 msgstr ""
 
-#: src/calculatorgui.cpp:120
+#: src/calculatorgui.cpp:121
 msgid "Precise, thousands separator"
 msgstr ""
 
-#: src/calculatorgui.cpp:120
+#: src/calculatorgui.cpp:121
 msgid "Succinct"
 msgstr ""
 
-#: src/calculatorgui.cpp:120
+#: src/calculatorgui.cpp:121
 msgid "Succinct, thousands separator"
 msgstr ""
 
-#: src/calculatorgui.cpp:120
+#: src/calculatorgui.cpp:121
 msgid "Scientific"
 msgstr ""
 
-#: src/calculatorgui.cpp:120
+#: src/calculatorgui.cpp:121
 msgid "Humanised"
 msgstr ""
 
-#: src/calculatorgui.cpp:130
+#: src/calculatorgui.cpp:131
 msgid "Show/Hide Buttons"
 msgstr ""
 
-#: src/calculatorgui.cpp:132
+#: src/calculatorgui.cpp:133
 msgid "Help Button"
 msgstr ""
 
-#: src/calculatorgui.cpp:134
+#: src/calculatorgui.cpp:135
 msgid "Show/Hide help button (you can always type \"help\" from input window)."
 msgstr ""
 
-#: src/calculatorgui.cpp:138
+#: src/calculatorgui.cpp:139
 msgid "History Toggle"
 msgstr ""
 
-#: src/calculatorgui.cpp:140 src/calculatorgui.cpp:146
+#: src/calculatorgui.cpp:141 src/calculatorgui.cpp:147
 msgid ""
 "Show/Hide history toggle (you can always type \"history\" from input window)."
 msgstr ""
 
-#: src/calculatorgui.cpp:144
+#: src/calculatorgui.cpp:145
 msgid "History Pulldown"
 msgstr ""
 
-#: src/calculatorgui.cpp:150
+#: src/calculatorgui.cpp:151
 msgid "Calculate Button"
 msgstr ""
 
-#: src/calculatorgui.cpp:152
+#: src/calculatorgui.cpp:153
 msgid ""
 "Show/Hide Calculate button (you can always press enter at the end of input)."
 msgstr ""
 
-#: src/calculatorgui.cpp:156
+#: src/calculatorgui.cpp:157
 msgid "Function Button in Calculator window"
 msgstr ""
 
-#: src/calculatorgui.cpp:160
-msgid "Function Button in OpenCPN (Requires OpenCPN restart)"
-msgstr ""
-
-#: src/calculatorgui.cpp:168
+#: src/calculatorgui.cpp:165
 msgid "History Settings"
 msgstr ""
 
-#: src/calculatorgui.cpp:175
+#: src/calculatorgui.cpp:172
 msgid "Max Results"
 msgstr ""
 
-#: src/calculatorgui.cpp:177
+#: src/calculatorgui.cpp:174
 msgid ""
 "More results use up more memory. Memory is only allocated if required (e.g. "
 "if number is 30000, corresponding memory will only be used after this many "
 "calculations)."
 msgstr ""
 
-#: src/calculatorgui.cpp:182
+#: src/calculatorgui.cpp:179
 msgid ""
 "More results use more memory. Memory will be cleared if Max Results is "
 "reached. NB variables are kept"
 msgstr ""
 
-#: src/calculatorgui.cpp:189
+#: src/calculatorgui.cpp:186
 msgid "Opacity"
 msgstr ""
 
-#: src/calculatorgui.cpp:200
+#: src/calculatorgui.cpp:197
 msgid "Show History Window"
 msgstr ""
 
-#: src/calculatorgui.cpp:202
+#: src/calculatorgui.cpp:199
 msgid "Show/Hide history"
 msgstr ""
 
-#: src/calculatorgui.cpp:210
+#: src/calculatorgui.cpp:207
 msgid "Other"
 msgstr ""
 
-#: src/calculatorgui.cpp:212
+#: src/calculatorgui.cpp:209
 msgid "Log results to opencpn"
 msgstr ""
 
-#: src/calculatorgui.cpp:213
+#: src/calculatorgui.cpp:210
 msgid "Log calculator results in OpenCPN log file"
 msgstr ""
 
-#: src/calculatorgui.cpp:258
+#: src/calculatorgui.cpp:255
 msgid ""
 "Calculator Plugin for OpenCPN by SaltyPaws aka Walbert Schulpen\n"
 "=======================================\n"
@@ -478,116 +362,62 @@ msgid ""
 "\tLog to opencpn: Enable/Disable logging of results to opencpn logfile."
 msgstr ""
 
-#: src/calculatorgui.cpp:314 src/calculatorgui.cpp:374
-msgid "DD.dddddd° (no limit to decimals)"
-msgstr ""
-
-#: src/calculatorgui.cpp:322
-msgid "Lattitude  "
-msgstr ""
-
-#: src/calculatorgui.cpp:330 src/calculatorgui.cpp:348 src/calculatorgui.cpp:390
-#: src/calculatorgui.cpp:422 src/calculatorgui.cpp:484 src/calculatorgui.cpp:524
-msgid "°"
-msgstr ""
-
-#: src/calculatorgui.cpp:340
-msgid "Longitude"
-msgstr ""
-
-#: src/calculatorgui.cpp:361 src/calculatorgui.cpp:452 src/calculatorgui.cpp:562
-msgid "Convert"
-msgstr ""
-
-#: src/calculatorgui.cpp:368
-msgid "Degrees"
-msgstr ""
-
-#: src/calculatorgui.cpp:382 src/calculatorgui.cpp:476
-msgid "Lat "
-msgstr ""
-
-#: src/calculatorgui.cpp:398 src/calculatorgui.cpp:430 src/calculatorgui.cpp:492
-#: src/calculatorgui.cpp:532
-msgid "'"
-msgstr ""
-
-#: src/calculatorgui.cpp:402 src/calculatorgui.cpp:504
+#: src/calculatorgui.cpp:418 src/calculatorgui.cpp:513
 msgid "N"
 msgstr ""
 
-#: src/calculatorgui.cpp:402 src/calculatorgui.cpp:504
+#: src/calculatorgui.cpp:418 src/calculatorgui.cpp:513
 msgid "S"
 msgstr ""
 
-#: src/calculatorgui.cpp:414 src/calculatorgui.cpp:516
-msgid "Lon"
-msgstr ""
-
-#: src/calculatorgui.cpp:434 src/calculatorgui.cpp:544
+#: src/calculatorgui.cpp:448 src/calculatorgui.cpp:550
 msgid "E"
 msgstr ""
 
-#: src/calculatorgui.cpp:434 src/calculatorgui.cpp:544
+#: src/calculatorgui.cpp:448 src/calculatorgui.cpp:550
 msgid "W"
 msgstr ""
 
-#: src/calculatorgui.cpp:462
-msgid "Degree, Minute"
+#: src/calculatorgui.cpp:580
+msgid "Convert"
 msgstr ""
 
-#: src/calculatorgui.cpp:468
-msgid "DD°MM'SS.s (no limit to digits)"
-msgstr ""
-
-#: src/calculatorgui.cpp:500 src/calculatorgui.cpp:540
-msgid "\""
-msgstr ""
-
-#: src/calculatorgui.cpp:572
-msgid "° ' \""
-msgstr ""
-
-#: src/calculatorgui.cpp:616
+#: src/calculatorgui.cpp:636
 msgid "Select Function Category"
 msgstr ""
 
-#: src/calculatorgui.cpp:628
+#: src/calculatorgui.cpp:648
 msgid "Select Function"
 msgstr ""
 
-#: src/calculatorgui.cpp:640
+#: src/calculatorgui.cpp:660
 msgid "Function And Description"
 msgstr ""
 
-#: src/calculatorgui.cpp:646
-msgid "ere"
-msgstr ""
-
-#: src/calculatorgui.cpp:650 src/calculatorgui.cpp:918
+#: src/calculatorgui.cpp:675 src/calculatorgui.cpp:943
 msgid "Description"
 msgstr ""
 
-#: src/calculatorgui.cpp:664
+#: src/calculatorgui.cpp:689
 msgid "Input Parameters"
 msgstr ""
 
-#: src/calculatorgui.cpp:672 src/calculatorgui.cpp:693 src/calculatorgui.cpp:714
-#: src/calculatorgui.cpp:735 src/calculatorgui.cpp:756 src/calculatorgui.cpp:777
-#: src/calculatorgui.cpp:798 src/calculatorgui.cpp:819 src/calculatorgui.cpp:840
-#: src/calculatorgui.cpp:861
+#: src/calculatorgui.cpp:697 src/calculatorgui.cpp:718 src/calculatorgui.cpp:739
+#: src/calculatorgui.cpp:760 src/calculatorgui.cpp:781 src/calculatorgui.cpp:802
+#: src/calculatorgui.cpp:823 src/calculatorgui.cpp:844 src/calculatorgui.cpp:865
+#: src/calculatorgui.cpp:886
 msgid "Parameter"
 msgstr ""
 
-#: src/calculatorgui.cpp:880
+#: src/calculatorgui.cpp:905
 msgid "Function Result Select Units"
 msgstr ""
 
-#: src/calculatorgui.cpp:891
+#: src/calculatorgui.cpp:916
 msgid "MyLabel"
 msgstr ""
 
-#: src/calculatorgui.cpp:915
+#: src/calculatorgui.cpp:940
 msgid "Close"
 msgstr ""
 
@@ -610,27 +440,9 @@ msgid "Design"
 msgstr ""
 
 #: src/functions.cpp:37 src/functions.cpp:64 src/functions.cpp:91
-#: src/functions.cpp:118 src/functions.cpp:145 src/functions.cpp:172
-#: src/functions.cpp:226 src/functions.cpp:253
+#: src/functions.cpp:118 src/functions.cpp:145 src/functions.cpp:226
+#: src/functions.cpp:253
 msgid "http://www.bootkeyharbor.com/Formulas.htm"
-msgstr ""
-
-#: src/functions.cpp:38
-msgid "vhull=1.34*sqrt(LWL)"
-msgstr ""
-
-#: src/functions.cpp:39 src/functions.cpp:93 src/functions.cpp:95
-#: src/functions.cpp:147
-msgid "knots"
-msgstr ""
-
-#: src/functions.cpp:40
-msgid "LWL"
-msgstr ""
-
-#: src/functions.cpp:41 src/functions.cpp:232 src/functions.cpp:257
-#: src/functions.cpp:259 src/units_conversion.cpp:63
-msgid "feet"
 msgstr ""
 
 #: src/functions.cpp:61 src/functions.cpp:62
@@ -644,41 +456,8 @@ msgstr ""
 msgid "Navigation"
 msgstr ""
 
-#: src/functions.cpp:65
-msgid "draft_heeled=draft*cos(dtr*angle)"
-msgstr ""
-
-#: src/functions.cpp:66 src/functions.cpp:70 src/functions.cpp:120
-#: src/functions.cpp:174 src/functions.cpp:176 src/functions.cpp:201
-#: src/functions.cpp:205 src/functions.cpp:502 src/functions.cpp:579
-#: src/functions.cpp:581
-msgid "meter"
-msgstr ""
-
-#: src/functions.cpp:67
-msgid "angle"
-msgstr ""
-
-#: src/functions.cpp:68 src/functions.cpp:340 src/functions.cpp:367
-#: src/functions.cpp:369 src/functions.cpp:687 src/functions.cpp:689
-#: src/units_conversion.cpp:33
-msgid "Degree (°)"
-msgstr ""
-
-#: src/functions.cpp:69
-msgid "draft"
-msgstr ""
-
 #: src/functions.cpp:88 src/functions.cpp:89
 msgid "Speed of wind-driven current"
-msgstr ""
-
-#: src/functions.cpp:92
-msgid "Speed_Current = 0.03 * (Speed_Wind)"
-msgstr ""
-
-#: src/functions.cpp:94
-msgid "Speed_Wind"
 msgstr ""
 
 #: src/functions.cpp:115
@@ -687,18 +466,6 @@ msgstr ""
 
 #: src/functions.cpp:116
 msgid "Maximum Wavelength = 1.5 x square root of fetch in nm"
-msgstr ""
-
-#: src/functions.cpp:119
-msgid "Maximum_Wavelength = 1.5 * sqrt(fetch)"
-msgstr ""
-
-#: src/functions.cpp:121
-msgid "fetch"
-msgstr ""
-
-#: src/functions.cpp:122 src/units_conversion.cpp:53
-msgid "Nautical Miles"
 msgstr ""
 
 #: src/functions.cpp:142
@@ -711,43 +478,19 @@ msgid ""
 "confirmed"
 msgstr ""
 
-#: src/functions.cpp:146
-msgid "Wave_speed = 3.03 * (wave_period)"
-msgstr ""
-
-#: src/functions.cpp:148
-msgid "wave_period"
-msgstr ""
-
-#: src/functions.cpp:149
-msgid "seconds"
-msgstr ""
-
 #: src/functions.cpp:169
 msgid "Change in height of Tide"
 msgstr ""
 
 #: src/functions.cpp:170
 msgid ""
-"Height is total change in tide heigt between high and low. The time ratio is "
+"Height is total change in tide height between high and low. The time ratio is "
 "time elapsed from the previous tide divided by the time difference between "
 "the two tides. (Similar to rule of 12)"
 msgstr ""
 
-#: src/functions.cpp:173
-msgid "Change_in_height_of_Tide = height/2 * (1-cos(dtr(180) * time_ratio))"
-msgstr ""
-
-#: src/functions.cpp:175 src/functions.cpp:526
-msgid "height"
-msgstr ""
-
-#: src/functions.cpp:177
-msgid "time_ratio"
-msgstr ""
-
-#: src/functions.cpp:178
-msgid "-"
+#: src/functions.cpp:172
+msgid "Not very accurate - use official publications"
 msgstr ""
 
 #: src/functions.cpp:196
@@ -765,28 +508,6 @@ msgstr ""
 msgid "Naoto Ebuchi, Journal of oceanography, vol 55, pp 575 to 584, 1999"
 msgstr ""
 
-#: src/functions.cpp:200
-msgid ""
-"Waveheight=0 ,CDU10=(0.879+0.075*U10)*10^-3,U10 < 8 ? alpha = 1 : alpha = 0.6 "
-"+ 0.05 * U10 ,Cd=CDU10/alpha ,F_hat=(Fetch*9.80665)/U10^2 ,F_star=F_hat/Cd,"
-"F_tilde=CDU10*F_star ,H_tilde=0.3*alpha*(1-(1+0.004*sqrt(F_tilde/alpha))^-2) ,"
-"H_star=H_tilde/CDU10 ,H_hat=H_star*Cd ,Waveheight=H_hat*(U10^2)/9.80665"
-msgstr ""
-
-#: src/functions.cpp:202
-msgid "U10"
-msgstr ""
-
-#: src/functions.cpp:203 src/functions.cpp:394 src/functions.cpp:444
-#: src/functions.cpp:473 src/functions.cpp:633 src/functions.cpp:635
-#: src/units_conversion.cpp:83
-msgid "m/s"
-msgstr ""
-
-#: src/functions.cpp:204
-msgid "Fetch"
-msgstr ""
-
 #: src/functions.cpp:223
 msgid "Flow rate of leak in boat"
 msgstr ""
@@ -794,34 +515,15 @@ msgstr ""
 #: src/functions.cpp:224
 msgid ""
 "Flow rate of leak in boat:\tQ = 3,600 (A) (H)\n"
-"\tQ = gallons per minute of water coming in\n"
-"\tA = area of hole in square feet\n"
-"\tH = height of water over hole in feet, to bottom of the opening"
+"\n"
+"Q = volume per minute of water coming in\n"
+"A = area of hole\n"
+"H = height of water over hole, to bottom of the opening"
 msgstr ""
 
 #: src/functions.cpp:225 src/functions.cpp:252 src/functions.cpp:279
 #: src/functions.cpp:306
 msgid "Safety"
-msgstr ""
-
-#: src/functions.cpp:227
-msgid "Q = 3600 *(A)* (H)"
-msgstr ""
-
-#: src/functions.cpp:228 src/units_conversion.cpp:123
-msgid "US gallons per minute"
-msgstr ""
-
-#: src/functions.cpp:229
-msgid "A"
-msgstr ""
-
-#: src/functions.cpp:230 src/units_conversion.cpp:163
-msgid "Square feet"
-msgstr ""
-
-#: src/functions.cpp:231 src/functions.cpp:256
-msgid "H"
 msgstr ""
 
 #: src/functions.cpp:250
@@ -833,22 +535,9 @@ msgid ""
 "Patch or cover thickness to withstand water pressure (patch over hole):\n"
 "\n"
 "\tT = square root of:\t(48x (H) (L2))/ 1000)\n"
-"\tT = thickness of wood or plywood patch in inches\n"
-"\tH = height of water above bottom of hole, in feet\n"
-"\tL = length of patch, longest distance between supports, in feet"
-msgstr ""
-
-#: src/functions.cpp:254
-msgid "T = sqrt( (48* H* (L^2))/1000)"
-msgstr ""
-
-#: src/functions.cpp:255 src/functions.cpp:286 src/functions.cpp:313
-#: src/units_conversion.cpp:58
-msgid "inch"
-msgstr ""
-
-#: src/functions.cpp:258
-msgid "L"
+"\tT = thickness of wood or plywood patch\n"
+"\tH = height of water above bottom of hole\n"
+"\tL = length of patch, longest distance between supports"
 msgstr ""
 
 #: src/functions.cpp:277
@@ -875,36 +564,8 @@ msgstr ""
 msgid "http://www.boatsafe.com/marlinespike/breaking.htm"
 msgstr ""
 
-#: src/functions.cpp:281
-msgid "breaking_strength= 900 * comparison_factor * circumference^2 "
-msgstr ""
-
-#: src/functions.cpp:282 src/functions.cpp:309 src/units_conversion.cpp:153
-msgid "lbs"
-msgstr ""
-
-#: src/functions.cpp:283 src/functions.cpp:310
-msgid "comparison_factor"
-msgstr ""
-
-#: src/functions.cpp:284 src/functions.cpp:311
-msgid "See table"
-msgstr ""
-
-#: src/functions.cpp:285
-msgid "circumference"
-msgstr ""
-
 #: src/functions.cpp:304
 msgid "Line Break strength (diameter)"
-msgstr ""
-
-#: src/functions.cpp:308
-msgid "breaking_strength= 900 * comparison_factor * (pi*diameter)^2 "
-msgstr ""
-
-#: src/functions.cpp:312
-msgid "diameter"
 msgstr ""
 
 #: src/functions.cpp:331
@@ -927,37 +588,8 @@ msgstr ""
 msgid "http://lagoon-inside.com/2012/01/faster-thanks-to-the-vmg-concept/"
 msgstr ""
 
-#: src/functions.cpp:335
-msgid "VMG=V*cos(alpha*dtr)"
-msgstr ""
-
-#: src/functions.cpp:336 src/functions.cpp:338 src/functions.cpp:363
-#: src/functions.cpp:365 src/units_conversion.cpp:88
-msgid "Knots"
-msgstr ""
-
-#: src/functions.cpp:337 src/functions.cpp:364
-msgid "V"
-msgstr ""
-
-#: src/functions.cpp:339
-msgid "alpha"
-msgstr ""
-
 #: src/functions.cpp:358
 msgid "Velocity Made Good (delta)"
-msgstr ""
-
-#: src/functions.cpp:362
-msgid "VMG=V*cos((alpha1-alpha2)*dtr)"
-msgstr ""
-
-#: src/functions.cpp:366
-msgid "alpha1"
-msgstr ""
-
-#: src/functions.cpp:368
-msgid "alpha2"
 msgstr ""
 
 #: src/functions.cpp:385
@@ -989,26 +621,6 @@ msgid ""
 "prods_servs/normals_documentation_e.html"
 msgstr ""
 
-#: src/functions.cpp:389
-msgid ""
-"T_wind_chill = 13.12 + 0.6215 * T_air - 11.37 * V_wind^0.16 + 0.3965 * T_air* "
-"V_wind^0.16 "
-msgstr ""
-
-#: src/functions.cpp:390 src/functions.cpp:392 src/functions.cpp:417
-#: src/functions.cpp:419 src/functions.cpp:606 src/functions.cpp:608
-#: src/units_conversion.cpp:98
-msgid "Celsius"
-msgstr ""
-
-#: src/functions.cpp:391 src/functions.cpp:418
-msgid "T_air"
-msgstr ""
-
-#: src/functions.cpp:393
-msgid "V_wind"
-msgstr ""
-
 #: src/functions.cpp:412
 msgid "Humidex"
 msgstr ""
@@ -1024,22 +636,7 @@ msgid ""
 msgstr ""
 
 #: src/functions.cpp:415
-msgid ""
-"http://climate.weatheroffice.gc.ca/prods_servs/normals_documentation_e.html"
-msgstr ""
-
-#: src/functions.cpp:416
-msgid ""
-"humidex = (T_air) + (0.5555)*((6.11 * exp (5417.7530 * ( (1/273.16) - (1/"
-"dewpoint) ) ) ) - 10.0)"
-msgstr ""
-
-#: src/functions.cpp:420
-msgid "dewpoint"
-msgstr ""
-
-#: src/functions.cpp:421 src/units_conversion.cpp:103
-msgid "Kelvin"
+msgid "http://climate.weather.gc.ca/glossary_e.html"
 msgstr ""
 
 #: src/functions.cpp:439
@@ -1057,24 +654,8 @@ msgstr ""
 msgid "http://planetcalc.com/384/"
 msgstr ""
 
-#: src/functions.cpp:443
-msgid "Wind_Speed=0.837*Beaufort^(3/2)"
-msgstr ""
-
-#: src/functions.cpp:445 src/functions.cpp:446 src/functions.cpp:471
-msgid "Beaufort"
-msgstr ""
-
 #: src/functions.cpp:466
 msgid "Wind Velocity to Beaufort"
-msgstr ""
-
-#: src/functions.cpp:470
-msgid "Beaufort=(Wind_Speed/0.837)^(2/3)"
-msgstr ""
-
-#: src/functions.cpp:472
-msgid "Wind_Speed"
 msgstr ""
 
 #: src/functions.cpp:493
@@ -1103,26 +684,6 @@ msgid ""
 "Saltypaws"
 msgstr ""
 
-#: src/functions.cpp:497
-msgid "Pressure=density*9.80665*depth"
-msgstr ""
-
-#: src/functions.cpp:498 src/units_conversion.cpp:208
-msgid "Pa"
-msgstr ""
-
-#: src/functions.cpp:499
-msgid "density"
-msgstr ""
-
-#: src/functions.cpp:500 src/units_conversion.cpp:248
-msgid "kg/m3"
-msgstr ""
-
-#: src/functions.cpp:501
-msgid "depth"
-msgstr ""
-
 #: src/functions.cpp:520
 msgid "Distance to horizon"
 msgstr ""
@@ -1138,15 +699,6 @@ msgstr ""
 
 #: src/functions.cpp:523
 msgid "https://en.wikipedia.org/wiki/Horizon, geometrical model"
-msgstr ""
-
-#: src/functions.cpp:524
-msgid "distance_horizon=sqrt(height* (height + 12756.32))"
-msgstr ""
-
-#: src/functions.cpp:525 src/functions.cpp:527 src/functions.cpp:552
-#: src/functions.cpp:554 src/functions.cpp:556 src/units_conversion.cpp:68
-msgid "kilometer"
 msgstr ""
 
 #: src/functions.cpp:547
@@ -1165,26 +717,13 @@ msgstr ""
 msgid "https://en.wikipedia.org/wiki/Horizon, Objects above horizon"
 msgstr ""
 
-#: src/functions.cpp:551
-msgid ""
-"distance_visible=sqrt(height_observer * (height_observer + 12756.32)) + "
-"sqrt(height_object * (height_object + 12756.32))"
-msgstr ""
-
-#: src/functions.cpp:553
-msgid "height_observer"
-msgstr ""
-
-#: src/functions.cpp:555
-msgid "height_object"
-msgstr ""
-
 #: src/functions.cpp:574 src/functions.cpp:575
 msgid "Convert Distance"
 msgstr ""
 
 #: src/functions.cpp:576 src/functions.cpp:603 src/functions.cpp:630
 #: src/functions.cpp:657 src/functions.cpp:684 src/functions.cpp:711
+#: src/functions.cpp:739
 msgid "Conversions"
 msgstr ""
 
@@ -1193,411 +732,179 @@ msgstr ""
 msgid "Saltypaws"
 msgstr ""
 
-#: src/functions.cpp:578
-msgid "Distance_Out=Distance_In"
-msgstr ""
-
-#: src/functions.cpp:580
-msgid "Distance_In"
-msgstr ""
-
 #: src/functions.cpp:601 src/functions.cpp:602
 msgid "Convert Temperature"
-msgstr ""
-
-#: src/functions.cpp:605
-msgid "Temperature_Out=Temperature_In"
-msgstr ""
-
-#: src/functions.cpp:607
-msgid "Temperature_In"
 msgstr ""
 
 #: src/functions.cpp:628 src/functions.cpp:629
 msgid "Convert Speed"
 msgstr ""
 
-#: src/functions.cpp:632
-msgid "Speed_Out=Speed_In"
-msgstr ""
-
-#: src/functions.cpp:634
-msgid "Speed_In"
-msgstr ""
-
 #: src/functions.cpp:655 src/functions.cpp:656
 msgid "Convert Pressure"
-msgstr ""
-
-#: src/functions.cpp:659
-msgid "Pressure_Out=Pressure_In"
-msgstr ""
-
-#: src/functions.cpp:660 src/functions.cpp:662 src/units_conversion.cpp:183
-msgid "bara"
-msgstr ""
-
-#: src/functions.cpp:661
-msgid "Pressure_In"
 msgstr ""
 
 #: src/functions.cpp:682 src/functions.cpp:683
 msgid "Convert Angle"
 msgstr ""
 
-#: src/functions.cpp:686
-msgid "Angle_Out=Angle_In"
-msgstr ""
-
-#: src/functions.cpp:688
-msgid "Angle_Out"
-msgstr ""
-
 #: src/functions.cpp:709 src/functions.cpp:710
 msgid "Convert Flowrate"
 msgstr ""
 
-#: src/functions.cpp:713
-msgid "Flowrate_Out=Flowrate_In"
+#: src/functions.cpp:737
+msgid "Convert Degrees (All formats)"
 msgstr ""
 
-#: src/functions.cpp:714 src/functions.cpp:716 src/units_conversion.cpp:118
-msgid "m3/s"
+#: src/functions.cpp:738
+msgid "Convert (All formats)"
 msgstr ""
 
-#: src/functions.cpp:715
-msgid "Flowrate_Out"
+#: src/functions.cpp:740
+msgid "Rasbats"
 msgstr ""
 
-#: src/units_conversion.cpp:34 src/units_conversion.cpp:39
-#: src/units_conversion.cpp:44
-msgid "Angle"
+#: src/muparser/muParserError.cpp:76
+msgid "Unexpected token \"$TOK$\" found at position $POS$."
 msgstr ""
 
-#: src/units_conversion.cpp:35 src/units_conversion.cpp:45
-#: src/units_conversion.cpp:50 src/units_conversion.cpp:85
-#: src/units_conversion.cpp:100 src/units_conversion.cpp:120
-#: src/units_conversion.cpp:135 src/units_conversion.cpp:150
-#: src/units_conversion.cpp:160 src/units_conversion.cpp:180
-#: src/units_conversion.cpp:185 src/units_conversion.cpp:235
-#: src/units_conversion.cpp:250
-msgid "1"
+#: src/muparser/muParserError.cpp:77
+msgid "Internal error"
 msgstr ""
 
-#: src/units_conversion.cpp:36 src/units_conversion.cpp:41
-#: src/units_conversion.cpp:51 src/units_conversion.cpp:56
-#: src/units_conversion.cpp:61 src/units_conversion.cpp:66
-#: src/units_conversion.cpp:71 src/units_conversion.cpp:86
-#: src/units_conversion.cpp:91 src/units_conversion.cpp:96
-#: src/units_conversion.cpp:101 src/units_conversion.cpp:106
-#: src/units_conversion.cpp:111 src/units_conversion.cpp:116
-#: src/units_conversion.cpp:121 src/units_conversion.cpp:126
-#: src/units_conversion.cpp:131 src/units_conversion.cpp:136
-#: src/units_conversion.cpp:141 src/units_conversion.cpp:146
-#: src/units_conversion.cpp:151 src/units_conversion.cpp:156
-#: src/units_conversion.cpp:161 src/units_conversion.cpp:166
-#: src/units_conversion.cpp:171 src/units_conversion.cpp:176
-#: src/units_conversion.cpp:181 src/units_conversion.cpp:186
-#: src/units_conversion.cpp:191 src/units_conversion.cpp:196
-#: src/units_conversion.cpp:206 src/units_conversion.cpp:211
-#: src/units_conversion.cpp:216 src/units_conversion.cpp:221
-#: src/units_conversion.cpp:226 src/units_conversion.cpp:231
-#: src/units_conversion.cpp:251 src/units_conversion.cpp:256
-msgid "TRUE"
+#: src/muparser/muParserError.cpp:78
+msgid "Invalid function-, variable- or constant name: \"$TOK$\"."
 msgstr ""
 
-#: src/units_conversion.cpp:38
-msgid "Radians"
+#: src/muparser/muParserError.cpp:79
+msgid "Invalid binary operator identifier: \"$TOK$\"."
 msgstr ""
 
-#: src/units_conversion.cpp:40
-msgid "VAR/dtr=VAR*dtr"
+#: src/muparser/muParserError.cpp:80
+msgid "Invalid infix operator identifier: \"$TOK$\"."
 msgstr ""
 
-#: src/units_conversion.cpp:43
-msgid "Degree"
+#: src/muparser/muParserError.cpp:81
+msgid "Invalid postfix operator identifier: \"$TOK$\"."
 msgstr ""
 
-#: src/units_conversion.cpp:46 src/units_conversion.cpp:76
-#: src/units_conversion.cpp:81 src/units_conversion.cpp:201
-msgid "FALSE"
+#: src/muparser/muParserError.cpp:82
+msgid "Invalid pointer to callback function."
 msgstr ""
 
-#: src/units_conversion.cpp:48
-msgid "Meter"
+#: src/muparser/muParserError.cpp:83
+msgid "Expression is empty."
 msgstr ""
 
-#: src/units_conversion.cpp:49 src/units_conversion.cpp:54
-#: src/units_conversion.cpp:59 src/units_conversion.cpp:64
-#: src/units_conversion.cpp:69 src/units_conversion.cpp:74
-#: src/units_conversion.cpp:79 src/units_conversion.cpp:174
-msgid "Distance"
+#: src/muparser/muParserError.cpp:84
+msgid "Invalid pointer to variable."
 msgstr ""
 
-#: src/units_conversion.cpp:55
-msgid "1852"
+#: src/muparser/muParserError.cpp:85
+msgid "Unexpected operator \"$TOK$\" found at position $POS$"
 msgstr ""
 
-#: src/units_conversion.cpp:60
-msgid "0.0254"
+#: src/muparser/muParserError.cpp:86
+msgid "Unexpected end of expression at position $POS$"
 msgstr ""
 
-#: src/units_conversion.cpp:65 src/units_conversion.cpp:75
-msgid "0.3048"
+#: src/muparser/muParserError.cpp:87
+msgid "Unexpected argument separator at position $POS$"
 msgstr ""
 
-#: src/units_conversion.cpp:70
-msgid "1000"
+#: src/muparser/muParserError.cpp:88
+msgid "Unexpected parenthesis \"$TOK$\" at position $POS$"
 msgstr ""
 
-#: src/units_conversion.cpp:73
-msgid "foot"
+#: src/muparser/muParserError.cpp:89
+msgid "Unexpected function \"$TOK$\" at position $POS$"
 msgstr ""
 
-#: src/units_conversion.cpp:78
-msgid "Fathom"
+#: src/muparser/muParserError.cpp:90
+msgid "Unexpected value \"$TOK$\" found at position $POS$"
 msgstr ""
 
-#: src/units_conversion.cpp:80
-msgid "1.8288"
+#: src/muparser/muParserError.cpp:91
+msgid "Unexpected variable \"$TOK$\" found at position $POS$"
 msgstr ""
 
-#: src/units_conversion.cpp:84 src/units_conversion.cpp:89
-#: src/units_conversion.cpp:94
-msgid "Speed"
+#: src/muparser/muParserError.cpp:92
+msgid "Function arguments used without a function (position: $POS$)"
 msgstr ""
 
-#: src/units_conversion.cpp:90
-msgid "0.514444"
+#: src/muparser/muParserError.cpp:93
+msgid "Missing parenthesis"
 msgstr ""
 
-#: src/units_conversion.cpp:93
-msgid "km/h"
+#: src/muparser/muParserError.cpp:94
+msgid "Too many parameters for function \"$TOK$\" at expression position $POS$"
 msgstr ""
 
-#: src/units_conversion.cpp:95
-msgid "0.277778"
+#: src/muparser/muParserError.cpp:95
+msgid "Too few parameters for function \"$TOK$\" at expression position $POS$"
 msgstr ""
 
-#: src/units_conversion.cpp:99 src/units_conversion.cpp:104
-#: src/units_conversion.cpp:109 src/units_conversion.cpp:114
-msgid "Temperature"
+#: src/muparser/muParserError.cpp:96
+msgid "Divide by zero"
 msgstr ""
 
-#: src/units_conversion.cpp:105
-msgid "VAR - 273.15=VAR + 273.15"
+#: src/muparser/muParserError.cpp:97
+msgid "Domain error"
 msgstr ""
 
-#: src/units_conversion.cpp:108
-msgid "Fahrenheit"
+#: src/muparser/muParserError.cpp:98
+msgid "Name conflict"
 msgstr ""
 
-#: src/units_conversion.cpp:110
-msgid "(5/9) * (VAR - 32)=((9/5)* VAR)+32"
+#: src/muparser/muParserError.cpp:99
+msgid "Invalid value for operator priority (must be greater or equal to zero)."
 msgstr ""
 
-#: src/units_conversion.cpp:113
-msgid "Rankine"
+#: src/muparser/muParserError.cpp:100
+msgid ""
+"user defined binary operator \"$TOK$\" conflicts with a built in operator."
 msgstr ""
 
-#: src/units_conversion.cpp:115
-msgid "(5/9)*(VAR-491.67)=(9/5)*(VAR + 273.15)"
+#: src/muparser/muParserError.cpp:101
+msgid "Unexpected string token found at position $POS$."
 msgstr ""
 
-#: src/units_conversion.cpp:119 src/units_conversion.cpp:124
-#: src/units_conversion.cpp:129
-msgid "Flowrate"
+#: src/muparser/muParserError.cpp:102
+msgid "Unterminated string starting at position $POS$."
 msgstr ""
 
-#: src/units_conversion.cpp:125
-msgid "15850.3231"
+#: src/muparser/muParserError.cpp:103
+msgid "String function called with a non string type of argument."
 msgstr ""
 
-#: src/units_conversion.cpp:128
-msgid "liter per minute"
+#: src/muparser/muParserError.cpp:104
+msgid "String value used where a numerical argument is expected."
 msgstr ""
 
-#: src/units_conversion.cpp:130
-msgid "60000"
+#: src/muparser/muParserError.cpp:105
+msgid "No suitable overload for operator \"$TOK$\" at position $POS$."
 msgstr ""
 
-#: src/units_conversion.cpp:133
-msgid "Seconds"
+#: src/muparser/muParserError.cpp:106
+msgid "Function result is a string."
 msgstr ""
 
-#: src/units_conversion.cpp:134 src/units_conversion.cpp:139
-#: src/units_conversion.cpp:144
-msgid "Time"
+#: src/muparser/muParserError.cpp:107
+msgid "Parser error."
 msgstr ""
 
-#: src/units_conversion.cpp:138
-msgid "Minutes"
+#: src/muparser/muParserError.cpp:108
+msgid "Decimal separator is identic to function argument separator."
 msgstr ""
 
-#: src/units_conversion.cpp:140
-msgid "60"
+#: src/muparser/muParserError.cpp:109
+msgid "The \"$TOK$\" operator must be preceeded by a closing bracket."
 msgstr ""
 
-#: src/units_conversion.cpp:143
-msgid "Hours"
+#: src/muparser/muParserError.cpp:110
+msgid "If-then-else operator is missing an else clause"
 msgstr ""
 
-#: src/units_conversion.cpp:145
-msgid "3600"
-msgstr ""
-
-#: src/units_conversion.cpp:148
-msgid "Newton"
-msgstr ""
-
-#: src/units_conversion.cpp:149 src/units_conversion.cpp:154
-msgid "Force"
-msgstr ""
-
-#: src/units_conversion.cpp:155
-msgid "4.4482216"
-msgstr ""
-
-#: src/units_conversion.cpp:158
-msgid "Square meter"
-msgstr ""
-
-#: src/units_conversion.cpp:159 src/units_conversion.cpp:164
-#: src/units_conversion.cpp:169
-msgid "Area"
-msgstr ""
-
-#: src/units_conversion.cpp:165
-msgid "0.092903"
-msgstr ""
-
-#: src/units_conversion.cpp:168
-msgid "Square cm"
-msgstr ""
-
-#: src/units_conversion.cpp:170
-msgid "0.0001"
-msgstr ""
-
-#: src/units_conversion.cpp:173
-msgid "Centimeter"
-msgstr ""
-
-#: src/units_conversion.cpp:175 src/units_conversion.cpp:205
-msgid "0.01"
-msgstr ""
-
-#: src/units_conversion.cpp:178
-msgid "bar"
-msgstr ""
-
-#: src/units_conversion.cpp:179 src/units_conversion.cpp:184
-#: src/units_conversion.cpp:189 src/units_conversion.cpp:194
-#: src/units_conversion.cpp:199 src/units_conversion.cpp:204
-#: src/units_conversion.cpp:209 src/units_conversion.cpp:214
-#: src/units_conversion.cpp:219 src/units_conversion.cpp:224
-#: src/units_conversion.cpp:229
-msgid "Pressure"
-msgstr ""
-
-#: src/units_conversion.cpp:188
-msgid "barg"
-msgstr ""
-
-#: src/units_conversion.cpp:190
-msgid "VAR-1=VAR+1"
-msgstr ""
-
-#: src/units_conversion.cpp:193
-msgid "psia"
-msgstr ""
-
-#: src/units_conversion.cpp:195 src/units_conversion.cpp:200
-msgid "0.0689475729"
-msgstr ""
-
-#: src/units_conversion.cpp:198
-msgid "psi"
-msgstr ""
-
-#: src/units_conversion.cpp:203
-msgid "kPa"
-msgstr ""
-
-#: src/units_conversion.cpp:210
-msgid "1e-05"
-msgstr ""
-
-#: src/units_conversion.cpp:213
-msgid "Inches of Mercury"
-msgstr ""
-
-#: src/units_conversion.cpp:215
-msgid "0.03386"
-msgstr ""
-
-#: src/units_conversion.cpp:218
-msgid "mBar"
-msgstr ""
-
-#: src/units_conversion.cpp:220 src/units_conversion.cpp:245
-#: src/units_conversion.cpp:255
-msgid "0.001"
-msgstr ""
-
-#: src/units_conversion.cpp:223
-msgid "atm"
-msgstr ""
-
-#: src/units_conversion.cpp:225
-msgid "0.987"
-msgstr ""
-
-#: src/units_conversion.cpp:228
-msgid "mmHg"
-msgstr ""
-
-#: src/units_conversion.cpp:230
-msgid "750.06"
-msgstr ""
-
-#: src/units_conversion.cpp:233
-msgid "kg"
-msgstr ""
-
-#: src/units_conversion.cpp:234 src/units_conversion.cpp:239
-#: src/units_conversion.cpp:244
-msgid "Weight"
-msgstr ""
-
-#: src/units_conversion.cpp:236
-msgid "2"
-msgstr ""
-
-#: src/units_conversion.cpp:238
-msgid "Lbs (weight)"
-msgstr ""
-
-#: src/units_conversion.cpp:240
-msgid "2.20462"
-msgstr ""
-
-#: src/units_conversion.cpp:241
-msgid "3"
-msgstr ""
-
-#: src/units_conversion.cpp:243
-msgid "gram"
-msgstr ""
-
-#: src/units_conversion.cpp:246
-msgid "4"
-msgstr ""
-
-#: src/units_conversion.cpp:249 src/units_conversion.cpp:254
-msgid "Density"
-msgstr ""
-
-#: src/units_conversion.cpp:253
-msgid "kg/liter"
+#: src/muparser/muParserError.cpp:111
+msgid "Misplaced colon at position $POS$"
 msgstr ""

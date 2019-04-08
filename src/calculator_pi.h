@@ -42,7 +42,7 @@
 
 
 #define     PLUGIN_VERSION_MAJOR    2
-#define     PLUGIN_VERSION_MINOR    0
+#define     PLUGIN_VERSION_MINOR    1
 
 #define     MY_API_VERSION_MAJOR    1
 #define     MY_API_VERSION_MINOR    8

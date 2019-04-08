@@ -26,6 +26,7 @@
  */
 
 #include "calculatorgui_impl.h"
+#include "wx/math.h"
 
 
 
@@ -58,6 +59,10 @@ FunDlg::FunDlg( wxWindow* parent, wxWindowID id, const wxString& title, const wx
 {
     this->LoadCategories();
     this->LoadFunctions(wxT("All"),wxT("All"));
+}
+
+DegreeDlg::DegreeDlg(wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style) : MyDialog5(parent, id, title, pos, size, style)
+{
 }
 
 void FunDlg::LoadFunctions(wxString Category, wxString Unit)
@@ -113,6 +118,7 @@ void FunDlg::OnItemSelect( wxCommandEvent& event )
 
 void FunDlg::OnItemSelect(void)
     {
+	m_button7->Show();
     wxString Selected_Result=	this->m_Function_Dropdown->GetString( this->m_Function_Dropdown->GetCurrentSelection()); // Return selected formula
     unsigned int n;
     for ( n = 0; n < testf.m_Formula.GetCount() ; n++)
@@ -121,6 +127,33 @@ void FunDlg::OnItemSelect(void)
     }
     this->testf.Selected_Formula=n;
     this->m_Function->SetLabel(testf.m_Formula[testf.Selected_Formula]);
+
+	wxString resultFormula = m_Function->GetLabelText();
+	if (resultFormula == wxString(_T("vhull=1.34*sqrt(LWL)"))) {
+		m_textExtraDescription->SetValue(_("LWL = Length of water line\nVhull = Hull speed"));
+		m_textExtraDescription->Show();
+	}
+	else if (resultFormula == wxString(_T("Maximum_Wavelength = 1.5 * sqrt(fetch)"))) {
+		m_textExtraDescription->SetValue(_("fetch = distance over water that the wind blows"));
+		m_textExtraDescription->Show();
+	}
+	else if (resultFormula == wxString(_T("Waveheight=0 ,CDU10=(0.879+0.075*U10)*10^-3,U10 < 8 ? alpha = 1 : alpha = 0.6 + 0.05 * U10 ,Cd=CDU10/alpha ,F_hat=(Fetch*9.80665)/U10^2 ,F_star=F_hat/Cd,F_tilde=CDU10*F_star ,H_tilde=0.3*alpha*(1-(1+0.004*sqrt(F_tilde/alpha))^-2) ,H_star=H_tilde/CDU10 ,H_hat=H_star*Cd ,Waveheight=H_hat*(U10^2)/9.80665"))) {
+		m_textExtraDescription->SetValue(_("fetch = distance over water that the wind blows"));
+		m_textExtraDescription->Show();
+	}
+	else if (resultFormula == wxString(_T("distance_horizon=sqrt(height* (height + 12756.32))"))) {
+		m_textExtraDescription->SetValue(_("Height_observer is the height of the observer\nHeight_object is the height of the object"));
+		m_textExtraDescription->Show();
+	
+	}else if (resultFormula == wxString(_T("DegreesIn=DegreesOut"))) {	
+		m_button7->Hide();
+		Plugin_Dialog->OnCalculateDegrees();
+	}
+	else {
+		m_textExtraDescription->SetValue(_T(""));
+		m_textExtraDescription->Hide();
+	}	    
+
     this->m_Description->SetLabel(testf.m_LongDesc[testf.Selected_Formula]);
     this->m_Output_Parameter->SetLabel(testf.m_Formula[testf.Selected_Formula].BeforeFirst('='));
     PopulatePuldown(testf.m_Result_Unit[testf.Selected_Formula],this->m_Output_Parameter_UnitC, m_panel9);//Populate output units. Needs to be expanded for multiple. note m_panel 9 needs to be updated.
@@ -284,6 +317,12 @@ else
     }
 }
 
+void FunDlg::OnOutputParameterChange(wxCommandEvent& event) {
+
+	m_Function_Result->Clear();
+
+}
+
 void FunDlg::OnExtraCalculate( wxCommandEvent& event )
 {
     //Calculate the result of the function
@@ -295,8 +334,8 @@ void FunDlg::OnExtraCalculate( wxCommandEvent& event )
 
 
     */
-
-
+	wxString ResultDegrees = testf.m_Formula[testf.Selected_Formula];
+	
     wxString Result=testf.m_Formula[testf.Selected_Formula].BeforeFirst('=');
     wxString Formula=testf.m_Formula[testf.Selected_Formula].AfterFirst('=');
     /*
@@ -362,11 +401,24 @@ Dlg::Dlg(wxWindow *parent, calculator_pi *ppi)
     MemoryFull=false;
     m_pHelpdialog=NULL;
     m_pFunctiondialog=NULL; //So we can check that the Function Function dialog has been opened.
+	m_pDegreeDialog = NULL;
 }
 Dlg::~Dlg()
 {
 
 }
+
+void Dlg::OnCalculateDegrees(void)
+{
+	if (NULL == m_pDegreeDialog)
+	{
+		m_pDegreeDialog = new DegreeDlg(this);	
+		m_pDegreeDialog->Plugin_Dialog = this;
+		
+	}
+	m_pDegreeDialog->Show(!m_pDegreeDialog->IsShown());
+}
+
 
 void Dlg::OnClose(wxCloseEvent& event)
 {
@@ -507,45 +559,45 @@ wxString Dlg::OnCalculate( void )
         error_check=true;
     }
 
-    if ((Text.StartsWith(_("clear"))) || (Text.StartsWith(_("Clear")))|| (Text.StartsWith(_("CLEAR")))){ //clear old results
+    if ((Text.StartsWith(_T("clear"))) || (Text.StartsWith(_T("Clear")))|| (Text.StartsWith(_T("CLEAR")))){ //clear old results
         m_listCtrl->ClearAll();
         error_check=true;
     }
-    if ((Text.StartsWith(_("HideHelp"))) || (Text.StartsWith(_("hidehelp")))|| (Text.StartsWith(_("HIDEHELP"))) ||(Text.StartsWith(_("ShowHelp"))) || (Text.StartsWith(_("showhelp")))|| (Text.StartsWith(_("SHOWHELP"))) ){
+    if ((Text.StartsWith(_T("HideHelp"))) || (Text.StartsWith(_T("hidehelp")))|| (Text.StartsWith(_T("HIDEHELP"))) ||(Text.StartsWith(_T("ShowHelp"))) || (Text.StartsWith(_T("showhelp")))|| (Text.StartsWith(_T("SHOWHELP"))) ){
         m_bshowhelpB=(!m_bshowhelpB);
         this->set_Buttons();
         error_check=true;
     }
 
-    if ((Text.StartsWith(_("HideHistory"))) || (Text.StartsWith(_("hidehistory")))|| (Text.StartsWith(_("HIDEHISTORY")))||(Text.StartsWith(_("ShowHistory"))) || (Text.StartsWith(_("showhistory")))|| (Text.StartsWith(_("SHOWHISTORY")))){
+    if ((Text.StartsWith(_T("HideHistory"))) || (Text.StartsWith(_T("hidehistory")))|| (Text.StartsWith(_T("HIDEHISTORY")))||(Text.StartsWith(_T("ShowHistory"))) || (Text.StartsWith(_T("showhistory")))|| (Text.StartsWith(_T("SHOWHISTORY")))){
         m_bshowhistoryB=(!m_bshowhistoryB);
         this->set_Buttons();
         error_check=true;
     }
 
-    if ((Text.StartsWith(_("HideCalculate"))) || (Text.StartsWith(_("hidecalculate")))|| (Text.StartsWith(_("HIDECALCULATE"))) || (Text.StartsWith(_("ShowCalculate"))) || (Text.StartsWith(_("showcalculate")))|| (Text.StartsWith(_("SHOWCALCULATE")))){
+    if ((Text.StartsWith(_T("HideCalculate"))) || (Text.StartsWith(_T("hidecalculate")))|| (Text.StartsWith(_T("HIDECALCULATE"))) || (Text.StartsWith(_T("ShowCalculate"))) || (Text.StartsWith(_T("showcalculate")))|| (Text.StartsWith(_T("SHOWCALCULATE")))){
         m_bCalculateB=(!m_bCalculateB);
         this->set_Buttons();
         error_check=true;
     }
 
-    if ((Text.StartsWith(_("HideFunction"))) || (Text.StartsWith(_("hidefunction")))|| (Text.StartsWith(_("HIDEFUNCTION"))) || (Text.StartsWith(_("showfunction")))|| (Text.StartsWith(_("ShowFunction")))|| (Text.StartsWith(_("SHOWFUNCTION")))){
+    if ((Text.StartsWith(_T("HideFunction"))) || (Text.StartsWith(_T("hidefunction")))|| (Text.StartsWith(_T("HIDEFUNCTION"))) || (Text.StartsWith(_T("showfunction")))|| (Text.StartsWith(_T("ShowFunction")))|| (Text.StartsWith(_T("SHOWFUNCTION")))){
         m_bshowFunction=(!m_bshowFunction);
         this->set_Buttons();
         error_check=true;
     }
 
-    if ((Text.StartsWith(_("Help"))) || (Text.StartsWith(_("HELP")))|| (Text.StartsWith(_("help")))){
+    if ((Text.StartsWith(_T("Help"))) || (Text.StartsWith(_T("HELP")))|| (Text.StartsWith(_T("help")))){
         this->OnHelp ();
         error_check=true;
     }
 
-    if ((Text.StartsWith(_("Function"))) || (Text.StartsWith(_("function")))|| (Text.StartsWith(_("FUNCTION")))){
+    if ((Text.StartsWith(_T("Function"))) || (Text.StartsWith(_T("function")))|| (Text.StartsWith(_T("FUNCTION")))){
         this->OnFunction ();
         error_check=true;
     }
 
-    if ((Text.StartsWith(_("history"))) || (Text.StartsWith(_("History")))|| (Text.StartsWith(_("HISTORY")))){
+    if ((Text.StartsWith(_T("history"))) || (Text.StartsWith(_T("History")))|| (Text.StartsWith(_T("HISTORY")))){
         m_bshowhistory=(!m_bshowhistory);
         this->m_Help->SetValue(m_bshowhistory);
         this->set_History();
@@ -827,3 +879,239 @@ mu::string_type Dlg::WxString2StdString(wxString wxString_in){
 	return mu::string_type(ws);
 #endif
 }
+
+void DegreeDlg::OnConvertToDegree(wxCommandEvent& event)
+{
+	double DDLat;
+	double DDLon;
+
+	double DDLat1;
+	double DDLon1;
+
+	double MMLat;
+	double MMLon;
+
+	double SSLat;
+	double SSLon;
+
+	int DDlat1;
+	int DDlon1;
+
+	int MMlat1;
+	int MMlon1;
+
+	int NS;
+	int EW;
+
+	double MMlat0;
+	double MMlon0;
+
+	double MMlat2;
+	double MMlon2;
+
+	double SSlat1;
+	double SSlon1;
+
+	double value;
+
+	wxString s;
+	wxString s1;
+	wxString m1;
+	wxString d1;
+
+	switch (m_wxNotebook234->GetSelection()) {
+		case 0:
+			s = m_Lat1->GetValue();
+			s.ToDouble(&value);
+			DDLat = value;
+			s = m_Lon1->GetValue();
+			s.ToDouble(&value);
+			DDLon = value;
+
+			DDlat1 = abs(int(DDLat));
+			DDlon1 = abs(int(DDLon));
+
+			// set the ddmm page
+
+			m_Lat1_d1->SetValue(wxString::Format(_T("%i"), (int)DDlat1));
+			m_Lon1_d1->SetValue(wxString::Format(_T("%i"), (int)DDlon1));
+
+			MMlat0 = (fabs(DDLat) - double(DDlat1)) * 60;
+			MMlon0 = (fabs(DDLon) - double(DDlon1)) * 60;
+
+			m_Lat1_m1->SetValue(wxString::Format(_T("%8.6f"), MMlat0));
+			m_Lon1_m1->SetValue(wxString::Format(_T("%8.6f"), MMlon0));
+
+			if (DDLat > 0) {
+				m_Lat1_NS1->SetSelection(0);
+				m_Lat1_NS->SetSelection(0);
+			}
+			else {
+				m_Lat1_NS1->SetSelection(1);
+				m_Lat1_NS->SetSelection(1);
+			}
+
+			if (DDLon > 0) {
+				m_Lon1_EW1->SetSelection(0);
+				m_Lon1_EW->SetSelection(0);
+			}
+			else {
+				m_Lon1_EW1->SetSelection(1);
+				m_Lon1_EW->SetSelection(1);
+			}
+
+			// set the ddmmss page
+
+			m_Lat1_d->SetValue(wxString::Format(_T("%i"), abs((int)DDlat1)));
+			m_Lon1_d->SetValue(wxString::Format(_T("%i"), abs((int)DDlon1)));	
+
+			m_Lat1_m->SetValue(wxString::Format(_T("%i"), abs((int)MMlat0)));
+			m_Lon1_m->SetValue(wxString::Format(_T("%i"), abs((int)MMlon0)));
+
+			MMlat2 = int(MMlat0);
+			MMlon2 = int(MMlon0);
+
+			SSlat1 = (MMlat0 - MMlat2) * 60;
+			SSlon1 = (MMlon0 - MMlon2) * 60;
+
+			m_Lat1_s->SetValue(wxString::Format(_T("%8.6f"), SSlat1));
+			m_Lon1_s->SetValue(wxString::Format(_T("%8.6f"), SSlon1));
+
+
+
+			break;
+
+		case 1:
+
+			d1 = m_Lat1_d1->GetValue();
+			d1.ToDouble(&value);
+			DDLat = value;
+			d1 = m_Lon1_d1->GetValue();
+			d1.ToDouble(&value);
+			DDLon = value;
+
+			m1 = m_Lat1_m1->GetValue();
+			m1.ToDouble(&value);
+			MMLat = value;
+			m1 = m_Lon1_m1->GetValue();
+			m1.ToDouble(&value);
+			MMLon = value;
+
+			DDLat1 = DDLat + (MMLat / 60);
+			DDLon1 = DDLon + (MMLon / 60);
+
+			//wxMessageBox(wxString::Format(_T("%f"), DDLat1));
+			//wxMessageBox(wxString::Format(_T("%f"), DDLon1));
+
+			NS = m_Lat1_NS1->GetSelection();
+			if (NS == 1) {
+				DDLat1 *= -1;
+			}
+			EW = m_Lon1_EW1->GetSelection();
+			if (EW == 1) {
+				DDLon1 *= -1;
+			}
+
+			// set the dd.dddd page
+
+			m_Lat1->SetValue(wxString::Format(_T("%8.6f"), DDLat1));
+			m_Lon1->SetValue(wxString::Format(_T("%8.6f"), DDLon1));	
+
+			MMlat1 = int(MMLat);
+			MMlon1 = int(MMLon);
+
+			// set the ddmmss page
+
+			m_Lat1_d->SetValue(wxString::Format(_T("%i"), abs((int)DDLat1)));
+			m_Lon1_d->SetValue(wxString::Format(_T("%i"), abs((int)DDLon1)));
+
+
+			m_Lat1_m->SetValue(wxString::Format(_T("%i"), MMlat1));
+			m_Lon1_m->SetValue(wxString::Format(_T("%i"), MMlon1));
+
+			MMlat2 = (MMLat - double(MMlat1))*60;
+			MMlon2 = (MMLon - double(MMlon1))*60;
+
+			m_Lat1_s->SetValue(wxString::Format(_T("%8.6f"), MMlat2));
+			m_Lon1_s->SetValue(wxString::Format(_T("%8.6f"), MMlon2));
+
+			
+			break;
+		case 2:
+			d1 = m_Lat1_d->GetValue();
+			d1.ToDouble(&value);
+			DDLat = value;
+			d1 = m_Lon1_d->GetValue();
+			d1.ToDouble(&value);
+			DDLon = value;
+
+			m1 = m_Lat1_m->GetValue();
+			m1.ToDouble(&value);
+			MMLat = value;
+			m1 = m_Lon1_m->GetValue();
+			m1.ToDouble(&value);
+			MMLon = value;
+
+			s1 = m_Lat1_s->GetValue();
+			s1.ToDouble(&value);
+			SSLat = value;
+			s1 = m_Lon1_s->GetValue();
+			s1.ToDouble(&value);
+			SSLon = value;
+
+			DDLat1 = DDLat + MMLat / 60 + SSLat / 3600;
+			DDLon1 = DDLon + MMLon / 60 + SSLon / 3600;
+
+			NS = m_Lat1_NS->GetSelection();
+			if (NS == 1) {
+				DDLat1 *= -1;
+				m_Lat1_NS1->SetSelection(1);
+			}
+			else {
+				m_Lat1_NS1->SetSelection(0);
+			}
+
+			EW = m_Lon1_EW->GetSelection();
+			if (EW == 1) {
+				DDLon1 *= -1;
+				m_Lon1_EW1->SetSelection(1);
+			}
+			else {
+				m_Lon1_EW1->SetSelection(0);
+			}
+
+			// set dd.ddd page
+
+			m_Lat1->SetValue(wxString::Format(_T("%8.6f"), DDLat1));
+			m_Lon1->SetValue(wxString::Format(_T("%8.6f"), DDLon1));
+
+			// set ddmm page
+
+			m_Lat1_d1->SetValue(wxString::Format(_T("%i"), abs((int)DDLat1)));
+			m_Lon1_d1->SetValue(wxString::Format(_T("%i"), abs((int)DDLon1)));
+
+
+			DDLat1 = MMLat + SSLat / 60;
+			DDLon1 = MMLon + SSLon / 60;
+
+			m_Lat1_m1->SetValue(wxString::Format(_T("%8.6f"), DDLat1));
+			m_Lon1_m1->SetValue(wxString::Format(_T("%8.6f"), DDLon1));
+
+
+			break;
+	}
+	
+
+
+}
+
+void DegreeDlg::OnNoteBookFit(wxBookCtrlEvent& event) {
+	
+}
+
+void DegreeDlg::OnCloseDegreeDlg(wxCloseEvent& event) {
+	Plugin_Dialog->m_pDegreeDialog->Hide();
+	Refresh(m_parent);
+}
+
+

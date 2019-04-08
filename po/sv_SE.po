@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-06 15:21+0000\n"
+"POT-Creation-Date: 2019-04-08 11:19+0100\n"
 "PO-Revision-Date: 2018-03-06 07:43-0500\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
 "Language-Team: Swedish\n"
@@ -16,122 +16,14 @@ msgstr ""
 "X-Crowdin-Language: sv-SE\n"
 "X-Crowdin-File: /plugins/calculator_pi/po/calculator_pi.pot\n"
 #
+msgid "    calculator_pi panel icon NOT loaded"
+msgstr ""
+#
 #, fuzzy
 msgid " Calculator output:"
 msgstr "Kalkylatorns utdata:"
 #
-msgid "\""
-msgstr ""
-#
-msgid "'"
-msgstr ""
-#
-msgid "(5/9) * (VAR - 32)=((9/5)* VAR)+32"
-msgstr ""
-#
-msgid "(5/9)*(VAR-491.67)=(9/5)*(VAR + 273.15)"
-msgstr ""
-#
-msgid "-"
-msgstr ""
-#
-msgid "0.0001"
-msgstr ""
-#
-msgid "0.001"
-msgstr ""
-#
-msgid "0.01"
-msgstr ""
-#
-msgid "0.0254"
-msgstr ""
-#
-msgid "0.03386"
-msgstr ""
-#
-msgid "0.0689475729"
-msgstr ""
-#
-msgid "0.092903"
-msgstr ""
-#
-msgid "0.277778"
-msgstr ""
-#
-msgid "0.3048"
-msgstr ""
-#
-msgid "0.514444"
-msgstr ""
-#
-msgid "0.987"
-msgstr ""
-#
-msgid "1"
-msgstr ""
-#
-msgid "1.8288"
-msgstr ""
-#
-msgid "1000"
-msgstr ""
-#
-msgid "15850.3231"
-msgstr ""
-#
-msgid "1852"
-msgstr ""
-#
-msgid "1e-05"
-msgstr ""
-#
-msgid "2"
-msgstr ""
-#
-msgid "2.20462"
-msgstr ""
-#
-msgid "3"
-msgstr ""
-#
-msgid "3600"
-msgstr ""
-#
-msgid "4"
-msgstr ""
-#
-msgid "4.4482216"
-msgstr ""
-#
-msgid "60"
-msgstr ""
-#
-msgid "60000"
-msgstr ""
-#
-msgid "750.06"
-msgstr ""
-#
-msgid "A"
-msgstr ""
-#
 msgid "All"
-msgstr ""
-#
-msgid "Angle"
-msgstr ""
-#
-msgid "Angle_Out"
-msgstr ""
-#
-msgid "Angle_Out=Angle_In"
-msgstr ""
-#
-msgid "Area"
-msgstr ""
-#
-msgid "Beaufort"
 msgstr ""
 #
 msgid ""
@@ -141,12 +33,6 @@ msgid ""
 msgstr ""
 #
 msgid "Beaufort to Wind Velocity"
-msgstr ""
-#
-msgid "Beaufort=(Wind_Speed/0.837)^(2/3)"
-msgstr ""
-#
-msgid "CLEAR"
 msgstr ""
 #
 msgid "Calculate"
@@ -309,25 +195,10 @@ msgstr "Kalkylator-inställningar"
 msgid "Calculator Reporting"
 msgstr "Kalkylatorns utdata:"
 #
-msgid "Calculator by SaltyPaws"
-msgstr "Kalkylatorn av SaltyPaws"
-#
 msgid "Calculator preferences"
 msgstr "Kalkylatorinställningar"
 #
-msgid "Celsius"
-msgstr ""
-#
-msgid "Centimeter"
-msgstr ""
-#
 msgid "Change in height of Tide"
-msgstr ""
-#
-msgid "Change_in_height_of_Tide = height/2 * (1-cos(dtr(180) * time_ratio))"
-msgstr ""
-#
-msgid "Clear"
 msgstr ""
 #
 msgid "Close"
@@ -339,7 +210,13 @@ msgstr ""
 msgid "Convert"
 msgstr ""
 #
+msgid "Convert (All formats)"
+msgstr ""
+#
 msgid "Convert Angle"
+msgstr ""
+#
+msgid "Convert Degrees (All formats)"
 msgstr ""
 #
 msgid "Convert Distance"
@@ -357,25 +234,10 @@ msgstr ""
 msgid "Convert Temperature"
 msgstr ""
 #
-msgid "DD.dddddd° (no limit to decimals)"
+msgid "Decimal separator is identic to function argument separator."
 msgstr ""
 #
-msgid "DD°MM'SS.s (no limit to digits)"
-msgstr ""
-#
-msgid "Degree"
-msgstr ""
-#
-msgid "Degree (°)"
-msgstr ""
-#
-msgid "Degree, Minute"
-msgstr ""
-#
-msgid "Degrees"
-msgstr ""
-#
-msgid "Density"
+msgid "Degree Conversions"
 msgstr ""
 #
 msgid "Description"
@@ -384,19 +246,16 @@ msgstr ""
 msgid "Design"
 msgstr ""
 #
-msgid "Distance"
-msgstr ""
-#
 msgid "Distance to horizon"
 msgstr ""
 #
-msgid "Distance_In"
-msgstr ""
-#
-msgid "Distance_Out=Distance_In"
+msgid "Divide by zero"
 msgstr ""
 #
 msgid "Diving"
+msgstr ""
+#
+msgid "Domain error"
 msgstr ""
 #
 msgid "Draft of vessel when heeled"
@@ -423,22 +282,10 @@ msgstr ""
 msgid "Error"
 msgstr "Fel"
 #
+msgid "Expression is empty."
+msgstr ""
+#
 msgid "Extra Functions"
-msgstr ""
-#
-msgid "FALSE"
-msgstr ""
-#
-msgid "FUNCTION"
-msgstr ""
-#
-msgid "Fahrenheit"
-msgstr ""
-#
-msgid "Fathom"
-msgstr ""
-#
-msgid "Fetch"
 msgstr ""
 #
 msgid "Fetch Modified Wilson"
@@ -449,21 +296,10 @@ msgstr ""
 #
 msgid ""
 "Flow rate of leak in boat:\tQ = 3,600 (A) (H)\n"
-"\tQ = gallons per minute of water coming in\n"
-"\tA = area of hole in square feet\n"
-"\tH = height of water over hole in feet, to bottom of the opening"
-msgstr ""
-#
-msgid "Flowrate"
-msgstr ""
-#
-msgid "Flowrate_Out"
-msgstr ""
-#
-msgid "Flowrate_Out=Flowrate_In"
-msgstr ""
-#
-msgid "Force"
+"\n"
+"Q = volume per minute of water coming in\n"
+"A = area of hole\n"
+"H = height of water over hole, to bottom of the opening"
 msgstr ""
 #
 msgid "Function"
@@ -475,40 +311,24 @@ msgstr ""
 msgid "Function Button in Calculator window"
 msgstr ""
 #
-msgid "Function Button in OpenCPN (Requires OpenCPN restart)"
-msgstr ""
-#
 msgid "Function Result Select Units"
 msgstr ""
 #
-msgid "Functions"
+msgid "Function arguments used without a function (position: $POS$)"
 msgstr ""
 #
-msgid "H"
-msgstr ""
-#
-msgid "HELP"
-msgstr ""
-#
-msgid "HIDECALCULATE"
-msgstr ""
-#
-msgid "HIDEFUNCTION"
-msgstr ""
-#
-msgid "HIDEHELP"
-msgstr ""
-#
-msgid "HIDEHISTORY"
-msgstr ""
-#
-msgid "HISTORY"
+msgid "Function result is a string."
 msgstr ""
 #
 msgid ""
-"Height is total change in tide heigt between high and low. The time ratio is "
+"Height is total change in tide height between high and low. The time ratio is "
 "time elapsed from the previous tide divided by the time difference between "
 "the two tides. (Similar to rule of 12)"
+msgstr ""
+#
+msgid ""
+"Height_observer is the height of the observer\n"
+"Height_object is the height of the object"
 msgstr ""
 #
 msgid "Help"
@@ -521,20 +341,6 @@ msgstr ""
 msgid "Help!!!!"
 msgstr "Hjälp"
 #
-#, fuzzy
-msgid "HideCalculate"
-msgstr "Beräkna"
-#
-msgid "HideFunction"
-msgstr ""
-#
-#, fuzzy
-msgid "HideHelp"
-msgstr "Hjälp"
-#
-msgid "HideHistory"
-msgstr ""
-#
 msgid "History"
 msgstr ""
 #
@@ -545,9 +351,6 @@ msgid "History Settings"
 msgstr ""
 #
 msgid "History Toggle"
-msgstr ""
-#
-msgid "Hours"
 msgstr ""
 #
 msgid "Hull Speed"
@@ -596,6 +399,9 @@ msgid ""
 "diameter of 12 756.32 km."
 msgstr ""
 #
+msgid "If-then-else operator is missing an else clause"
+msgstr ""
+#
 msgid ""
 "In November 2001 Canada, U.S. and U.K. implemented a new wind chill index "
 "developed by scientists and medical experts on the Joint Action Group for "
@@ -609,31 +415,36 @@ msgid ""
 "approximated, to within one degree, from the following formula:"
 msgstr ""
 #
-msgid "Inches of Mercury"
-msgstr ""
-#
 msgid "Input Parameters"
 msgstr ""
 #
-msgid "Kelvin"
+msgid "Internal error"
 msgstr ""
 #
-msgid "Knots"
+msgid "Invalid binary operator identifier: \"$TOK$\"."
 msgstr ""
 #
-msgid "L"
+msgid "Invalid function-, variable- or constant name: \"$TOK$\"."
 msgstr ""
 #
-msgid "LWL"
+msgid "Invalid infix operator identifier: \"$TOK$\"."
 msgstr ""
 #
-msgid "Lat "
+msgid "Invalid pointer to callback function."
 msgstr ""
 #
-msgid "Lattitude  "
+msgid "Invalid pointer to variable."
 msgstr ""
 #
-msgid "Lbs (weight)"
+msgid "Invalid postfix operator identifier: \"$TOK$\"."
+msgstr ""
+#
+msgid "Invalid value for operator priority (must be greater or equal to zero)."
+msgstr ""
+#
+msgid ""
+"LWL = Length of water line\n"
+"Vhull = Hull speed"
 msgstr ""
 #
 msgid "Line Break strength (circumference)"
@@ -651,12 +462,6 @@ msgstr ""
 msgid "Log results to opencpn"
 msgstr ""
 #
-msgid "Lon"
-msgstr ""
-#
-msgid "Longitude"
-msgstr ""
-#
 msgid "Max Results"
 msgstr ""
 #
@@ -666,13 +471,10 @@ msgstr ""
 msgid "Maximum Wavelength = 1.5 x square root of fetch in nm"
 msgstr ""
 #
-msgid "Maximum_Wavelength = 1.5 * sqrt(fetch)"
+msgid "Misplaced colon at position $POS$"
 msgstr ""
 #
-msgid "Meter"
-msgstr ""
-#
-msgid "Minutes"
+msgid "Missing parenthesis"
 msgstr ""
 #
 msgid ""
@@ -695,16 +497,19 @@ msgstr ""
 msgid "N"
 msgstr ""
 #
-msgid "Naoto Ebuchi, Journal of oceanography, vol 55, pp 575 to 584, 1999"
+msgid "Name conflict"
 msgstr ""
 #
-msgid "Nautical Miles"
+msgid "Naoto Ebuchi, Journal of oceanography, vol 55, pp 575 to 584, 1999"
 msgstr ""
 #
 msgid "Navigation"
 msgstr ""
 #
-msgid "Newton"
+msgid "No suitable overload for operator \"$TOK$\" at position $POS$."
+msgstr ""
+#
+msgid "Not very accurate - use official publications"
 msgstr ""
 #
 msgid "Objects above horizon"
@@ -716,19 +521,19 @@ msgstr "Genomskinlighet"
 msgid "Other"
 msgstr ""
 #
-msgid "Pa"
+msgid "Parameter"
 msgstr ""
 #
-msgid "Parameter"
+msgid "Parser error."
 msgstr ""
 #
 msgid ""
 "Patch or cover thickness to withstand water pressure (patch over hole):\n"
 "\n"
 "\tT = square root of:\t(48x (H) (L2))/ 1000)\n"
-"\tT = thickness of wood or plywood patch in inches\n"
-"\tH = height of water above bottom of hole, in feet\n"
-"\tL = length of patch, longest distance between supports, in feet"
+"\tT = thickness of wood or plywood patch\n"
+"\tH = height of water above bottom of hole\n"
+"\tL = length of patch, longest distance between supports"
 msgstr ""
 #
 msgid "Patch over hole"
@@ -740,43 +545,13 @@ msgstr ""
 msgid "Precise, thousands separator"
 msgstr ""
 #
-msgid "Pressure"
-msgstr ""
-#
 msgid "Pressure at depth"
 msgstr ""
 #
-msgid "Pressure=density*9.80665*depth"
-msgstr ""
-#
-msgid "Pressure_In"
-msgstr ""
-#
-msgid "Pressure_Out=Pressure_In"
-msgstr ""
-#
-msgid "Q = 3600 *(A)* (H)"
-msgstr ""
-#
-msgid "Radians"
-msgstr ""
-#
-msgid "Rankine"
+msgid "Rasbats"
 msgstr ""
 #
 msgid "S"
-msgstr ""
-#
-msgid "SHOWCALCULATE"
-msgstr ""
-#
-msgid "SHOWFUNCTION"
-msgstr ""
-#
-msgid "SHOWHELP"
-msgstr ""
-#
-msgid "SHOWHISTORY"
 msgstr ""
 #
 msgid "Safety"
@@ -786,12 +561,6 @@ msgid "Saltypaws"
 msgstr ""
 #
 msgid "Scientific"
-msgstr ""
-#
-msgid "Seconds"
-msgstr ""
-#
-msgid "See table"
 msgstr ""
 #
 msgid "Select Function"
@@ -820,45 +589,13 @@ msgid ""
 "Show/Hide history toggle (you can always type \"history\" from input window)."
 msgstr ""
 #
-#, fuzzy
-msgid "ShowCalculate"
-msgstr "Beräkna"
-#
-msgid "ShowFunction"
-msgstr ""
-#
-#, fuzzy
-msgid "ShowHelp"
-msgstr "Hjälp"
-#
-msgid "ShowHistory"
-msgstr ""
-#
-msgid "Speed"
-msgstr ""
-#
 msgid "Speed of wind-driven current"
 msgstr ""
 #
-msgid "Speed_Current = 0.03 * (Speed_Wind)"
+msgid "String function called with a non string type of argument."
 msgstr ""
 #
-msgid "Speed_In"
-msgstr ""
-#
-msgid "Speed_Out=Speed_In"
-msgstr ""
-#
-msgid "Speed_Wind"
-msgstr ""
-#
-msgid "Square cm"
-msgstr ""
-#
-msgid "Square feet"
-msgstr ""
-#
-msgid "Square meter"
+msgid "String value used where a numerical argument is expected."
 msgstr ""
 #
 msgid "Succinct"
@@ -867,30 +604,10 @@ msgstr ""
 msgid "Succinct, thousands separator"
 msgstr ""
 #
-msgid "T = sqrt( (48* H* (L^2))/1000)"
-msgstr ""
-#
-msgid "TRUE"
-msgstr ""
-#
-msgid "T_air"
-msgstr ""
-#
-msgid ""
-"T_wind_chill = 13.12 + 0.6215 * T_air - 11.37 * V_wind^0.16 + 0.3965 * T_air* "
-"V_wind^0.16 "
-msgstr ""
-#
-msgid "Temperature"
-msgstr ""
-#
-msgid "Temperature_In"
-msgstr ""
-#
-msgid "Temperature_Out=Temperature_In"
-msgstr ""
-#
 msgid "Test"
+msgstr ""
+#
+msgid "The \"$TOK$\" operator must be preceeded by a closing bracket."
 msgstr ""
 #
 #, fuzzy
@@ -901,9 +618,6 @@ msgstr ""
 "Detta är en plugin för kalkyl och matematisk analys.\n"
 "Vill du vill veta din skrovhastighet?"
 #
-msgid "Time"
-msgstr ""
-#
 msgid ""
 "To compute the greatest distance at which an observer can see the top of an "
 "object above the horizon, compute the distance to the horizon for a "
@@ -911,31 +625,40 @@ msgid ""
 "distance to the horizon. This formula assumes earth diameter of 12 756.32 km."
 msgstr ""
 #
-msgid "U10"
+msgid "Too few parameters for function \"$TOK$\" at expression position $POS$"
 msgstr ""
 #
-msgid "US gallons per minute"
+msgid "Too many parameters for function \"$TOK$\" at expression position $POS$"
 msgstr ""
 #
-msgid "V"
+msgid "Unexpected argument separator at position $POS$"
 msgstr ""
 #
-msgid "VAR - 273.15=VAR + 273.15"
+msgid "Unexpected end of expression at position $POS$"
 msgstr ""
 #
-msgid "VAR-1=VAR+1"
+msgid "Unexpected function \"$TOK$\" at position $POS$"
 msgstr ""
 #
-msgid "VAR/dtr=VAR*dtr"
+msgid "Unexpected operator \"$TOK$\" found at position $POS$"
 msgstr ""
 #
-msgid "VMG=V*cos((alpha1-alpha2)*dtr)"
+msgid "Unexpected parenthesis \"$TOK$\" at position $POS$"
 msgstr ""
 #
-msgid "VMG=V*cos(alpha*dtr)"
+msgid "Unexpected string token found at position $POS$."
 msgstr ""
 #
-msgid "V_wind"
+msgid "Unexpected token \"$TOK$\" found at position $POS$."
+msgstr ""
+#
+msgid "Unexpected value \"$TOK$\" found at position $POS$"
+msgstr ""
+#
+msgid "Unexpected variable \"$TOK$\" found at position $POS$"
+msgstr ""
+#
+msgid "Unterminated string starting at position $POS$."
 msgstr ""
 #
 msgid "Velocity Made Good (angle)"
@@ -966,20 +689,7 @@ msgstr ""
 msgid "Wave speed =f(period)"
 msgstr ""
 #
-msgid "Wave_speed = 3.03 * (wave_period)"
-msgstr ""
-#
-msgid ""
-"Waveheight=0 ,CDU10=(0.879+0.075*U10)*10^-3,U10 < 8 ? alpha = 1 : alpha = 0.6 "
-"+ 0.05 * U10 ,Cd=CDU10/alpha ,F_hat=(Fetch*9.80665)/U10^2 ,F_star=F_hat/Cd,"
-"F_tilde=CDU10*F_star ,H_tilde=0.3*alpha*(1-(1+0.004*sqrt(F_tilde/alpha))^-2) ,"
-"H_star=H_tilde/CDU10 ,H_hat=H_star*Cd ,Waveheight=H_hat*(U10^2)/9.80665"
-msgstr ""
-#
 msgid "Weather"
-msgstr ""
-#
-msgid "Weight"
 msgstr ""
 #
 msgid "Wind Chill"
@@ -988,125 +698,14 @@ msgstr ""
 msgid "Wind Velocity to Beaufort"
 msgstr ""
 #
-msgid "Wind_Speed"
-msgstr ""
-#
-msgid "Wind_Speed=0.837*Beaufort^(3/2)"
-msgstr ""
-#
-msgid "alpha"
-msgstr ""
-#
-msgid "alpha1"
-msgstr ""
-#
-msgid "alpha2"
-msgstr ""
-#
-msgid "angle"
-msgstr ""
-#
-msgid "atm"
-msgstr ""
-#
-msgid "bar"
-msgstr ""
-#
-msgid "bara"
-msgstr ""
-#
-msgid "barg"
-msgstr ""
-#
-msgid "breaking_strength= 900 * comparison_factor * (pi*diameter)^2 "
-msgstr ""
-#
-msgid "breaking_strength= 900 * comparison_factor * circumference^2 "
-msgstr ""
-#
-msgid "circumference"
-msgstr ""
-#
-msgid "clear"
-msgstr ""
-#
-msgid "comparison_factor"
-msgstr ""
-#
-msgid "density"
-msgstr ""
-#
-msgid "depth"
-msgstr ""
-#
-msgid "dewpoint"
-msgstr ""
-#
-msgid "diameter"
-msgstr ""
-#
-msgid "distance_horizon=sqrt(height* (height + 12756.32))"
-msgstr ""
-#
-msgid ""
-"distance_visible=sqrt(height_observer * (height_observer + 12756.32)) + "
-"sqrt(height_object * (height_object + 12756.32))"
-msgstr ""
-#
-msgid "draft"
-msgstr ""
-#
-msgid "draft_heeled=draft*cos(dtr*angle)"
-msgstr ""
-#
-msgid "ere"
-msgstr ""
-#
-msgid "feet"
-msgstr ""
-#
-msgid "fetch"
-msgstr ""
-#
-msgid "foot"
-msgstr ""
-#
-msgid "function"
-msgstr ""
-#
-msgid "gram"
-msgstr ""
-#
-msgid "height"
-msgstr ""
-#
-msgid "height_object"
-msgstr ""
-#
-msgid "height_observer"
-msgstr ""
-#
-msgid "help"
-msgstr ""
-#
 #, fuzzy
-msgid "hidecalculate"
-msgstr "Beräkna"
+msgid "calculator"
+msgstr "Kalkylatorn"
 #
-msgid "hidefunction"
+msgid "fetch = distance over water that the wind blows"
 msgstr ""
 #
-msgid "hidehelp"
-msgstr ""
-#
-msgid "hidehistory"
-msgstr ""
-#
-msgid "history"
-msgstr ""
-#
-msgid ""
-"http://climate.weatheroffice.gc.ca/prods_servs/normals_documentation_e.html"
+msgid "http://climate.weather.gc.ca/glossary_e.html"
 msgstr ""
 #
 msgid ""
@@ -1138,97 +737,125 @@ msgid "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 msgstr ""
 #
 msgid ""
-"humidex = (T_air) + (0.5555)*((6.11 * exp (5417.7530 * ( (1/273.16) - (1/"
-"dewpoint) ) ) ) - 10.0)"
+"user defined binary operator \"$TOK$\" conflicts with a built in operator."
 msgstr ""
 #
-msgid "inch"
-msgstr ""
 #
-msgid "kPa"
-msgstr ""
 #
-msgid "kg"
-msgstr ""
 #
-msgid "kg/liter"
-msgstr ""
 #
-msgid "kg/m3"
-msgstr ""
 #
-msgid "kilometer"
-msgstr ""
 #
-msgid "km/h"
-msgstr ""
 #
-msgid "knots"
-msgstr ""
 #
-msgid "lbs"
-msgstr ""
 #
-msgid "liter per minute"
-msgstr ""
 #
-msgid "m/s"
-msgstr ""
 #
-msgid "m3/s"
-msgstr ""
 #
-msgid "mBar"
-msgstr ""
 #
-msgid "meter"
-msgstr ""
 #
-msgid "mmHg"
-msgstr ""
 #
-msgid "psi"
-msgstr ""
 #
-msgid "psia"
-msgstr ""
 #
-msgid "seconds"
-msgstr ""
 #
-#, fuzzy
-msgid "showcalculate"
-msgstr "Beräkna"
-#
-msgid "showfunction"
-msgstr ""
-#
-msgid "showhelp"
-msgstr ""
-#
-msgid "showhistory"
-msgstr ""
-#
-msgid "time_ratio"
-msgstr ""
-#
-msgid "vhull=1.34*sqrt(LWL)"
-msgstr ""
-#
-msgid "wave_period"
-msgstr ""
-#
-msgid "°"
-msgstr ""
-#
-msgid "° ' \""
-msgstr ""
 #
 #~ msgid "Ans"
 #~ msgstr "Ans"
 #
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#~ msgid "Calculator by SaltyPaws"
+#~ msgstr "Kalkylatorn av SaltyPaws"
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 #~ msgid "General settings"
 #~ msgstr "Allmänna inställningar"
+#
+#
+#
+#
+#
+#, fuzzy
+#~ msgid "HideCalculate"
+#~ msgstr "Beräkna"
+#
+#
+#
+#
+#
+#, fuzzy
+#~ msgid "HideHelp"
+#~ msgstr "Hjälp"
+#
+#
+#
+#
+#
+#, fuzzy
+#~ msgid "ShowCalculate"
+#~ msgstr "Beräkna"
+#
+#
+#
+#
+#
+#, fuzzy
+#~ msgid "ShowHelp"
+#~ msgstr "Hjälp"
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 #
 #~ msgid ""
 #~ "Use up and down keys, while cursor is in input box, to recall previous "
@@ -1322,3 +949,19 @@ msgstr ""
 #~ "\t Ans är resultatet från tidigare beräkning\t\t\n"
 #~ " Du kan definiera egna variabler (t.ex. minVar=10/8*cos(dtr*90) eller "
 #~ "egenVar=Ans)"
+#
+#
+#
+#
+#
+#, fuzzy
+#~ msgid "hidecalculate"
+#~ msgstr "Beräkna"
+#
+#
+#
+#
+#
+#, fuzzy
+#~ msgid "showcalculate"
+#~ msgstr "Beräkna"

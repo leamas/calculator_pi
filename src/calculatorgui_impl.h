@@ -70,6 +70,20 @@ public:
       HlpDlg( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Help!!!!"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( -1,-1 ), long style = wxCAPTION|wxDEFAULT_DIALOG_STYLE|wxMAXIMIZE_BOX|wxRESIZE_BORDER );
 };
 
+class DegreeDlg : public MyDialog5
+{
+public:
+	DegreeDlg(wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Degree Conversions"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize(-1, -1), long style = wxCAPTION | wxDEFAULT_DIALOG_STYLE | wxMAXIMIZE_BOX | wxRESIZE_BORDER);
+
+	void OnConvertToDegree(wxCommandEvent& event);
+	void OnNoteBookFit(wxBookCtrlEvent& event);
+	void OnCloseDegreeDlg(wxCloseEvent& event);
+	Dlg *Plugin_Dialog;
+
+private:
+
+};
+
 class FunDlg : public FunDlgDef
 {
     public:
@@ -78,6 +92,7 @@ class FunDlg : public FunDlgDef
         Units_Conversion Units_conv;
         void OnClose( wxCommandEvent& event );
         void OnToggle( wxCommandEvent& event );
+		void OnOutputParameterChange(wxCommandEvent& event);
         void OnExtraCalculate( wxCommandEvent& event );
         void OnItemSelect( wxCommandEvent& event );
         void OnItemSelect (void);
@@ -108,7 +123,9 @@ public:
         void OnTest( wxMouseEvent& event );
         void OnTest(wxCommandEvent& event);
         void OnTest( wxListEvent& event );
-        #endif // DEBUG
+        #endif // DEBUG	
+		
+		void OnCalculateDegrees(void);
 		void OnClose(wxCloseEvent& event);
         void OnFunction( wxCommandEvent& event );
         void OnFunction ( void );
@@ -145,7 +162,7 @@ public:
         wxString ThousandSeparator(wxString Number_in);
 		
 		FunDlg            *m_pFunctiondialog;
-
+		DegreeDlg         *m_pDegreeDialog;
 
 private:
         wxPoint xy;
@@ -169,8 +186,12 @@ private:
         bool              m_bshowfunction_Open_CPN_BAR;
 
         HlpDlg            *m_pHelpdialog;
+		
         
 
 };
+
+
+
 
 #endif
