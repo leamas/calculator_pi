@@ -73,7 +73,7 @@ calculator_pi::calculator_pi(void *ppimgr)
 	  if (panelIcon.IsOk())
 		  m_panelBitmap = wxBitmap(panelIcon);
 	  else
-		  wxLogMessage(_T("    calculator_pi panel icon NOT loaded"));
+		  wxLogMessage(_("    calculator_pi panel icon NOT loaded"));
 	  m_bShowCalculator = false;
 	  
 }
