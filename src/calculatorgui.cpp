@@ -313,11 +313,11 @@ MyDialog5::MyDialog5( wxWindow* parent, wxWindowID id, const wxString& title, co
 	bSizer35 = new wxBoxSizer( wxVERTICAL );
 
 	m_wxNotebook234 = new wxNotebook( m_panel14, wxID_ANY, wxDefaultPosition, wxDefaultSize, 0 );
-	
+
 	//
 	// start m_panelDegrees
 	//
-	
+
 	m_panelDegrees = new wxPanel( m_wxNotebook234, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL );
 	wxBoxSizer* bSizer402;
 	bSizer402 = new wxBoxSizer( wxVERTICAL );
@@ -359,7 +359,7 @@ MyDialog5::MyDialog5( wxWindow* parent, wxWindowID id, const wxString& title, co
 	m_Lon1 = new wxTextCtrl( sbSizer7->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0 );
 	bSizer14311->Add( m_Lon1, 3, wxALIGN_CENTER_VERTICAL|wxEXPAND|wxTOP|wxBOTTOM|wxLEFT, 5 );
 
-	m_staticText33311 = new wxStaticText( sbSizer7->GetStaticBox(), wxID_ANY, deg, wxDefaultPosition, wxDefaultSize, 0 );
+	m_staticText33311 = new wxStaticText( sbSizer7->GetStaticBox(), wxID_ANY, _T("\u00b0"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText33311->Wrap( -1 );
 	bSizer14311->Add( m_staticText33311, 0, wxTOP|wxBOTTOM|wxLEFT, 5 );
 	//
