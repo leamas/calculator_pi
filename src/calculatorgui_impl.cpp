@@ -943,17 +943,21 @@ void DegreeDlg::OnConvertToDegree(wxCommandEvent& event)
 			m_Lon1_m1->SetValue(wxString::Format(_T("%8.6f"), MMlon0));
 			
 			if (DDLat > 0) {
-				m_Lat1_NS1->SetSelection(0);				
+				m_Lat1_NS1->SetSelection(0);
+				m_Lat1_NS->SetSelection(0);
 			}
 			else {
-				m_Lat1_NS1->SetSelection(1);				
+				m_Lat1_NS1->SetSelection(1);
+				m_Lat1_NS->SetSelection(1);
 			}
 
 			if (DDLon > 0) {
-				m_Lon1_EW1->SetSelection(0);				
+				m_Lon1_EW1->SetSelection(0);
+				m_Lon1_EW->SetSelection(0);
 			}
 			else {
-				m_Lon1_EW1->SetSelection(1);			
+				m_Lon1_EW1->SetSelection(1);
+				m_Lon1_EW->SetSelection(1);
 			}
 			
 			// set the ddmmss page			
