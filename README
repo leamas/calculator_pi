@@ -1,3 +1,8 @@
+Version 2.1
+===========
+Preparation for internationalisation.
+Added dialog for converting degrees (dd.dddddd to dd.mm and dd.mm.sss).
+
 Version 2.0
 ===========
 This version for OpenCPN v5.

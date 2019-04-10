@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 11:19+0100\n"
+"POT-Creation-Date: 2019-04-10 10:02+0100\n"
 "PO-Revision-Date: 2018-03-06 07:42-0500\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
 "Language-Team: Romanian\n"
@@ -16,9 +16,6 @@ msgstr ""
 "X-Crowdin-Project: opencpn\n"
 "X-Crowdin-Language: ro\n"
 "X-Crowdin-File: /plugins/calculator_pi/po/calculator_pi.pot\n"
-#
-msgid "    calculator_pi panel icon NOT loaded"
-msgstr ""
 #
 msgid " Calculator output:"
 msgstr ""
@@ -230,9 +227,6 @@ msgstr ""
 msgid "Convert Temperature"
 msgstr ""
 #
-msgid "Decimal separator is identic to function argument separator."
-msgstr ""
-#
 msgid "Degree Conversions"
 msgstr ""
 #
@@ -245,13 +239,7 @@ msgstr ""
 msgid "Distance to horizon"
 msgstr ""
 #
-msgid "Divide by zero"
-msgstr ""
-#
 msgid "Diving"
-msgstr ""
-#
-msgid "Domain error"
 msgstr ""
 #
 msgid "Draft of vessel when heeled"
@@ -268,17 +256,15 @@ msgid ""
 "to manila line. The basic breaking strength factor for manila line is found "
 "by multiplying the square of the circumference of the line by 900 lbs. Knots "
 "and splices only have 50-60 of line strenght.\n"
-"\tLine Material\tComparison Factor \n"
-"\tNylon\t\t\t\t\t2.5\n"
-"\tDacron\t\t\t\t2.0\n"
-"\tPolypropylene\t\t1.4\n"
-"\tManilla \t\t\t\t1.0"
+"\n"
+"Line Material\tComparison Factor \n"
+"Nylon\t\t\t2.5\n"
+"Dacron\t\t\t2.0\n"
+"Polypropylene\t\t1.4\n"
+"Manilla \t\t\t1.0"
 msgstr ""
 #
 msgid "Error"
-msgstr ""
-#
-msgid "Expression is empty."
 msgstr ""
 #
 msgid "Extra Functions"
@@ -308,12 +294,6 @@ msgid "Function Button in Calculator window"
 msgstr ""
 #
 msgid "Function Result Select Units"
-msgstr ""
-#
-msgid "Function arguments used without a function (position: $POS$)"
-msgstr ""
-#
-msgid "Function result is a string."
 msgstr ""
 #
 msgid ""
@@ -394,9 +374,6 @@ msgid ""
 "diameter of 12 756.32 km."
 msgstr ""
 #
-msgid "If-then-else operator is missing an else clause"
-msgstr ""
-#
 msgid ""
 "In November 2001 Canada, U.S. and U.K. implemented a new wind chill index "
 "developed by scientists and medical experts on the Joint Action Group for "
@@ -411,30 +388,6 @@ msgid ""
 msgstr ""
 #
 msgid "Input Parameters"
-msgstr ""
-#
-msgid "Internal error"
-msgstr ""
-#
-msgid "Invalid binary operator identifier: \"$TOK$\"."
-msgstr ""
-#
-msgid "Invalid function-, variable- or constant name: \"$TOK$\"."
-msgstr ""
-#
-msgid "Invalid infix operator identifier: \"$TOK$\"."
-msgstr ""
-#
-msgid "Invalid pointer to callback function."
-msgstr ""
-#
-msgid "Invalid pointer to variable."
-msgstr ""
-#
-msgid "Invalid postfix operator identifier: \"$TOK$\"."
-msgstr ""
-#
-msgid "Invalid value for operator priority (must be greater or equal to zero)."
 msgstr ""
 #
 msgid ""
@@ -466,12 +419,6 @@ msgstr ""
 msgid "Maximum Wavelength = 1.5 x square root of fetch in nm"
 msgstr ""
 #
-msgid "Misplaced colon at position $POS$"
-msgstr ""
-#
-msgid "Missing parenthesis"
-msgstr ""
-#
 msgid ""
 "More results use more memory. Memory will be cleared if Max Results is "
 "reached. NB variables are kept"
@@ -492,16 +439,10 @@ msgstr ""
 msgid "N"
 msgstr ""
 #
-msgid "Name conflict"
-msgstr ""
-#
 msgid "Naoto Ebuchi, Journal of oceanography, vol 55, pp 575 to 584, 1999"
 msgstr ""
 #
 msgid "Navigation"
-msgstr ""
-#
-msgid "No suitable overload for operator \"$TOK$\" at position $POS$."
 msgstr ""
 #
 msgid "Not very accurate - use official publications"
@@ -517,9 +458,6 @@ msgid "Other"
 msgstr ""
 #
 msgid "Parameter"
-msgstr ""
-#
-msgid "Parser error."
 msgstr ""
 #
 msgid ""
@@ -587,12 +525,6 @@ msgstr ""
 msgid "Speed of wind-driven current"
 msgstr ""
 #
-msgid "String function called with a non string type of argument."
-msgstr ""
-#
-msgid "String value used where a numerical argument is expected."
-msgstr ""
-#
 msgid "Succinct"
 msgstr ""
 #
@@ -600,9 +532,6 @@ msgid "Succinct, thousands separator"
 msgstr ""
 #
 msgid "Test"
-msgstr ""
-#
-msgid "The \"$TOK$\" operator must be preceeded by a closing bracket."
 msgstr ""
 #
 msgid ""
@@ -615,42 +544,6 @@ msgid ""
 "object above the horizon, compute the distance to the horizon for a "
 "hypothetical observer on top of that object, and add it to the real observers "
 "distance to the horizon. This formula assumes earth diameter of 12 756.32 km."
-msgstr ""
-#
-msgid "Too few parameters for function \"$TOK$\" at expression position $POS$"
-msgstr ""
-#
-msgid "Too many parameters for function \"$TOK$\" at expression position $POS$"
-msgstr ""
-#
-msgid "Unexpected argument separator at position $POS$"
-msgstr ""
-#
-msgid "Unexpected end of expression at position $POS$"
-msgstr ""
-#
-msgid "Unexpected function \"$TOK$\" at position $POS$"
-msgstr ""
-#
-msgid "Unexpected operator \"$TOK$\" found at position $POS$"
-msgstr ""
-#
-msgid "Unexpected parenthesis \"$TOK$\" at position $POS$"
-msgstr ""
-#
-msgid "Unexpected string token found at position $POS$."
-msgstr ""
-#
-msgid "Unexpected token \"$TOK$\" found at position $POS$."
-msgstr ""
-#
-msgid "Unexpected value \"$TOK$\" found at position $POS$"
-msgstr ""
-#
-msgid "Unexpected variable \"$TOK$\" found at position $POS$"
-msgstr ""
-#
-msgid "Unterminated string starting at position $POS$."
 msgstr ""
 #
 msgid "Velocity Made Good (angle)"
@@ -725,8 +618,4 @@ msgid "https://en.wikipedia.org/wiki/Horizon, Objects above horizon"
 msgstr ""
 #
 msgid "https://en.wikipedia.org/wiki/Horizon, geometrical model"
-msgstr ""
-#
-msgid ""
-"user defined binary operator \"$TOK$\" conflicts with a built in operator."
 msgstr ""

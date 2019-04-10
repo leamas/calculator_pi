@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 11:19+0100\n"
+"POT-Creation-Date: 2019-04-10 10:02+0100\n"
 "PO-Revision-Date: 2019-04-05 08:39+0100\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
 "Language-Team: French\n"
@@ -15,9 +15,6 @@ msgstr ""
 "X-Crowdin-Project: opencpn\n"
 "X-Crowdin-Language: fr\n"
 "X-Crowdin-File: /plugins/calculator_pi/po/calculator_pi.pot\n"
-#
-msgid "    calculator_pi panel icon NOT loaded"
-msgstr ""
 #
 msgid " Calculator output:"
 msgstr ""
@@ -233,9 +230,6 @@ msgstr "Convertir la vitesse"
 msgid "Convert Temperature"
 msgstr ""
 #
-msgid "Decimal separator is identic to function argument separator."
-msgstr ""
-#
 #, fuzzy
 msgid "Degree Conversions"
 msgstr "Conversions"
@@ -249,13 +243,7 @@ msgstr "Apparence"
 msgid "Distance to horizon"
 msgstr "Distance à l'horizon"
 #
-msgid "Divide by zero"
-msgstr ""
-#
 msgid "Diving"
-msgstr ""
-#
-msgid "Domain error"
 msgstr ""
 #
 msgid "Draft of vessel when heeled"
@@ -272,18 +260,16 @@ msgid ""
 "to manila line. The basic breaking strength factor for manila line is found "
 "by multiplying the square of the circumference of the line by 900 lbs. Knots "
 "and splices only have 50-60 of line strenght.\n"
-"\tLine Material\tComparison Factor \n"
-"\tNylon\t\t\t\t\t2.5\n"
-"\tDacron\t\t\t\t2.0\n"
-"\tPolypropylene\t\t1.4\n"
-"\tManilla \t\t\t\t1.0"
+"\n"
+"Line Material\tComparison Factor \n"
+"Nylon\t\t\t2.5\n"
+"Dacron\t\t\t2.0\n"
+"Polypropylene\t\t1.4\n"
+"Manilla \t\t\t1.0"
 msgstr ""
 #
 msgid "Error"
 msgstr "Erreur"
-#
-msgid "Expression is empty."
-msgstr ""
 #
 msgid "Extra Functions"
 msgstr "Fonctions supplémentaires"
@@ -312,13 +298,6 @@ msgid "Function Button in Calculator window"
 msgstr "Bouton \"Fonction\" dans la fenêtre \"Calculatrice\""
 #
 msgid "Function Result Select Units"
-msgstr "Sélectionner les unités des résultats de la fonction"
-#
-msgid "Function arguments used without a function (position: $POS$)"
-msgstr ""
-#
-#, fuzzy
-msgid "Function result is a string."
 msgstr "Sélectionner les unités des résultats de la fonction"
 #
 msgid ""
@@ -412,9 +391,6 @@ msgstr ""
 "n'est pas absolument exacte, même en l'absence de réfraction.) Cette formule "
 "suppose un diamètre de terre de 12 756,32 km."
 #
-msgid "If-then-else operator is missing an else clause"
-msgstr ""
-#
 msgid ""
 "In November 2001 Canada, U.S. and U.K. implemented a new wind chill index "
 "developed by scientists and medical experts on the Joint Action Group for "
@@ -430,30 +406,6 @@ msgstr ""
 #
 msgid "Input Parameters"
 msgstr "Paramètres d'entrée"
-#
-msgid "Internal error"
-msgstr ""
-#
-msgid "Invalid binary operator identifier: \"$TOK$\"."
-msgstr ""
-#
-msgid "Invalid function-, variable- or constant name: \"$TOK$\"."
-msgstr ""
-#
-msgid "Invalid infix operator identifier: \"$TOK$\"."
-msgstr ""
-#
-msgid "Invalid pointer to callback function."
-msgstr ""
-#
-msgid "Invalid pointer to variable."
-msgstr ""
-#
-msgid "Invalid postfix operator identifier: \"$TOK$\"."
-msgstr ""
-#
-msgid "Invalid value for operator priority (must be greater or equal to zero)."
-msgstr ""
 #
 msgid ""
 "LWL = Length of water line\n"
@@ -485,12 +437,6 @@ msgstr "Longueur d’onde maximale"
 msgid "Maximum Wavelength = 1.5 x square root of fetch in nm"
 msgstr "Maximum Wavelength = 1.5 x square root of fetch in nm"
 #
-msgid "Misplaced colon at position $POS$"
-msgstr ""
-#
-msgid "Missing parenthesis"
-msgstr ""
-#
 msgid ""
 "More results use more memory. Memory will be cleared if Max Results is "
 "reached. NB variables are kept"
@@ -516,17 +462,11 @@ msgstr ""
 msgid "N"
 msgstr "N"
 #
-msgid "Name conflict"
-msgstr ""
-#
 msgid "Naoto Ebuchi, Journal of oceanography, vol 55, pp 575 to 584, 1999"
 msgstr "Naoto Ebuchi, Journal of oceanography, vol 55, pp 575 to 584, 1999"
 #
 msgid "Navigation"
 msgstr "Navigation"
-#
-msgid "No suitable overload for operator \"$TOK$\" at position $POS$."
-msgstr ""
 #
 msgid "Not very accurate - use official publications"
 msgstr "Pas très précis - utilisez les publications officielles"
@@ -542,9 +482,6 @@ msgstr "Autre"
 #
 msgid "Parameter"
 msgstr "Paramètre "
-#
-msgid "Parser error."
-msgstr ""
 #
 msgid ""
 "Patch or cover thickness to withstand water pressure (patch over hole):\n"
@@ -617,12 +554,6 @@ msgstr ""
 msgid "Speed of wind-driven current"
 msgstr ""
 #
-msgid "String function called with a non string type of argument."
-msgstr ""
-#
-msgid "String value used where a numerical argument is expected."
-msgstr ""
-#
 msgid "Succinct"
 msgstr "Succinct"
 #
@@ -631,9 +562,6 @@ msgstr "Succinct, séparateur de milliers"
 #
 msgid "Test"
 msgstr "Test"
-#
-msgid "The \"$TOK$\" operator must be preceeded by a closing bracket."
-msgstr ""
 #
 msgid ""
 "This is a light weight yet powerful calculator plugin for OpenCPN.\n"
@@ -654,42 +582,6 @@ msgstr ""
 "pour un observateur hypothétique au-dessus de cet objet et ajoutez-la à la "
 "distance réelle des observateurs à l'horizon. Cette formule suppose un "
 "diamètre de terre de 12 756,32 km."
-#
-msgid "Too few parameters for function \"$TOK$\" at expression position $POS$"
-msgstr ""
-#
-msgid "Too many parameters for function \"$TOK$\" at expression position $POS$"
-msgstr ""
-#
-msgid "Unexpected argument separator at position $POS$"
-msgstr ""
-#
-msgid "Unexpected end of expression at position $POS$"
-msgstr ""
-#
-msgid "Unexpected function \"$TOK$\" at position $POS$"
-msgstr ""
-#
-msgid "Unexpected operator \"$TOK$\" found at position $POS$"
-msgstr ""
-#
-msgid "Unexpected parenthesis \"$TOK$\" at position $POS$"
-msgstr ""
-#
-msgid "Unexpected string token found at position $POS$."
-msgstr ""
-#
-msgid "Unexpected token \"$TOK$\" found at position $POS$."
-msgstr ""
-#
-msgid "Unexpected value \"$TOK$\" found at position $POS$"
-msgstr ""
-#
-msgid "Unexpected variable \"$TOK$\" found at position $POS$"
-msgstr ""
-#
-msgid "Unterminated string starting at position $POS$."
-msgstr ""
 #
 msgid "Velocity Made Good (angle)"
 msgstr ""
@@ -771,9 +663,6 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, Objects above horizon"
 msgid "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
-msgid ""
-"user defined binary operator \"$TOK$\" conflicts with a built in operator."
-msgstr ""
 #
 #
 #
@@ -784,8 +673,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "'"
 #~ msgstr "'"
+#
 #
 #
 #
@@ -804,8 +695,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "(5/9)*(VAR-491.67)=(9/5)*(VAR + 273.15)"
 #~ msgstr "(5/9)*(VAR-491.67)=(9/5)*(VAR + 273.15)"
+#
 #
 #
 #
@@ -824,8 +717,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "0.0001"
 #~ msgstr "0.0001"
+#
 #
 #
 #
@@ -844,8 +739,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "0.01"
 #~ msgstr "0.01"
+#
 #
 #
 #
@@ -864,8 +761,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "0.03386"
 #~ msgstr "0.03386"
+#
 #
 #
 #
@@ -884,8 +783,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "0.092903"
 #~ msgstr "0.092903"
+#
 #
 #
 #
@@ -904,8 +805,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "0.3048"
 #~ msgstr "0.3048"
+#
 #
 #
 #
@@ -924,8 +827,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "0.987"
 #~ msgstr "0.987"
+#
 #
 #
 #
@@ -944,8 +849,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "1.8288"
 #~ msgstr "1.8288"
+#
 #
 #
 #
@@ -964,8 +871,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "15850.3231"
 #~ msgstr "15850.3231"
+#
 #
 #
 #
@@ -984,8 +893,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "1e-05"
 #~ msgstr "1e-05"
+#
 #
 #
 #
@@ -1004,8 +915,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "2.20462"
 #~ msgstr "2.20462"
+#
 #
 #
 #
@@ -1024,8 +937,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "3600"
 #~ msgstr "3600"
+#
 #
 #
 #
@@ -1044,8 +959,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "4.4482216"
 #~ msgstr "4.4482216"
+#
 #
 #
 #
@@ -1064,8 +981,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "60000"
 #~ msgstr "60000"
+#
 #
 #
 #
@@ -1084,8 +1003,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "A"
 #~ msgstr "A"
+#
 #
 #
 #
@@ -1104,8 +1025,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Angle_In"
 #~ msgstr "Angle_In"
+#
 #
 #
 #
@@ -1124,8 +1047,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Area"
 #~ msgstr "Zone"
+#
 #
 #
 #
@@ -1144,6 +1069,7 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Beaufort=(Wind_Speed/0.837)^(2/3)"
 #~ msgstr "Beaufort=(Wind_Speed/0.837)^(2/3)"
 #
@@ -1151,8 +1077,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "CLEAR"
 #~ msgstr "EFFACER"
+#
 #
 #
 #
@@ -1171,6 +1099,7 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid ""
 #~ "Change_in_height_of_Tide =  (height/2) * (1-cos(dtr*180 * time_ratio))"
 #~ msgstr ""
@@ -1180,8 +1109,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Clear"
 #~ msgstr "Effacer"
+#
 #
 #
 #
@@ -1196,8 +1127,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Degree (°)"
 #~ msgstr "Degrées (°)"
+#
 #
 #
 #
@@ -1208,8 +1141,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Degrees"
 #~ msgstr "Degrées"
+#
 #
 #
 #
@@ -1228,8 +1163,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Distance"
 #~ msgstr "Distance"
+#
 #
 #
 #
@@ -1248,8 +1185,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Distance_Out=Distance_In"
 #~ msgstr "Distance_Out=Distance_In"
+#
 #
 #
 #
@@ -1265,8 +1204,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "FUNCTION"
 #~ msgstr "FONCTION"
+#
 #
 #
 #
@@ -1285,8 +1226,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Flowrate"
 #~ msgstr "Flux"
+#
 #
 #
 #
@@ -1305,6 +1248,7 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Flowrate_Out=Flowrate_In"
 #~ msgstr "Flowrate_Out=Flowrate_In"
 #
@@ -1315,8 +1259,15 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Force"
 #~ msgstr "Forcer"
+#
+#
+#, fuzzy
+#~ msgid "Function result is a string."
+#~ msgstr "Sélectionner les unités des résultats de la fonction"
+#
 #
 #
 #
@@ -1332,8 +1283,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "HELP"
 #~ msgstr "AIDE"
+#
 #
 #
 #
@@ -1346,8 +1299,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "HIDEHELP"
 #~ msgstr "CACHER L'AIDE"
+#
 #
 #
 #
@@ -1360,8 +1315,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "HISTORY"
 #~ msgstr "HISTORIQUE"
+#
 #
 #
 #
@@ -1374,6 +1331,7 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "HideHelp"
 #~ msgstr "Cacher l'aide"
 #
@@ -1381,8 +1339,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "HideHistory"
 #~ msgstr "Historique : Cacher"
+#
 #
 #
 #
@@ -1401,8 +1361,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Inches of Mercury"
 #~ msgstr "Pouce de mercure"
+#
 #
 #
 #
@@ -1421,8 +1383,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "L"
 #~ msgstr "L"
+#
 #
 #
 #
@@ -1437,8 +1401,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Lat "
 #~ msgstr "Lat "
+#
 #
 #
 #
@@ -1453,8 +1419,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Lbs (weight)"
 #~ msgstr "Lbs (poids)"
+#
 #
 #
 #
@@ -1465,8 +1433,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Longitude"
 #~ msgstr "Longitude"
+#
 #
 #
 #
@@ -1485,8 +1455,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Meter"
 #~ msgstr "Mètre"
+#
 #
 #
 #
@@ -1505,8 +1477,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Nautical Miles"
 #~ msgstr "Milles nautiques"
+#
 #
 #
 #
@@ -1525,8 +1499,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Pressure"
 #~ msgstr "Pression"
+#
 #
 #
 #
@@ -1545,8 +1521,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Pressure_In"
 #~ msgstr "Pressure_In"
+#
 #
 #
 #
@@ -1565,8 +1543,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Q = 3600 *(A)* (H)"
 #~ msgstr "Q = 3600 *(A)* (H)"
+#
 #
 #
 #
@@ -1582,8 +1562,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "SHOWFUNCTION"
 #~ msgstr "FONCTION : VOIR"
+#
 #
 #
 #
@@ -1596,8 +1578,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "SHOWHISTORY"
 #~ msgstr "HISTORIQUE : VOIR"
+#
 #
 #
 #
@@ -1616,8 +1600,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "See table"
 #~ msgstr "Voir la table"
+#
 #
 #
 #
@@ -1630,6 +1616,7 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "ShowHelp"
 #~ msgstr "Aide : Voir"
 #
@@ -1637,8 +1624,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "ShowHistory"
 #~ msgstr "Historique : Voir"
+#
 #
 #
 #
@@ -1657,8 +1646,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Speed_Current = 0.03 * (Speed_Wind)"
 #~ msgstr "Speed_Current = 0.03 * (Vitesse_Wind)"
+#
 #
 #
 #
@@ -1677,8 +1668,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Speed_Out=Speed_In"
 #~ msgstr "Speed_Out=Speed_In"
+#
 #
 #
 #
@@ -1697,8 +1690,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Square cm"
 #~ msgstr "Cm carré"
+#
 #
 #
 #
@@ -1717,8 +1712,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Square meter"
 #~ msgstr "Mètre carré"
+#
 #
 #
 #
@@ -1737,8 +1734,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "TRUE"
 #~ msgstr "Vrai"
+#
 #
 #
 #
@@ -1757,12 +1756,14 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid ""
 #~ "T_wind_chill = 13.12 + 0.6215 * T_air - 11.37 * V_wind^0.16 + 0.3965 * "
 #~ "T_air* V_wind^0.16 "
 #~ msgstr ""
 #~ "T_wind_chill = 13.12 + 0.6215 * T_air - 11.37 * V_wind^0.16 + 0.3965 * "
 #~ "T_air* V_wind^0.16 "
+#
 #
 #
 #
@@ -1781,8 +1782,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Time"
 #~ msgstr "Temps"
+#
 #
 #
 #
@@ -1801,8 +1804,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "US gallons per minute"
 #~ msgstr "gallons américains par minute"
+#
 #
 #
 #
@@ -1821,8 +1826,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "VAR - 273.15=VAR + 273.15"
 #~ msgstr "VAR - 273.15=VAR + 273.15"
+#
 #
 #
 #
@@ -1841,8 +1848,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "VAR/dtr=VAR*dtr"
 #~ msgstr "VAR/dtr=VAR*dtr"
+#
 #
 #
 #
@@ -1861,8 +1870,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "VMG=V*cos(alpha*dtr)"
 #~ msgstr "VMG=V*cos(alpha*dtr)"
+#
 #
 #
 #
@@ -1881,8 +1892,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Wave_speed = 3.03 * (wave_period)"
 #~ msgstr "Wave_speed = 3.03 * (wave_period)"
+#
 #
 #
 #
@@ -1903,6 +1916,7 @@ msgstr ""
 #~ "F_star=F_hat/Cd,F_tilde=CDU10*F_star ,H_tilde=0.3*alpha*(1-"
 #~ "(1+0.004*sqrt(F_tilde/alpha))^-2) ,H_star=H_tilde/CDU10 ,H_hat=H_star*Cd ,"
 #~ "Waveheight=H_hat*(U10^2)/9.80665"
+#
 #
 #
 #
@@ -1921,8 +1935,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Wind_Speed"
 #~ msgstr "Wind_Speed"
+#
 #
 #
 #
@@ -1941,8 +1957,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "alpha"
 #~ msgstr "alpha"
+#
 #
 #
 #
@@ -1961,8 +1979,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "alpha2"
 #~ msgstr "alpha2"
+#
 #
 #
 #
@@ -1981,8 +2001,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "atm"
 #~ msgstr "atm"
+#
 #
 #
 #
@@ -2001,8 +2023,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "breaking_strength= 900 * comparison_factor * (pi*diameter)^2 "
 #~ msgstr "breaking_strength= 900 * comparison_factor * (pi*diameter)^2 "
+#
 #
 #
 #
@@ -2021,6 +2045,7 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "circumference"
 #~ msgstr "circonférence"
 #
@@ -2028,8 +2053,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "clear"
 #~ msgstr "effacer"
+#
 #
 #
 #
@@ -2048,8 +2075,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "density"
 #~ msgstr "densité"
+#
 #
 #
 #
@@ -2068,8 +2097,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "dewpoint"
 #~ msgstr "Point de rosée"
+#
 #
 #
 #
@@ -2088,8 +2119,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "distance_horizon=sqrt(height* (height + 12756.32))"
 #~ msgstr "distance_horizon=sqrt(height* (height + 12756.32))"
+#
 #
 #
 #
@@ -2104,6 +2137,7 @@ msgstr ""
 #~ msgstr ""
 #~ "distance_visible=sqrt(height_observer * (height_observer + 12756.32)) + "
 #~ "sqrt(height_object * (height_object + 12756.32))"
+#
 #
 #
 #
@@ -2122,8 +2156,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "draft_heeled=draft*cos(dtr*angle)"
 #~ msgstr "draft_heeled=draft*cos(dtr*angle)"
+#
 #
 #
 #
@@ -2133,6 +2169,7 @@ msgstr ""
 #, fuzzy
 #~ msgid "ere"
 #~ msgstr "Degré"
+#
 #
 #
 #
@@ -2151,6 +2188,7 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "foot"
 #~ msgstr "pied"
 #
@@ -2158,8 +2196,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "function"
 #~ msgstr "fonction"
+#
 #
 #
 #
@@ -2178,8 +2218,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "height"
 #~ msgstr "hauteur"
+#
 #
 #
 #
@@ -2198,8 +2240,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "height_observer"
 #~ msgstr "height_observer"
+#
 #
 #
 #
@@ -2212,8 +2256,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "hidefunction"
 #~ msgstr "fonction : cacher"
+#
 #
 #
 #
@@ -2226,6 +2272,7 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "hidehistory"
 #~ msgstr "historique : cacher"
 #
@@ -2233,8 +2280,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "history"
 #~ msgstr "historique"
+#
 #
 #
 #
@@ -2257,8 +2306,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "inch"
 #~ msgstr "pouce"
+#
 #
 #
 #
@@ -2277,8 +2328,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "kg"
 #~ msgstr "kg"
+#
 #
 #
 #
@@ -2297,8 +2350,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "kg/m3"
 #~ msgstr "kg/m3"
+#
 #
 #
 #
@@ -2317,8 +2372,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "km/h"
 #~ msgstr "km/h"
+#
 #
 #
 #
@@ -2337,8 +2394,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "lbs"
 #~ msgstr "lbs"
+#
 #
 #
 #
@@ -2357,8 +2416,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "m/s"
 #~ msgstr "m / s"
+#
 #
 #
 #
@@ -2377,8 +2438,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "mBar"
 #~ msgstr "mBar"
+#
 #
 #
 #
@@ -2397,14 +2460,17 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "mmHg"
 #~ msgstr "mmHG"
 #
 #
 #
 #
+#
 #~ msgid "no limit to decimals"
 #~ msgstr "aucune limite aux décimales"
+#
 #
 #
 #
@@ -2420,8 +2486,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "showfunction"
 #~ msgstr "fonction : voir"
+#
 #
 #
 #
@@ -2434,8 +2502,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "showhistory"
 #~ msgstr "historique : voir"
+#
 #
 #
 #
@@ -2454,8 +2524,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "vhull=1.34*sqrt(LWL)"
 #~ msgstr "vhull=1.34*sqrt(LWL)"
+#
 #
 #
 #

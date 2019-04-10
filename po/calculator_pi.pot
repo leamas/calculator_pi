@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: calculator_pi 2.0\n"
+"Project-Id-Version: calculator_pi 2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 11:25+0100\n"
+"POT-Creation-Date: 2019-04-10 10:02+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,10 +16,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: src/calculator_pi.cpp:76
-msgid "    calculator_pi panel icon NOT loaded"
-msgstr ""
 
 #: src/calculator_pi.cpp:104
 msgid "calculator"
@@ -553,11 +549,12 @@ msgid ""
 "to manila line. The basic breaking strength factor for manila line is found "
 "by multiplying the square of the circumference of the line by 900 lbs. Knots "
 "and splices only have 50-60 of line strenght.\n"
-"\tLine Material\tComparison Factor \n"
-"\tNylon\t\t\t\t\t2.5\n"
-"\tDacron\t\t\t\t2.0\n"
-"\tPolypropylene\t\t1.4\n"
-"\tManilla \t\t\t\t1.0"
+"\n"
+"Line Material\tComparison Factor \n"
+"Nylon\t\t\t2.5\n"
+"Dacron\t\t\t2.0\n"
+"Polypropylene\t\t1.4\n"
+"Manilla \t\t\t1.0"
 msgstr ""
 
 #: src/functions.cpp:280 src/functions.cpp:307
@@ -762,149 +759,4 @@ msgstr ""
 
 #: src/functions.cpp:740
 msgid "Rasbats"
-msgstr ""
-
-#: src/muparser/muParserError.cpp:76
-msgid "Unexpected token \"$TOK$\" found at position $POS$."
-msgstr ""
-
-#: src/muparser/muParserError.cpp:77
-msgid "Internal error"
-msgstr ""
-
-#: src/muparser/muParserError.cpp:78
-msgid "Invalid function-, variable- or constant name: \"$TOK$\"."
-msgstr ""
-
-#: src/muparser/muParserError.cpp:79
-msgid "Invalid binary operator identifier: \"$TOK$\"."
-msgstr ""
-
-#: src/muparser/muParserError.cpp:80
-msgid "Invalid infix operator identifier: \"$TOK$\"."
-msgstr ""
-
-#: src/muparser/muParserError.cpp:81
-msgid "Invalid postfix operator identifier: \"$TOK$\"."
-msgstr ""
-
-#: src/muparser/muParserError.cpp:82
-msgid "Invalid pointer to callback function."
-msgstr ""
-
-#: src/muparser/muParserError.cpp:83
-msgid "Expression is empty."
-msgstr ""
-
-#: src/muparser/muParserError.cpp:84
-msgid "Invalid pointer to variable."
-msgstr ""
-
-#: src/muparser/muParserError.cpp:85
-msgid "Unexpected operator \"$TOK$\" found at position $POS$"
-msgstr ""
-
-#: src/muparser/muParserError.cpp:86
-msgid "Unexpected end of expression at position $POS$"
-msgstr ""
-
-#: src/muparser/muParserError.cpp:87
-msgid "Unexpected argument separator at position $POS$"
-msgstr ""
-
-#: src/muparser/muParserError.cpp:88
-msgid "Unexpected parenthesis \"$TOK$\" at position $POS$"
-msgstr ""
-
-#: src/muparser/muParserError.cpp:89
-msgid "Unexpected function \"$TOK$\" at position $POS$"
-msgstr ""
-
-#: src/muparser/muParserError.cpp:90
-msgid "Unexpected value \"$TOK$\" found at position $POS$"
-msgstr ""
-
-#: src/muparser/muParserError.cpp:91
-msgid "Unexpected variable \"$TOK$\" found at position $POS$"
-msgstr ""
-
-#: src/muparser/muParserError.cpp:92
-msgid "Function arguments used without a function (position: $POS$)"
-msgstr ""
-
-#: src/muparser/muParserError.cpp:93
-msgid "Missing parenthesis"
-msgstr ""
-
-#: src/muparser/muParserError.cpp:94
-msgid "Too many parameters for function \"$TOK$\" at expression position $POS$"
-msgstr ""
-
-#: src/muparser/muParserError.cpp:95
-msgid "Too few parameters for function \"$TOK$\" at expression position $POS$"
-msgstr ""
-
-#: src/muparser/muParserError.cpp:96
-msgid "Divide by zero"
-msgstr ""
-
-#: src/muparser/muParserError.cpp:97
-msgid "Domain error"
-msgstr ""
-
-#: src/muparser/muParserError.cpp:98
-msgid "Name conflict"
-msgstr ""
-
-#: src/muparser/muParserError.cpp:99
-msgid "Invalid value for operator priority (must be greater or equal to zero)."
-msgstr ""
-
-#: src/muparser/muParserError.cpp:100
-msgid ""
-"user defined binary operator \"$TOK$\" conflicts with a built in operator."
-msgstr ""
-
-#: src/muparser/muParserError.cpp:101
-msgid "Unexpected string token found at position $POS$."
-msgstr ""
-
-#: src/muparser/muParserError.cpp:102
-msgid "Unterminated string starting at position $POS$."
-msgstr ""
-
-#: src/muparser/muParserError.cpp:103
-msgid "String function called with a non string type of argument."
-msgstr ""
-
-#: src/muparser/muParserError.cpp:104
-msgid "String value used where a numerical argument is expected."
-msgstr ""
-
-#: src/muparser/muParserError.cpp:105
-msgid "No suitable overload for operator \"$TOK$\" at position $POS$."
-msgstr ""
-
-#: src/muparser/muParserError.cpp:106
-msgid "Function result is a string."
-msgstr ""
-
-#: src/muparser/muParserError.cpp:107
-msgid "Parser error."
-msgstr ""
-
-#: src/muparser/muParserError.cpp:108
-msgid "Decimal separator is identic to function argument separator."
-msgstr ""
-
-#: src/muparser/muParserError.cpp:109
-msgid "The \"$TOK$\" operator must be preceeded by a closing bracket."
-msgstr ""
-
-#: src/muparser/muParserError.cpp:110
-msgid "If-then-else operator is missing an else clause"
-msgstr ""
-
-#: src/muparser/muParserError.cpp:111
-msgid "Misplaced colon at position $POS$"
 msgstr ""

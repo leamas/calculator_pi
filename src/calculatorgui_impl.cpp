@@ -941,26 +941,22 @@ void DegreeDlg::OnConvertToDegree(wxCommandEvent& event)
 
 			m_Lat1_m1->SetValue(wxString::Format(_T("%8.6f"), MMlat0));
 			m_Lon1_m1->SetValue(wxString::Format(_T("%8.6f"), MMlon0));
-
+			
 			if (DDLat > 0) {
-				m_Lat1_NS1->SetSelection(0);
-				m_Lat1_NS->SetSelection(0);
+				m_Lat1_NS1->SetSelection(0);				
 			}
 			else {
-				m_Lat1_NS1->SetSelection(1);
-				m_Lat1_NS->SetSelection(1);
+				m_Lat1_NS1->SetSelection(1);				
 			}
 
 			if (DDLon > 0) {
-				m_Lon1_EW1->SetSelection(0);
-				m_Lon1_EW->SetSelection(0);
+				m_Lon1_EW1->SetSelection(0);				
 			}
 			else {
-				m_Lon1_EW1->SetSelection(1);
-				m_Lon1_EW->SetSelection(1);
+				m_Lon1_EW1->SetSelection(1);			
 			}
-
-			// set the ddmmss page
+			
+			// set the ddmmss page			
 
 			m_Lat1_d->SetValue(wxString::Format(_T("%i"), abs((int)DDlat1)));
 			m_Lon1_d->SetValue(wxString::Format(_T("%i"), abs((int)DDlon1)));	
@@ -1021,6 +1017,19 @@ void DegreeDlg::OnConvertToDegree(wxCommandEvent& event)
 			MMlon1 = int(MMLon);
 
 			// set the ddmmss page
+			if (m_Lat1_NS1->GetSelection() == 0) {
+				m_Lat1_NS->SetSelection(0);
+			}
+			else {
+				m_Lat1_NS->SetSelection(1);
+			}
+			if (m_Lon1_EW1->GetSelection() == 0) {
+				m_Lon1_EW->SetSelection(0);
+			}
+			else {
+				m_Lon1_EW->SetSelection(1);
+			}
+
 
 			m_Lat1_d->SetValue(wxString::Format(_T("%i"), abs((int)DDLat1)));
 			m_Lon1_d->SetValue(wxString::Format(_T("%i"), abs((int)DDLon1)));
@@ -1066,18 +1075,22 @@ void DegreeDlg::OnConvertToDegree(wxCommandEvent& event)
 			if (NS == 1) {
 				DDLat1 *= -1;
 				m_Lat1_NS1->SetSelection(1);
+				m_Lat1_NS->SetSelection(1);
 			}
 			else {
 				m_Lat1_NS1->SetSelection(0);
+				m_Lat1_NS->SetSelection(0);
 			}
 
 			EW = m_Lon1_EW->GetSelection();
 			if (EW == 1) {
 				DDLon1 *= -1;
 				m_Lon1_EW1->SetSelection(1);
+				m_Lon1_EW->SetSelection(1);
 			}
 			else {
 				m_Lon1_EW1->SetSelection(0);
+				m_Lon1_EW->SetSelection(0);
 			}
 
 			// set dd.ddd page
