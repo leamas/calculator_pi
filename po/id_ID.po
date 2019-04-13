@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-10 10:02+0100\n"
+"POT-Creation-Date: 2019-04-13 18:56+0100\n"
 "PO-Revision-Date: 2018-03-06 07:42-0500\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
 "Language-Team: Indonesian\n"
@@ -178,11 +178,18 @@ msgid ""
 "\thelp - show the help menu\n"
 "\n"
 "Settings/Plugins/Preferences:\n"
-"\tShow/Hide Calculate, Help and History toggle buttons\n"
+"\tShow/Hide Function, Calculate and Help buttons\n"
 "\tHistory Settings: max Results -this is the number of results that will be "
 "stored in the history pulldown. The history pulldown will contain five times "
 "this value\n"
-"\tLog to opencpn: Enable/Disable logging of results to opencpn logfile."
+"\tLog to opencpn: Enable/Disable logging of results to opencpn logfile.\n"
+"\n"
+"Calculate Button:\n"
+"\tEnter the expression in the input box: e.g. 4+2. Do NOT use the = sign. "
+"\"Enter\" or press \"Calculate\".\n"
+"\tIf you are using \"History\" the results will appear there. If not the "
+"result will appear in the input box.\n"
+"\tIf you make a mistake, press \"Calculate\" to clear the input box.  "
 msgstr ""
 #
 msgid "Calculator Preferences"
@@ -324,13 +331,7 @@ msgstr "Tolong"
 msgid "History"
 msgstr ""
 #
-msgid "History Pulldown"
-msgstr ""
-#
 msgid "History Settings"
-msgstr ""
-#
-msgid "History Toggle"
 msgstr ""
 #
 msgid "Hull Speed"
@@ -523,10 +524,6 @@ msgstr ""
 msgid "Show/Hide history"
 msgstr ""
 #
-msgid ""
-"Show/Hide history toggle (you can always type \"history\" from input window)."
-msgstr ""
-#
 msgid "Speed of wind-driven current"
 msgstr ""
 #
@@ -646,8 +643,10 @@ msgstr ""
 #
 #
 #
+#
 #~ msgid "Calculator by SaltyPaws"
 #~ msgstr "Kalkulator oleh SaltyPaws"
+#
 #
 #
 #
@@ -663,9 +662,11 @@ msgstr ""
 #
 #
 #
+#
 #, fuzzy
 #~ msgid "HideHelp"
 #~ msgstr "Tolong"
+#
 #
 #
 #
@@ -681,6 +682,7 @@ msgstr ""
 #
 #
 #
+#
 #, fuzzy
 #~ msgid "ShowHelp"
 #~ msgstr "Tolong"
@@ -690,9 +692,11 @@ msgstr ""
 #
 #
 #
+#
 #, fuzzy
 #~ msgid "hidecalculate"
 #~ msgstr "Hitung"
+#
 #
 #
 #

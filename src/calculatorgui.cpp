@@ -105,138 +105,138 @@ DlgDef::~DlgDef()
 
 }
 
-CfgDlgDef::CfgDlgDef( wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style ) : wxDialog( parent, id, title, pos, size, style )
+///////////////////////////////////////////////////////////////////////////
+// C++ code generated with wxFormBuilder (version Oct 26 2018)
+// http://www.wxformbuilder.org/
+//
+// PLEASE DO *NOT* EDIT THIS FILE!
+///////////////////////////////////////////////////////////////////////////
+
+#include "calculatorgui.h"
+
+///////////////////////////////////////////////////////////////////////////
+
+CfgDlgDef::CfgDlgDef(wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style) : wxDialog(parent, id, title, pos, size, style)
 {
-	this->SetSizeHints( wxDefaultSize, wxDefaultSize );
+	this->SetSizeHints(wxDefaultSize, wxDefaultSize);
 
 	wxBoxSizer* bSizer1;
-	bSizer1 = new wxBoxSizer( wxVERTICAL );
+	bSizer1 = new wxBoxSizer(wxVERTICAL);
 
 	wxBoxSizer* bSizer2;
-	bSizer2 = new wxBoxSizer( wxVERTICAL );
+	bSizer2 = new wxBoxSizer(wxVERTICAL);
 
 	wxStaticBoxSizer* sbSizer12;
-	sbSizer12 = new wxStaticBoxSizer( new wxStaticBox( this, wxID_ANY, _("Calculator Reporting") ), wxVERTICAL );
+	sbSizer12 = new wxStaticBoxSizer(new wxStaticBox(this, wxID_ANY, _("Calculator Reporting")), wxVERTICAL);
 
 	wxString m_Calc_ReportingChoices[] = { _("Precise (Default)"), _("Precise, thousands separator"), _("Succinct"), _("Succinct, thousands separator"), _("Scientific"), _("Humanised"), wxEmptyString };
-	int m_Calc_ReportingNChoices = sizeof( m_Calc_ReportingChoices ) / sizeof( wxString );
-	m_Calc_Reporting = new wxChoice( sbSizer12->GetStaticBox(), wxID_ANY, wxDefaultPosition, wxDefaultSize, m_Calc_ReportingNChoices, m_Calc_ReportingChoices, 0 );
-	m_Calc_Reporting->SetSelection( 0 );
-	sbSizer12->Add( m_Calc_Reporting, 0, wxALL|wxEXPAND, 5 );
+	int m_Calc_ReportingNChoices = sizeof(m_Calc_ReportingChoices) / sizeof(wxString);
+	m_Calc_Reporting = new wxChoice(sbSizer12->GetStaticBox(), wxID_ANY, wxDefaultPosition, wxDefaultSize, m_Calc_ReportingNChoices, m_Calc_ReportingChoices, 0);
+	m_Calc_Reporting->SetSelection(0);
+	sbSizer12->Add(m_Calc_Reporting, 0, wxALL | wxEXPAND, 5);
 
 
-	bSizer2->Add( sbSizer12, 0, wxEXPAND, 5 );
+	bSizer2->Add(sbSizer12, 0, wxEXPAND, 5);
 
 	wxStaticBoxSizer* sbSizer3;
-	sbSizer3 = new wxStaticBoxSizer( new wxStaticBox( this, wxID_ANY, _("Show/Hide Buttons") ), wxVERTICAL );
+	sbSizer3 = new wxStaticBoxSizer(new wxStaticBox(this, wxID_ANY, _("Show/Hide Buttons")), wxVERTICAL);
 
-	m_showhelpB = new wxCheckBox( sbSizer3->GetStaticBox(), wxID_ANY, _("Help Button"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_showhelpB = new wxCheckBox(sbSizer3->GetStaticBox(), wxID_ANY, _("Help Button"), wxDefaultPosition, wxDefaultSize, 0);
 	m_showhelpB->SetValue(true);
-	m_showhelpB->SetToolTip( _("Show/Hide help button (you can always type \"help\" from input window).") );
+	m_showhelpB->SetToolTip(_("Show/Hide help button (you can always type \"help\" from input window)."));
 
-	sbSizer3->Add( m_showhelpB, 0, wxALL, 5 );
+	sbSizer3->Add(m_showhelpB, 0, wxALL, 5);
 
-	m_showhistoryB = new wxCheckBox( sbSizer3->GetStaticBox(), wxID_ANY, _("History Toggle"), wxDefaultPosition, wxDefaultSize, 0 );
-	m_showhistoryB->SetValue(true);
-	m_showhistoryB->SetToolTip( _("Show/Hide history toggle (you can always type \"history\" from input window).") );
-
-	sbSizer3->Add( m_showhistoryB, 0, wxALL, 5 );
-
-	m_showhistoryP = new wxCheckBox( sbSizer3->GetStaticBox(), wxID_ANY, _("History Pulldown"), wxDefaultPosition, wxDefaultSize, 0 );
-	m_showhistoryP->SetValue(true);
-	m_showhistoryP->SetToolTip( _("Show/Hide history toggle (you can always type \"history\" from input window).") );
-
-	sbSizer3->Add( m_showhistoryP, 0, wxALL, 5 );
-
-	m_CalculateB = new wxCheckBox( sbSizer3->GetStaticBox(), wxID_ANY, _("Calculate Button"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_CalculateB = new wxCheckBox(sbSizer3->GetStaticBox(), wxID_ANY, _("Calculate Button"), wxDefaultPosition, wxDefaultSize, 0);
 	m_CalculateB->SetValue(true);
-	m_CalculateB->SetToolTip( _("Show/Hide Calculate button (you can always press enter at the end of input).") );
+	m_CalculateB->SetToolTip(_("Show/Hide Calculate button (you can always press enter at the end of input)."));
 
-	sbSizer3->Add( m_CalculateB, 0, wxALL, 5 );
+	sbSizer3->Add(m_CalculateB, 0, wxALL, 5);
 
-	m_showfunction = new wxCheckBox( sbSizer3->GetStaticBox(), wxID_ANY, _("Function Button in Calculator window"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_showfunction = new wxCheckBox(sbSizer3->GetStaticBox(), wxID_ANY, _("Function Button in Calculator window"), wxDefaultPosition, wxDefaultSize, 0);
 	m_showfunction->SetValue(true);
-	sbSizer3->Add( m_showfunction, 0, wxALL, 5 );
+	sbSizer3->Add(m_showfunction, 0, wxALL, 5);
 
 
-	bSizer2->Add( sbSizer3, 1, wxEXPAND, 5 );
+	bSizer2->Add(sbSizer3, 1, wxEXPAND, 5);
 
 	wxStaticBoxSizer* sbSizer4;
-	sbSizer4 = new wxStaticBoxSizer( new wxStaticBox( this, wxID_ANY, _("History Settings") ), wxVERTICAL );
+	sbSizer4 = new wxStaticBoxSizer(new wxStaticBox(this, wxID_ANY, _("History Settings")), wxVERTICAL);
 
 	wxFlexGridSizer* fgSizer3;
-	fgSizer3 = new wxFlexGridSizer( 0, 2, 0, 0 );
-	fgSizer3->SetFlexibleDirection( wxBOTH );
-	fgSizer3->SetNonFlexibleGrowMode( wxFLEX_GROWMODE_SPECIFIED );
+	fgSizer3 = new wxFlexGridSizer(0, 2, 0, 0);
+	fgSizer3->SetFlexibleDirection(wxBOTH);
+	fgSizer3->SetNonFlexibleGrowMode(wxFLEX_GROWMODE_SPECIFIED);
 
-	m_Font_Size_txt = new wxStaticText( sbSizer4->GetStaticBox(), wxID_ANY, _("Max Results"), wxDefaultPosition, wxDefaultSize, 0 );
-	m_Font_Size_txt->Wrap( -1 );
-	m_Font_Size_txt->SetToolTip( _("More results use up more memory. Memory is only allocated if required (e.g. if number is 30000, corresponding memory will only be used after this many calculations).") );
+	m_Font_Size_txt = new wxStaticText(sbSizer4->GetStaticBox(), wxID_ANY, _("Max Results"), wxDefaultPosition, wxDefaultSize, 0);
+	m_Font_Size_txt->Wrap(-1);
+	m_Font_Size_txt->SetToolTip(_("More results use up more memory. Memory is only allocated if required (e.g. if number is 30000, corresponding memory will only be used after this many calculations)."));
 
-	fgSizer3->Add( m_Font_Size_txt, 0, wxALL, 5 );
+	fgSizer3->Add(m_Font_Size_txt, 0, wxALL, 5);
 
-	m_MaxResults = new wxSpinCtrl( sbSizer4->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxSP_ARROW_KEYS, 0, 30000, 30 );
-	m_MaxResults->SetToolTip( _("More results use more memory. Memory will be cleared if Max Results is reached. NB variables are kept") );
+	m_MaxResults = new wxSpinCtrl(sbSizer4->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxSP_ARROW_KEYS, 0, 30000, 30);
+	m_MaxResults->SetToolTip(_("More results use more memory. Memory will be cleared if Max Results is reached. NB variables are kept"));
 
-	fgSizer3->Add( m_MaxResults, 0, wxALL, 5 );
+	fgSizer3->Add(m_MaxResults, 0, wxALL, 5);
 
 
-	sbSizer4->Add( fgSizer3, 1, wxEXPAND, 5 );
+	sbSizer4->Add(fgSizer3, 1, wxEXPAND, 5);
 
-	m_staticText17 = new wxStaticText( sbSizer4->GetStaticBox(), wxID_ANY, _("Opacity"), wxDefaultPosition, wxDefaultSize, 0 );
-	m_staticText17->Wrap( -1 );
+	m_staticText17 = new wxStaticText(sbSizer4->GetStaticBox(), wxID_ANY, _("Opacity"), wxDefaultPosition, wxDefaultSize, 0);
+	m_staticText17->Wrap(-1);
 	m_staticText17->Hide();
 
-	sbSizer4->Add( m_staticText17, 0, wxALL, 5 );
+	sbSizer4->Add(m_staticText17, 0, wxALL, 5);
 
-	m_sOpacity = new wxSlider( sbSizer4->GetStaticBox(), wxID_ANY, 50, 0, 255, wxDefaultPosition, wxDefaultSize, wxSL_HORIZONTAL );
+	m_sOpacity = new wxSlider(sbSizer4->GetStaticBox(), wxID_ANY, 50, 0, 255, wxDefaultPosition, wxDefaultSize, wxSL_HORIZONTAL);
 	m_sOpacity->Hide();
 
-	sbSizer4->Add( m_sOpacity, 0, wxALL|wxEXPAND, 5 );
+	sbSizer4->Add(m_sOpacity, 0, wxALL | wxEXPAND, 5);
 
-	m_showhistory = new wxCheckBox( sbSizer4->GetStaticBox(), wxID_ANY, _("Show History Window"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_showhistory = new wxCheckBox(sbSizer4->GetStaticBox(), wxID_ANY, _("Show History Window"), wxDefaultPosition, wxDefaultSize, 0);
 	m_showhistory->SetValue(true);
-	m_showhistory->SetToolTip( _("Show/Hide history") );
+	m_showhistory->SetToolTip(_("Show/Hide history"));
 
-	sbSizer4->Add( m_showhistory, 0, wxALL, 5 );
+	sbSizer4->Add(m_showhistory, 0, wxALL, 5);
 
 
-	bSizer2->Add( sbSizer4, 0, wxALL|wxEXPAND, 5 );
+	bSizer2->Add(sbSizer4, 0, wxALL | wxEXPAND, 5);
 
 	wxStaticBoxSizer* sbSizer41;
-	sbSizer41 = new wxStaticBoxSizer( new wxStaticBox( this, wxID_ANY, _("Other") ), wxVERTICAL );
+	sbSizer41 = new wxStaticBoxSizer(new wxStaticBox(this, wxID_ANY, _("Other")), wxVERTICAL);
 
-	m_logresults = new wxCheckBox( sbSizer41->GetStaticBox(), wxID_ANY, _("Log results to opencpn"), wxDefaultPosition, wxDefaultSize, 0 );
-	m_logresults->SetToolTip( _("Log calculator results in OpenCPN log file") );
+	m_logresults = new wxCheckBox(sbSizer41->GetStaticBox(), wxID_ANY, _("Log results to opencpn"), wxDefaultPosition, wxDefaultSize, 0);
+	m_logresults->SetToolTip(_("Log calculator results in OpenCPN log file"));
 
-	sbSizer41->Add( m_logresults, 0, wxALL, 5 );
-
-
-	bSizer2->Add( sbSizer41, 0, wxEXPAND, 5 );
+	sbSizer41->Add(m_logresults, 0, wxALL, 5);
 
 
-	bSizer1->Add( bSizer2, 1, wxEXPAND, 5 );
+	bSizer2->Add(sbSizer41, 0, wxEXPAND, 5);
+
+
+	bSizer1->Add(bSizer2, 1, wxEXPAND, 5);
 
 	m_sdbSizer1 = new wxStdDialogButtonSizer();
-	m_sdbSizer1OK = new wxButton( this, wxID_OK );
-	m_sdbSizer1->AddButton( m_sdbSizer1OK );
-	m_sdbSizer1Cancel = new wxButton( this, wxID_CANCEL );
-	m_sdbSizer1->AddButton( m_sdbSizer1Cancel );
+	m_sdbSizer1OK = new wxButton(this, wxID_OK);
+	m_sdbSizer1->AddButton(m_sdbSizer1OK);
+	m_sdbSizer1Cancel = new wxButton(this, wxID_CANCEL);
+	m_sdbSizer1->AddButton(m_sdbSizer1Cancel);
 	m_sdbSizer1->Realize();
 
-	bSizer1->Add( m_sdbSizer1, 0, wxALL|wxEXPAND, 5 );
+	bSizer1->Add(m_sdbSizer1, 0, wxALL | wxEXPAND, 5);
 
 
-	this->SetSizer( bSizer1 );
+	this->SetSizer(bSizer1);
 	this->Layout();
-	bSizer1->Fit( this );
+	bSizer1->Fit(this);
 
-	this->Centre( wxBOTH );
+	this->Centre(wxBOTH);
 }
 
 CfgDlgDef::~CfgDlgDef()
 {
 }
+
 
 HlpDlgDef::HlpDlgDef( wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style ) : wxDialog( parent, id, title, pos, size, style )
 {
@@ -252,7 +252,7 @@ HlpDlgDef::HlpDlgDef( wxWindow* parent, wxWindowID id, const wxString& title, co
 	wxBoxSizer* bSizer10;
 	bSizer10 = new wxBoxSizer( wxHORIZONTAL );
 
-	m_textCtrl3 = new wxTextCtrl( HelpPanel, wxID_ANY, _("Calculator Plugin for OpenCPN by SaltyPaws aka Walbert Schulpen\n=======================================\n\nThis is a light weight yet powerful calculator plugin for OpenCPN. Would you like to know your hull speed? \n\nKey features are:\n* Storing results in variables\n* Shows historic calculations\n* Full complement of nautical functions\n* Screen footprint can be optimised & minimised as required\n\nAdding formulas is easy. If your favorite nautical equation is missing, please let me know your equation via flyspray, and I will add it.\n\nHelp\n=========\nType help in the calculator to get these instructions.\n\nExamples of expression that work in the calculator are: (comments are in brackets, some results depend on other example calculations):\n=========\nHull speed:\n\tLWL=48\t\t\t(water line lenght in feet)\n\tvhull=1.34*LWL^(1/2)\t(hull speed in knots)\n\nConversions:\n\tftm=0.3048\t\t\t(feet to meters)\n\tkm_to_nm=0.539957\t\t(Kilometers to nautical Mile)\n\tftm*LWL\t\t\t(waterline length in meters)\n\nDistance to horizon\n\tR=6378.1*1000\t\t(Radius of the earth in m)\n\tH=2.5\t\t\t(Height of the eye above sea-level in m)\n\td = R * acos(R/(R + h))\t(Distance to horizon in m)   \n\tans*km_to_nm\t\t(Distance to horizon in nm)\n\nDistance to lighthouse\n\tH1=200\t\t\t(height of lighthouse in m)\n\td1 = R*acos(R/(R + H1))\t(Distance to horizon in m)\n\tdistance=d1+d\t\t(visibility range of lighthouse in m)\n\nBuilt-in functions\n\nThe following table gives an overview of the functions supported by the default implementation. It lists the function names, the number of arguments and a brief description.\nName \tArgc. \tExplanation\nsin \t1 \tsine function\ncos \t1 \tcosine function\ntan \t1 \ttangens function\nasin \t1 \tarcus sine function\nacos \t1 \tarcus cosine function\natan \t1 \tarcus tangens function\nsinh \t1 \thyperbolic sine function\ncosh \t1 \thyperbolic cosine\ntanh \t1 \thyperbolic tangens function\nasinh \t1 \thyperbolic arcus sine function\nacosh \t1 \thyperbolic arcus tangens function\natanh \t1 \thyperbolic arcur tangens function\nlog2 \t1 \tlogarithm to the base 2\nlog10 \t1 \tlogarithm to the base 10\nlog \t1 \tlogarithm to the base 10\nln \t\t1 \tlogarithm to base e (2.71828...)\nexp \t1 \te raised to the power of x\nsqrt \t1 \tsquare root of a value\nsign \t1 \tsign function -1 if x<0; 1 if x>0\nrint \t1 \tround to nearest integer\nabs \t1 \tabsolute value\nmin \tvar. \tmin of all arguments\nmax \tvar. \tmax of all arguments\nsum \tvar. \tsum of all arguments\navg \tvar. \tmean value of all arguments\n\n\nBuilt-in binary operators\n\nThe following table lists the default binary operators supported by the parser.\nOperator \tMeaning \tPriority\n= \t\tassignement \t\t\t-1\n&& \tlogical and \t\t\t1\n|| \t\tlogical or\t \t\t\t2\n<= \t\tless or equal \t\t\t4\n>= \t\tgreater or equal \t\t4\n!= \t\tnot equal \t\t\t\t4\n== \t\tequal \t\t\t\t\t4\n> \t\tgreater than \t\t\t4\n< \t\tless than \t\t\t\t4\n+ \t\taddition \t\t\t\t5\n- \t\tsubtraction \t\t\t5\n* \t\tmultiplication \t\t6\n/ \t\tdivision \t\t\t\t6\n^ \t\traise x to the power of y \t7\n*The assignment operator is special since it changes one of its arguments and can only by applied to variables.\nOther operators\n\nmuParser has built in support for the if then else operator. It uses lazy evaluation in order to make sure only the necessary branch of the expression is evaluated.\nOperator \tMeaning \tRemarks\n?: \tif then else operator \tC++ style syntax\n \nVariables:\n\tpi, e\n\tans is the result of the previous calulation\n\tdtr is the conversion factor from degrees to radians\t\t\n\tyou can define your own variables (e.g. myvariable=10/8*cos(dtr*90) or yourvariable=ans)\n\tclear removes results in the history, but leaves your defined variables in tact\n\nUser Interface - type these commands in the command window:\n\thistory - Toggle the history panel\n\tshowhelp - Show/Hide the Help button\n\tshowcalculate - Show/Hide the Calculate button\n\tshowhistory - Show/Hide the history toggle\n\thelp - show the help menu\n\nSettings/Plugins/Preferences:\n\tShow/Hide Calculate, Help and History toggle buttons\n\tHistory Settings: max Results -this is the number of results that will be stored in the history pulldown. The history pulldown will contain five times this value\n\tLog to opencpn: Enable/Disable logging of results to opencpn logfile."), wxDefaultPosition, wxDefaultSize, wxTE_MULTILINE );
+	m_textCtrl3 = new wxTextCtrl(HelpPanel, wxID_ANY, _("Calculator Plugin for OpenCPN by SaltyPaws aka Walbert Schulpen\n=======================================\n\nThis is a light weight yet powerful calculator plugin for OpenCPN. Would you like to know your hull speed? \n\nKey features are:\n* Storing results in variables\n* Shows historic calculations\n* Full complement of nautical functions\n* Screen footprint can be optimised & minimised as required\n\nAdding formulas is easy. If your favorite nautical equation is missing, please let me know your equation via flyspray, and I will add it.\n\nHelp\n=========\nType help in the calculator to get these instructions.\n\nExamples of expression that work in the calculator are: (comments are in brackets, some results depend on other example calculations):\n=========\nHull speed:\n\tLWL=48\t\t\t(water line lenght in feet)\n\tvhull=1.34*LWL^(1/2)\t(hull speed in knots)\n\nConversions:\n\tftm=0.3048\t\t\t(feet to meters)\n\tkm_to_nm=0.539957\t\t(Kilometers to nautical Mile)\n\tftm*LWL\t\t\t(waterline length in meters)\n\nDistance to horizon\n\tR=6378.1*1000\t\t(Radius of the earth in m)\n\tH=2.5\t\t\t(Height of the eye above sea-level in m)\n\td = R * acos(R/(R + h))\t(Distance to horizon in m)   \n\tans*km_to_nm\t\t(Distance to horizon in nm)\n\nDistance to lighthouse\n\tH1=200\t\t\t(height of lighthouse in m)\n\td1 = R*acos(R/(R + H1))\t(Distance to horizon in m)\n\tdistance=d1+d\t\t(visibility range of lighthouse in m)\n\nBuilt-in functions\n\nThe following table gives an overview of the functions supported by the default implementation. It lists the function names, the number of arguments and a brief description.\nName \tArgc. \tExplanation\nsin \t1 \tsine function\ncos \t1 \tcosine function\ntan \t1 \ttangens function\nasin \t1 \tarcus sine function\nacos \t1 \tarcus cosine function\natan \t1 \tarcus tangens function\nsinh \t1 \thyperbolic sine function\ncosh \t1 \thyperbolic cosine\ntanh \t1 \thyperbolic tangens function\nasinh \t1 \thyperbolic arcus sine function\nacosh \t1 \thyperbolic arcus tangens function\natanh \t1 \thyperbolic arcur tangens function\nlog2 \t1 \tlogarithm to the base 2\nlog10 \t1 \tlogarithm to the base 10\nlog \t1 \tlogarithm to the base 10\nln \t\t1 \tlogarithm to base e (2.71828...)\nexp \t1 \te raised to the power of x\nsqrt \t1 \tsquare root of a value\nsign \t1 \tsign function -1 if x<0; 1 if x>0\nrint \t1 \tround to nearest integer\nabs \t1 \tabsolute value\nmin \tvar. \tmin of all arguments\nmax \tvar. \tmax of all arguments\nsum \tvar. \tsum of all arguments\navg \tvar. \tmean value of all arguments\n\n\nBuilt-in binary operators\n\nThe following table lists the default binary operators supported by the parser.\nOperator \tMeaning \tPriority\n= \t\tassignement \t\t\t-1\n&& \tlogical and \t\t\t1\n|| \t\tlogical or\t \t\t\t2\n<= \t\tless or equal \t\t\t4\n>= \t\tgreater or equal \t\t4\n!= \t\tnot equal \t\t\t\t4\n== \t\tequal \t\t\t\t\t4\n> \t\tgreater than \t\t\t4\n< \t\tless than \t\t\t\t4\n+ \t\taddition \t\t\t\t5\n- \t\tsubtraction \t\t\t5\n* \t\tmultiplication \t\t6\n/ \t\tdivision \t\t\t\t6\n^ \t\traise x to the power of y \t7\n*The assignment operator is special since it changes one of its arguments and can only by applied to variables.\nOther operators\n\nmuParser has built in support for the if then else operator. It uses lazy evaluation in order to make sure only the necessary branch of the expression is evaluated.\nOperator \tMeaning \tRemarks\n?: \tif then else operator \tC++ style syntax\n \nVariables:\n\tpi, e\n\tans is the result of the previous calulation\n\tdtr is the conversion factor from degrees to radians\t\t\n\tyou can define your own variables (e.g. myvariable=10/8*cos(dtr*90) or yourvariable=ans)\n\tclear removes results in the history, but leaves your defined variables in tact\n\nUser Interface - type these commands in the command window:\n\thistory - Toggle the history panel\n\tshowhelp - Show/Hide the Help button\n\tshowcalculate - Show/Hide the Calculate button\n\tshowhistory - Show/Hide the history toggle\n\thelp - show the help menu\n\nSettings/Plugins/Preferences:\n\tShow/Hide Function, Calculate and Help buttons\n\tHistory Settings: max Results -this is the number of results that will be stored in the history pulldown. The history pulldown will contain five times this value\n\tLog to opencpn: Enable/Disable logging of results to opencpn logfile.\n\nCalculate Button:\n\tEnter the expression in the input box: e.g. 4+2. Do NOT use the = sign. \"Enter\" or press \"Calculate\".\n\tIf you are using \"History\" the results will appear there. If not the result will appear in the input box.\n\tIf you make a mistake, press \"Calculate\" to clear the input box.  "), wxDefaultPosition, wxDefaultSize, wxTE_MULTILINE);
 	m_textCtrl3->SetMinSize( wxSize( 600,400 ) );
 
 	bSizer10->Add( m_textCtrl3, 100, wxALL|wxEXPAND, 5 );

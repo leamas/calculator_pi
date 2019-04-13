@@ -71,36 +71,66 @@ class DlgDef : public wxDialog
 
 };
 
+///////////////////////////////////////////////////////////////////////////
+// C++ code generated with wxFormBuilder (version Oct 26 2018)
+// http://www.wxformbuilder.org/
+//
+// PLEASE DO *NOT* EDIT THIS FILE!
+///////////////////////////////////////////////////////////////////////////
+
+#pragma once
+
+#include <wx/artprov.h>
+#include <wx/xrc/xmlres.h>
+#include <wx/intl.h>
+#include <wx/string.h>
+#include <wx/choice.h>
+#include <wx/gdicmn.h>
+#include <wx/font.h>
+#include <wx/colour.h>
+#include <wx/settings.h>
+#include <wx/sizer.h>
+#include <wx/statbox.h>
+#include <wx/checkbox.h>
+#include <wx/stattext.h>
+#include <wx/spinctrl.h>
+#include <wx/slider.h>
+#include <wx/button.h>
+#include <wx/dialog.h>
+
+///////////////////////////////////////////////////////////////////////////
+
+
 ///////////////////////////////////////////////////////////////////////////////
 /// Class CfgDlgDef
 ///////////////////////////////////////////////////////////////////////////////
 class CfgDlgDef : public wxDialog
 {
-	private:
+private:
 
-	protected:
-		wxStaticText* m_Font_Size_txt;
-		wxStaticText* m_staticText17;
-		wxStdDialogButtonSizer* m_sdbSizer1;
-		wxButton* m_sdbSizer1OK;
-		wxButton* m_sdbSizer1Cancel;
+protected:
+	wxStaticText* m_Font_Size_txt;
+	wxStaticText* m_staticText17;
+	wxStdDialogButtonSizer* m_sdbSizer1;
+	wxButton* m_sdbSizer1OK;
+	wxButton* m_sdbSizer1Cancel;
 
-	public:
-		wxChoice* m_Calc_Reporting;
-		wxCheckBox* m_showhelpB;
-		wxCheckBox* m_showhistoryB;
-		wxCheckBox* m_showhistoryP;
-		wxCheckBox* m_CalculateB;
-		wxCheckBox* m_showfunction;
-		wxSpinCtrl* m_MaxResults;
-		wxSlider* m_sOpacity;
-		wxCheckBox* m_showhistory;
-		wxCheckBox* m_logresults;
+public:
+	wxChoice* m_Calc_Reporting;
+	wxCheckBox* m_showhelpB;
+	wxCheckBox* m_CalculateB;
+	wxCheckBox* m_showfunction;
+	wxSpinCtrl* m_MaxResults;
+	wxSlider* m_sOpacity;
+	wxCheckBox* m_showhistory;
+	wxCheckBox* m_logresults;
 
-		CfgDlgDef( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Calculator preferences"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( -1,-1 ), long style = wxDEFAULT_DIALOG_STYLE );
-		~CfgDlgDef();
+	CfgDlgDef(wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Calculator preferences"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize(-1, -1), long style = wxDEFAULT_DIALOG_STYLE);
+	~CfgDlgDef();
 
 };
+
+
 
 ///////////////////////////////////////////////////////////////////////////////
 /// Class HlpDlgDef

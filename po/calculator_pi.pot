@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calculator_pi 2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-10 10:02+0100\n"
+"POT-Creation-Date: 2019-04-13 18:56+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "calculator"
 msgstr ""
 
 #: src/calculator_pi.cpp:108 src/calculator_pi.cpp:181 src/calculatorgui.h:69
-#: src/calculatorgui.h:352
+#: src/calculatorgui.h:382
 msgid "Calculator"
 msgstr ""
 
@@ -40,7 +40,7 @@ msgstr ""
 msgid "Calculator Preferences"
 msgstr ""
 
-#: src/calculatorgui_impl.h:64 src/calculatorgui.h:100
+#: src/calculatorgui_impl.h:64 src/calculatorgui.h:128
 msgid "Calculator preferences"
 msgstr ""
 
@@ -117,114 +117,101 @@ msgstr ""
 msgid "Help"
 msgstr ""
 
-#: src/calculatorgui.cpp:119
+#: src/calculatorgui.cpp:130
 msgid "Calculator Reporting"
 msgstr ""
 
-#: src/calculatorgui.cpp:121
+#: src/calculatorgui.cpp:132
 msgid "Precise (Default)"
 msgstr ""
 
-#: src/calculatorgui.cpp:121
+#: src/calculatorgui.cpp:132
 msgid "Precise, thousands separator"
 msgstr ""
 
-#: src/calculatorgui.cpp:121
+#: src/calculatorgui.cpp:132
 msgid "Succinct"
 msgstr ""
 
-#: src/calculatorgui.cpp:121
+#: src/calculatorgui.cpp:132
 msgid "Succinct, thousands separator"
 msgstr ""
 
-#: src/calculatorgui.cpp:121
+#: src/calculatorgui.cpp:132
 msgid "Scientific"
 msgstr ""
 
-#: src/calculatorgui.cpp:121
+#: src/calculatorgui.cpp:132
 msgid "Humanised"
 msgstr ""
 
-#: src/calculatorgui.cpp:131
+#: src/calculatorgui.cpp:142
 msgid "Show/Hide Buttons"
 msgstr ""
 
-#: src/calculatorgui.cpp:133
+#: src/calculatorgui.cpp:144
 msgid "Help Button"
 msgstr ""
 
-#: src/calculatorgui.cpp:135
+#: src/calculatorgui.cpp:146
 msgid "Show/Hide help button (you can always type \"help\" from input window)."
 msgstr ""
 
-#: src/calculatorgui.cpp:139
-msgid "History Toggle"
-msgstr ""
-
-#: src/calculatorgui.cpp:141 src/calculatorgui.cpp:147
-msgid ""
-"Show/Hide history toggle (you can always type \"history\" from input window)."
-msgstr ""
-
-#: src/calculatorgui.cpp:145
-msgid "History Pulldown"
-msgstr ""
-
-#: src/calculatorgui.cpp:151
+#: src/calculatorgui.cpp:150
 msgid "Calculate Button"
 msgstr ""
 
-#: src/calculatorgui.cpp:153
+#: src/calculatorgui.cpp:152
 msgid ""
 "Show/Hide Calculate button (you can always press enter at the end of input)."
 msgstr ""
 
-#: src/calculatorgui.cpp:157
+#: src/calculatorgui.cpp:156
 msgid "Function Button in Calculator window"
 msgstr ""
 
-#: src/calculatorgui.cpp:165
+#: src/calculatorgui.cpp:164
 msgid "History Settings"
 msgstr ""
 
-#: src/calculatorgui.cpp:172
+#: src/calculatorgui.cpp:171
 msgid "Max Results"
 msgstr ""
 
-#: src/calculatorgui.cpp:174
+#: src/calculatorgui.cpp:173
 msgid ""
 "More results use up more memory. Memory is only allocated if required (e.g. "
 "if number is 30000, corresponding memory will only be used after this many "
 "calculations)."
 msgstr ""
 
-#: src/calculatorgui.cpp:179
+#: src/calculatorgui.cpp:178
 msgid ""
 "More results use more memory. Memory will be cleared if Max Results is "
 "reached. NB variables are kept"
 msgstr ""
 
-#: src/calculatorgui.cpp:186
+#: src/calculatorgui.cpp:185
 msgid "Opacity"
 msgstr ""
 
-#: src/calculatorgui.cpp:197
+#: src/calculatorgui.cpp:196
 msgid "Show History Window"
 msgstr ""
 
-#: src/calculatorgui.cpp:199
+#: src/calculatorgui.cpp:198
 msgid "Show/Hide history"
 msgstr ""
 
-#: src/calculatorgui.cpp:207
+#: src/calculatorgui.cpp:206
 msgid "Other"
 msgstr ""
 
-#: src/calculatorgui.cpp:209
+#: src/calculatorgui.cpp:208
 msgid "Log results to opencpn"
 msgstr ""
 
-#: src/calculatorgui.cpp:210
+#: src/calculatorgui.cpp:209
 msgid "Log calculator results in OpenCPN log file"
 msgstr ""
 
@@ -351,11 +338,18 @@ msgid ""
 "\thelp - show the help menu\n"
 "\n"
 "Settings/Plugins/Preferences:\n"
-"\tShow/Hide Calculate, Help and History toggle buttons\n"
+"\tShow/Hide Function, Calculate and Help buttons\n"
 "\tHistory Settings: max Results -this is the number of results that will be "
 "stored in the history pulldown. The history pulldown will contain five times "
 "this value\n"
-"\tLog to opencpn: Enable/Disable logging of results to opencpn logfile."
+"\tLog to opencpn: Enable/Disable logging of results to opencpn logfile.\n"
+"\n"
+"Calculate Button:\n"
+"\tEnter the expression in the input box: e.g. 4+2. Do NOT use the = sign. "
+"\"Enter\" or press \"Calculate\".\n"
+"\tIf you are using \"History\" the results will appear there. If not the "
+"result will appear in the input box.\n"
+"\tIf you make a mistake, press \"Calculate\" to clear the input box.  "
 msgstr ""
 
 #: src/calculatorgui.cpp:418 src/calculatorgui.cpp:513

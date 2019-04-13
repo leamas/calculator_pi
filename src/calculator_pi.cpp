@@ -369,7 +369,6 @@ void calculator_pi::ShowPreferencesDialog( wxWindow* parent )
       dialog->m_MaxResults->SetValue(m_iMaxResults);
 
       dialog->m_showhelpB->SetValue(m_bshowhelpB);
-      dialog->m_showhistoryB->SetValue(m_bshowhistoryB);
       dialog->m_CalculateB->SetValue(m_bCalculateB);
       dialog->m_showfunction->SetValue(m_bshowFunction);
       dialog->m_showhistory->SetValue(m_bshowhistory);
@@ -377,14 +376,12 @@ void calculator_pi::ShowPreferencesDialog( wxWindow* parent )
       dialog->m_logresults->SetValue(m_blogresults);
 
       dialog->m_Calc_Reporting->SetSelection(m_iCalc_Reporting);
-      dialog->m_showhistoryP->SetValue(m_bshowhistoryP);      
 
       if(dialog->ShowModal() == wxID_OK)
       {
             m_iOpacity = dialog->m_sOpacity->GetValue();
             m_iMaxResults = dialog->m_MaxResults->GetValue();
             m_bshowhelpB= dialog->m_showhelpB->GetValue();
-            m_bshowhistoryB= dialog->m_showhistoryB->GetValue();
             m_bCalculateB= dialog->m_CalculateB->GetValue();
             m_bshowFunction= dialog->m_showfunction->GetValue();
 
@@ -394,7 +391,6 @@ void calculator_pi::ShowPreferencesDialog( wxWindow* parent )
 
 
             m_iCalc_Reporting= dialog->m_Calc_Reporting->GetCurrentSelection();
-            m_bshowhistoryP= dialog->m_showhistoryP->GetValue();
             
 
 
