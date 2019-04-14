@@ -138,7 +138,7 @@ void FunDlg::OnItemSelect(void)
 		m_textExtraDescription->Show();
 	}
 	else if (resultFormula == wxString(_T("Waveheight=0 ,CDU10=(0.879+0.075*U10)*10^-3,U10 < 8 ? alpha = 1 : alpha = 0.6 + 0.05 * U10 ,Cd=CDU10/alpha ,F_hat=(Fetch*9.80665)/U10^2 ,F_star=F_hat/Cd,F_tilde=CDU10*F_star ,H_tilde=0.3*alpha*(1-(1+0.004*sqrt(F_tilde/alpha))^-2) ,H_star=H_tilde/CDU10 ,H_hat=H_star*Cd ,Waveheight=H_hat*(U10^2)/9.80665"))) {
-		m_textExtraDescription->SetValue(_("fetch = distance over water that the wind blows"));
+		m_textExtraDescription->SetValue(_("fetch = distance over water that the wind blows\nU10 - windspeed (10m) must be entered as m/s"));
 		m_textExtraDescription->Show();
 	}
 	else if (resultFormula == wxString(_T("distance_horizon=sqrt(height* (height + 12756.32))"))) {
@@ -854,6 +854,9 @@ wxString Dlg::ThousandSeparator(wxString Number_in){
 
 void Dlg::OnHistoryPulldown ( wxCommandEvent& event ){
     wxString Selected_Result=	this->m_HistoryPulldown->GetString( this->m_HistoryPulldown->GetCurrentSelection());
+	if (Selected_Result == wxEmptyString) {
+		this->m_result->SetFocus();
+	}
     Selected_Result=Selected_Result.BeforeFirst('=');
     //ItemText=ItemText.BeforeFirst(' ');
     this->m_result->AppendText(Selected_Result);

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-13 18:56+0100\n"
+"POT-Creation-Date: 2019-04-14 19:26+0100\n"
 "PO-Revision-Date: 2019-04-05 08:39+0100\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
 "Language-Team: French\n"
@@ -56,7 +56,8 @@ msgid "Calculator Plugin"
 msgstr "Complément Calculateur"
 #
 msgid ""
-"Calculator Plugin for OpenCPN by SaltyPaws aka Walbert Schulpen\n"
+"Calculator Plugin for OpenCPN by SaltyPaws aka Walbert Schulpen/Updated by "
+"Mike Rossiter(Rasbats)\n"
 "=======================================\n"
 "\n"
 "This is a light weight yet powerful calculator plugin for OpenCPN. Would you "
@@ -194,9 +195,6 @@ msgstr ""
 msgid "Calculator Preferences"
 msgstr "Préférences"
 #
-msgid "Calculator Reporting"
-msgstr ""
-#
 msgid "Calculator preferences"
 msgstr "Préférences"
 #
@@ -246,6 +244,9 @@ msgstr "Description"
 #
 msgid "Design"
 msgstr "Apparence"
+#
+msgid "Display Accuracy"
+msgstr ""
 #
 msgid "Distance to horizon"
 msgstr "Distance à l'horizon"
@@ -301,8 +302,9 @@ msgstr "Fonction"
 msgid "Function And Description"
 msgstr "Fonction et description"
 #
-msgid "Function Button in Calculator window"
-msgstr "Bouton \"Fonction\" dans la fenêtre \"Calculatrice\""
+#, fuzzy
+msgid "Function Button"
+msgstr "Fonction"
 #
 msgid "Function Result Select Units"
 msgstr "Sélectionner les unités des résultats de la fonction"
@@ -623,6 +625,11 @@ msgstr "calculateur"
 msgid "fetch = distance over water that the wind blows"
 msgstr ""
 #
+msgid ""
+"fetch = distance over water that the wind blows\n"
+"U10 - windspeed (10m) must be entered as m/s"
+msgstr ""
+#
 msgid "http://climate.weather.gc.ca/glossary_e.html"
 msgstr "http://climate.weather.gc.ca/glossary_e.html"
 #
@@ -633,7 +640,8 @@ msgstr ""
 "http://en.wikipedia.org/wiki/Wind_chill, http://climate.weatheroffice.gc.ca/"
 "prods_servs/normals_documentation_e.html"
 #
-msgid "http://lagoon-inside.com/2012/01/faster-thanks-to-the-vmg-concept/"
+#, fuzzy
+msgid "http://lagoon-inside.com/en/faster-thanks-to-the-vmg-concept/"
 msgstr "http://lagoon-inside.com/2012/01/faster-thanks-to-the-vmg-concept/"
 #
 msgid "http://planetcalc.com/384/"
@@ -663,6 +671,7 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "\""
 #~ msgstr "\""
 #
@@ -671,8 +680,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "'"
 #~ msgstr "'"
+#
 #
 #
 #
@@ -695,8 +706,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "(5/9)*(VAR-491.67)=(9/5)*(VAR + 273.15)"
 #~ msgstr "(5/9)*(VAR-491.67)=(9/5)*(VAR + 273.15)"
+#
 #
 #
 #
@@ -719,8 +732,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "0.0001"
 #~ msgstr "0.0001"
+#
 #
 #
 #
@@ -743,8 +758,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "0.01"
 #~ msgstr "0.01"
+#
 #
 #
 #
@@ -767,8 +784,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "0.03386"
 #~ msgstr "0.03386"
+#
 #
 #
 #
@@ -791,8 +810,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "0.092903"
 #~ msgstr "0.092903"
+#
 #
 #
 #
@@ -815,8 +836,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "0.3048"
 #~ msgstr "0.3048"
+#
 #
 #
 #
@@ -839,8 +862,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "0.987"
 #~ msgstr "0.987"
+#
 #
 #
 #
@@ -863,8 +888,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "1.8288"
 #~ msgstr "1.8288"
+#
 #
 #
 #
@@ -887,8 +914,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "15850.3231"
 #~ msgstr "15850.3231"
+#
 #
 #
 #
@@ -911,8 +940,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "1e-05"
 #~ msgstr "1e-05"
+#
 #
 #
 #
@@ -935,8 +966,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "2.20462"
 #~ msgstr "2.20462"
+#
 #
 #
 #
@@ -959,8 +992,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "3600"
 #~ msgstr "3600"
+#
 #
 #
 #
@@ -983,8 +1018,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "4.4482216"
 #~ msgstr "4.4482216"
+#
 #
 #
 #
@@ -1007,8 +1044,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "60000"
 #~ msgstr "60000"
+#
 #
 #
 #
@@ -1031,8 +1070,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "A"
 #~ msgstr "A"
+#
 #
 #
 #
@@ -1055,8 +1096,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Angle_In"
 #~ msgstr "Angle_In"
+#
 #
 #
 #
@@ -1079,8 +1122,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Area"
 #~ msgstr "Zone"
+#
 #
 #
 #
@@ -1103,6 +1148,7 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Beaufort=(Wind_Speed/0.837)^(2/3)"
 #~ msgstr "Beaufort=(Wind_Speed/0.837)^(2/3)"
 #
@@ -1112,8 +1158,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "CLEAR"
 #~ msgstr "EFFACER"
+#
 #
 #
 #
@@ -1136,6 +1184,7 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid ""
 #~ "Change_in_height_of_Tide =  (height/2) * (1-cos(dtr*180 * time_ratio))"
 #~ msgstr ""
@@ -1147,8 +1196,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Clear"
 #~ msgstr "Effacer"
+#
 #
 #
 #
@@ -1167,8 +1218,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Degree (°)"
 #~ msgstr "Degrées (°)"
+#
 #
 #
 #
@@ -1183,8 +1236,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Degrees"
 #~ msgstr "Degrées"
+#
 #
 #
 #
@@ -1207,8 +1262,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Distance"
 #~ msgstr "Distance"
+#
 #
 #
 #
@@ -1231,8 +1288,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Distance_Out=Distance_In"
 #~ msgstr "Distance_Out=Distance_In"
+#
 #
 #
 #
@@ -1252,8 +1311,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "FUNCTION"
 #~ msgstr "FONCTION"
+#
 #
 #
 #
@@ -1276,8 +1337,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Flowrate"
 #~ msgstr "Flux"
+#
 #
 #
 #
@@ -1300,8 +1363,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Flowrate_Out=Flowrate_In"
 #~ msgstr "Flowrate_Out=Flowrate_In"
+#
 #
 #
 #
@@ -1316,10 +1381,16 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #~ msgstr "Forcer"
 #
 #
+#~ msgid "Function Button in Calculator window"
+#~ msgstr "Bouton \"Fonction\" dans la fenêtre \"Calculatrice\""
+#
+#
+#
 #
 #, fuzzy
 #~ msgid "Function result is a string."
 #~ msgstr "Sélectionner les unités des résultats de la fonction"
+#
 #
 #
 #
@@ -1339,8 +1410,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "HELP"
 #~ msgstr "AIDE"
+#
 #
 #
 #
@@ -1357,8 +1430,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "HIDEHELP"
 #~ msgstr "CACHER L'AIDE"
+#
 #
 #
 #
@@ -1375,8 +1450,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "HISTORY"
 #~ msgstr "HISTORIQUE"
+#
 #
 #
 #
@@ -1393,8 +1470,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "HideHelp"
 #~ msgstr "Cacher l'aide"
+#
 #
 #
 #
@@ -1406,12 +1485,15 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #~ msgstr "Historique : Cacher"
 #
 #
+#
 #~ msgid "History Pulldown"
 #~ msgstr "Développer l'historique"
 #
 #
+#
 #~ msgid "History Toggle"
 #~ msgstr "Bascule de l'historique"
+#
 #
 #
 #
@@ -1434,8 +1516,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Inches of Mercury"
 #~ msgstr "Pouce de mercure"
+#
 #
 #
 #
@@ -1458,8 +1542,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "L"
 #~ msgstr "L"
+#
 #
 #
 #
@@ -1478,8 +1564,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Lat "
 #~ msgstr "Lat "
+#
 #
 #
 #
@@ -1498,8 +1586,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Lbs (weight)"
 #~ msgstr "Lbs (poids)"
+#
 #
 #
 #
@@ -1514,8 +1604,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Longitude"
 #~ msgstr "Longitude"
+#
 #
 #
 #
@@ -1538,8 +1630,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Meter"
 #~ msgstr "Mètre"
+#
 #
 #
 #
@@ -1562,8 +1656,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Nautical Miles"
 #~ msgstr "Milles nautiques"
+#
 #
 #
 #
@@ -1586,8 +1682,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Pressure"
 #~ msgstr "Pression"
+#
 #
 #
 #
@@ -1610,8 +1708,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Pressure_In"
 #~ msgstr "Pressure_In"
+#
 #
 #
 #
@@ -1634,8 +1734,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Q = 3600 *(A)* (H)"
 #~ msgstr "Q = 3600 *(A)* (H)"
+#
 #
 #
 #
@@ -1655,8 +1757,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "SHOWFUNCTION"
 #~ msgstr "FONCTION : VOIR"
+#
 #
 #
 #
@@ -1673,8 +1777,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "SHOWHISTORY"
 #~ msgstr "HISTORIQUE : VOIR"
+#
 #
 #
 #
@@ -1697,8 +1803,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "See table"
 #~ msgstr "Voir la table"
+#
 #
 #
 #~ msgid ""
@@ -1707,6 +1815,7 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #~ msgstr ""
 #~ "Montrer/Cacher le bouton bascule \"Historique\". (Vous pourrez toujours "
 #~ "entrer \"historique\" depuis la fenêtre d'entrée)."
+#
 #
 #
 #
@@ -1723,6 +1832,7 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "ShowHelp"
 #~ msgstr "Aide : Voir"
 #
@@ -1732,8 +1842,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "ShowHistory"
 #~ msgstr "Historique : Voir"
+#
 #
 #
 #
@@ -1756,8 +1868,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Speed_Current = 0.03 * (Speed_Wind)"
 #~ msgstr "Speed_Current = 0.03 * (Vitesse_Wind)"
+#
 #
 #
 #
@@ -1780,8 +1894,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Speed_Out=Speed_In"
 #~ msgstr "Speed_Out=Speed_In"
+#
 #
 #
 #
@@ -1804,8 +1920,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Square cm"
 #~ msgstr "Cm carré"
+#
 #
 #
 #
@@ -1828,8 +1946,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Square meter"
 #~ msgstr "Mètre carré"
+#
 #
 #
 #
@@ -1852,8 +1972,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "TRUE"
 #~ msgstr "Vrai"
+#
 #
 #
 #
@@ -1876,12 +1998,14 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid ""
 #~ "T_wind_chill = 13.12 + 0.6215 * T_air - 11.37 * V_wind^0.16 + 0.3965 * "
 #~ "T_air* V_wind^0.16 "
 #~ msgstr ""
 #~ "T_wind_chill = 13.12 + 0.6215 * T_air - 11.37 * V_wind^0.16 + 0.3965 * "
 #~ "T_air* V_wind^0.16 "
+#
 #
 #
 #
@@ -1904,8 +2028,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Time"
 #~ msgstr "Temps"
+#
 #
 #
 #
@@ -1928,8 +2054,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "US gallons per minute"
 #~ msgstr "gallons américains par minute"
+#
 #
 #
 #
@@ -1952,8 +2080,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "VAR - 273.15=VAR + 273.15"
 #~ msgstr "VAR - 273.15=VAR + 273.15"
+#
 #
 #
 #
@@ -1976,8 +2106,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "VAR/dtr=VAR*dtr"
 #~ msgstr "VAR/dtr=VAR*dtr"
+#
 #
 #
 #
@@ -2000,8 +2132,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "VMG=V*cos(alpha*dtr)"
 #~ msgstr "VMG=V*cos(alpha*dtr)"
+#
 #
 #
 #
@@ -2024,8 +2158,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Wave_speed = 3.03 * (wave_period)"
 #~ msgstr "Wave_speed = 3.03 * (wave_period)"
+#
 #
 #
 #
@@ -2048,6 +2184,7 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #~ "F_star=F_hat/Cd,F_tilde=CDU10*F_star ,H_tilde=0.3*alpha*(1-"
 #~ "(1+0.004*sqrt(F_tilde/alpha))^-2) ,H_star=H_tilde/CDU10 ,H_hat=H_star*Cd ,"
 #~ "Waveheight=H_hat*(U10^2)/9.80665"
+#
 #
 #
 #
@@ -2070,8 +2207,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "Wind_Speed"
 #~ msgstr "Wind_Speed"
+#
 #
 #
 #
@@ -2094,8 +2233,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "alpha"
 #~ msgstr "alpha"
+#
 #
 #
 #
@@ -2118,8 +2259,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "alpha2"
 #~ msgstr "alpha2"
+#
 #
 #
 #
@@ -2142,8 +2285,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "atm"
 #~ msgstr "atm"
+#
 #
 #
 #
@@ -2166,8 +2311,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "breaking_strength= 900 * comparison_factor * (pi*diameter)^2 "
 #~ msgstr "breaking_strength= 900 * comparison_factor * (pi*diameter)^2 "
+#
 #
 #
 #
@@ -2190,6 +2337,7 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "circumference"
 #~ msgstr "circonférence"
 #
@@ -2199,8 +2347,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "clear"
 #~ msgstr "effacer"
+#
 #
 #
 #
@@ -2223,8 +2373,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "density"
 #~ msgstr "densité"
+#
 #
 #
 #
@@ -2247,8 +2399,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "dewpoint"
 #~ msgstr "Point de rosée"
+#
 #
 #
 #
@@ -2271,8 +2425,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "distance_horizon=sqrt(height* (height + 12756.32))"
 #~ msgstr "distance_horizon=sqrt(height* (height + 12756.32))"
+#
 #
 #
 #
@@ -2289,6 +2445,7 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #~ msgstr ""
 #~ "distance_visible=sqrt(height_observer * (height_observer + 12756.32)) + "
 #~ "sqrt(height_object * (height_object + 12756.32))"
+#
 #
 #
 #
@@ -2311,8 +2468,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "draft_heeled=draft*cos(dtr*angle)"
 #~ msgstr "draft_heeled=draft*cos(dtr*angle)"
+#
 #
 #
 #
@@ -2324,6 +2483,7 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #, fuzzy
 #~ msgid "ere"
 #~ msgstr "Degré"
+#
 #
 #
 #
@@ -2346,6 +2506,7 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "foot"
 #~ msgstr "pied"
 #
@@ -2355,8 +2516,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "function"
 #~ msgstr "fonction"
+#
 #
 #
 #
@@ -2379,8 +2542,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "height"
 #~ msgstr "hauteur"
+#
 #
 #
 #
@@ -2403,8 +2568,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "height_observer"
 #~ msgstr "height_observer"
+#
 #
 #
 #
@@ -2421,8 +2588,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "hidefunction"
 #~ msgstr "fonction : cacher"
+#
 #
 #
 #
@@ -2439,6 +2608,7 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "hidehistory"
 #~ msgstr "historique : cacher"
 #
@@ -2448,8 +2618,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "history"
 #~ msgstr "historique"
+#
 #
 #
 #
@@ -2476,8 +2648,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "inch"
 #~ msgstr "pouce"
+#
 #
 #
 #
@@ -2500,8 +2674,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "kg"
 #~ msgstr "kg"
+#
 #
 #
 #
@@ -2524,8 +2700,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "kg/m3"
 #~ msgstr "kg/m3"
+#
 #
 #
 #
@@ -2548,8 +2726,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "km/h"
 #~ msgstr "km/h"
+#
 #
 #
 #
@@ -2572,8 +2752,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "lbs"
 #~ msgstr "lbs"
+#
 #
 #
 #
@@ -2596,8 +2778,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "m/s"
 #~ msgstr "m / s"
+#
 #
 #
 #
@@ -2620,8 +2804,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "mBar"
 #~ msgstr "mBar"
+#
 #
 #
 #
@@ -2644,6 +2830,7 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "mmHg"
 #~ msgstr "mmHG"
 #
@@ -2652,8 +2839,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "no limit to decimals"
 #~ msgstr "aucune limite aux décimales"
+#
 #
 #
 #
@@ -2673,8 +2862,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "showfunction"
 #~ msgstr "fonction : voir"
+#
 #
 #
 #
@@ -2691,8 +2882,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "showhistory"
 #~ msgstr "historique : voir"
+#
 #
 #
 #
@@ -2715,8 +2908,10 @@ msgstr "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 #
 #
 #
+#
 #~ msgid "vhull=1.34*sqrt(LWL)"
 #~ msgstr "vhull=1.34*sqrt(LWL)"
+#
 #
 #
 #

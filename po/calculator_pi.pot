@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calculator_pi 2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-13 18:56+0100\n"
+"POT-Creation-Date: 2019-04-14 19:26+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,8 +67,14 @@ msgid ""
 "Vhull = Hull speed"
 msgstr ""
 
-#: src/calculatorgui_impl.cpp:137 src/calculatorgui_impl.cpp:141
+#: src/calculatorgui_impl.cpp:137
 msgid "fetch = distance over water that the wind blows"
+msgstr ""
+
+#: src/calculatorgui_impl.cpp:141
+msgid ""
+"fetch = distance over water that the wind blows\n"
+"U10 - windspeed (10m) must be entered as m/s"
 msgstr ""
 
 #: src/calculatorgui_impl.cpp:145
@@ -118,7 +124,7 @@ msgid "Help"
 msgstr ""
 
 #: src/calculatorgui.cpp:130
-msgid "Calculator Reporting"
+msgid "Display Accuracy"
 msgstr ""
 
 #: src/calculatorgui.cpp:132
@@ -167,7 +173,7 @@ msgid ""
 msgstr ""
 
 #: src/calculatorgui.cpp:156
-msgid "Function Button in Calculator window"
+msgid "Function Button"
 msgstr ""
 
 #: src/calculatorgui.cpp:164
@@ -217,7 +223,8 @@ msgstr ""
 
 #: src/calculatorgui.cpp:255
 msgid ""
-"Calculator Plugin for OpenCPN by SaltyPaws aka Walbert Schulpen\n"
+"Calculator Plugin for OpenCPN by SaltyPaws aka Walbert Schulpen/Updated by "
+"Mike Rossiter(Rasbats)\n"
 "=======================================\n"
 "\n"
 "This is a light weight yet powerful calculator plugin for OpenCPN. Would you "
@@ -576,7 +583,7 @@ msgid ""
 msgstr ""
 
 #: src/functions.cpp:334 src/functions.cpp:361
-msgid "http://lagoon-inside.com/2012/01/faster-thanks-to-the-vmg-concept/"
+msgid "http://lagoon-inside.com/en/faster-thanks-to-the-vmg-concept/"
 msgstr ""
 
 #: src/functions.cpp:358

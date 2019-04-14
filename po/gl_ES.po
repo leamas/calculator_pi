@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-13 18:56+0100\n"
+"POT-Creation-Date: 2019-04-14 19:26+0100\n"
 "PO-Revision-Date: 2018-03-06 07:42-0500\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
 "Language-Team: Galician\n"
@@ -57,7 +57,8 @@ msgid "Calculator Plugin"
 msgstr "Calculadora"
 #
 msgid ""
-"Calculator Plugin for OpenCPN by SaltyPaws aka Walbert Schulpen\n"
+"Calculator Plugin for OpenCPN by SaltyPaws aka Walbert Schulpen/Updated by "
+"Mike Rossiter(Rasbats)\n"
 "=======================================\n"
 "\n"
 "This is a light weight yet powerful calculator plugin for OpenCPN. Would you "
@@ -195,10 +196,6 @@ msgstr ""
 msgid "Calculator Preferences"
 msgstr "Preferencias da Calculadora"
 #
-#, fuzzy
-msgid "Calculator Reporting"
-msgstr "Preferencias da Calculadora"
-#
 msgid "Calculator preferences"
 msgstr "Preferencias da Calculadora"
 #
@@ -245,6 +242,9 @@ msgid "Description"
 msgstr ""
 #
 msgid "Design"
+msgstr ""
+#
+msgid "Display Accuracy"
 msgstr ""
 #
 msgid "Distance to horizon"
@@ -301,7 +301,7 @@ msgstr ""
 msgid "Function And Description"
 msgstr ""
 #
-msgid "Function Button in Calculator window"
+msgid "Function Button"
 msgstr ""
 #
 msgid "Function Result Select Units"
@@ -592,6 +592,11 @@ msgstr "Calculadora"
 msgid "fetch = distance over water that the wind blows"
 msgstr ""
 #
+msgid ""
+"fetch = distance over water that the wind blows\n"
+"U10 - windspeed (10m) must be entered as m/s"
+msgstr ""
+#
 msgid "http://climate.weather.gc.ca/glossary_e.html"
 msgstr ""
 #
@@ -600,7 +605,7 @@ msgid ""
 "prods_servs/normals_documentation_e.html"
 msgstr ""
 #
-msgid "http://lagoon-inside.com/2012/01/faster-thanks-to-the-vmg-concept/"
+msgid "http://lagoon-inside.com/en/faster-thanks-to-the-vmg-concept/"
 msgstr ""
 #
 msgid "http://planetcalc.com/384/"
@@ -622,6 +627,12 @@ msgstr ""
 #
 msgid "https://en.wikipedia.org/wiki/Horizon, geometrical model"
 msgstr ""
+#
+#
+#, fuzzy
+#~ msgid "Calculator Reporting"
+#~ msgstr "Preferencias da Calculadora"
+#
 #
 #
 #
@@ -653,9 +664,11 @@ msgstr ""
 #
 #
 #
+#
 #, fuzzy
 #~ msgid "HideCalculate"
 #~ msgstr "Calcular"
+#
 #
 #
 #
@@ -673,9 +686,11 @@ msgstr ""
 #
 #
 #
+#
 #, fuzzy
 #~ msgid "ShowCalculate"
 #~ msgstr "Calcular"
+#
 #
 #
 #
@@ -693,9 +708,11 @@ msgstr ""
 #
 #
 #
+#
 #, fuzzy
 #~ msgid "hidecalculate"
 #~ msgstr "Calcular"
+#
 #
 #
 #
