@@ -83,9 +83,9 @@ int calculator_pi::Init(void)
       AddLocaleCatalog( _T("opencpn-calculator_pi") );
 
       // Set some default private member parameters
-      m_calculator_dialog_x = 0;
-      m_calculator_dialog_y = 0;
-      m_calculator_dialog_width = 20;
+      m_calculator_dialog_x = 100;
+      m_calculator_dialog_y = 100;
+      m_calculator_dialog_width = 200;
       m_calculator_dialog_height = 20;
 
       ::wxDisplaySize(&m_display_width, &m_display_height);
@@ -250,7 +250,7 @@ void calculator_pi::OnToolbarToolCallback(int id)
 	}
 	else {
 		m_pDialog->Hide();
-		if (!m_pDialog->m_pFunctiondialog) {
+		if (!m_pDialog->m_pFunctiondialog == NULL) {
 			m_pDialog->m_pFunctiondialog->Hide();
 		}
 	}
@@ -276,8 +276,8 @@ bool calculator_pi::LoadConfig(void)
             pConf->Read ( _T ( "MaxResults" ),  &m_iMaxResults, 30 );
             m_calculator_dialog_x =  pConf->Read ( _T ( "DialogPosX" ), 20L );
             m_calculator_dialog_y =  pConf->Read ( _T ( "DialogPosY" ), 170L );
-            m_calculator_dialog_width = pConf->Read ( _T ( "DialogPosW" ), 300L );
-            m_calculator_dialog_height = pConf->Read ( _T ( "DialogPosH" ), 540L );
+            m_calculator_dialog_width = pConf->Read ( _T ( "DialogPosW" ), 500L );
+            m_calculator_dialog_height = pConf->Read ( _T ( "DialogPosH" ), 200L );
 
             m_bshowhelpB = pConf->Read ( _T ( "m_bshowhelpB" ), 1 );
             m_bshowhistoryB = pConf->Read ( _T ( "m_bshowhistoryB" ), 1 );
