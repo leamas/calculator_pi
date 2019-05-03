@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-14 19:26+0100\n"
+"POT-Creation-Date: 2019-05-01 07:56+0100\n"
 "PO-Revision-Date: 2018-03-06 07:43-0500\n"
 "Last-Translator: nohal <pavel@kalian.cz>\n"
 "Language-Team: Spanish\n"
@@ -73,6 +73,13 @@ msgid ""
 "Adding formulas is easy. If your favorite nautical equation is missing, "
 "please let me know your equation via flyspray, and I will add it.\n"
 "\n"
+"Many formulas are based on U.S. units. Formulas use a 'base' unit, for "
+"example US Gallons per Minute. Conversion factors are used to display the "
+"result in other units. Using other units the result may not be exactly as "
+"expected. For example \"Convert Flowrate\": 10 m3/s converts to "
+"599999.999365987 liter per minute, not 600000 exactly, using the 'precise' "
+"accuracy.\n"
+"\n"
 "Help\n"
 "=========\n"
 "Type help in the calculator to get these instructions.\n"
@@ -85,7 +92,7 @@ msgid ""
 "\tvhull=1.34*LWL^(1/2)\t(hull speed in knots)\n"
 "\n"
 "Conversions:\n"
-"\tftm=0.3048\t\t\t(feet to meters)\n"
+"\tftm=0.3048\t\t(feet to meters)\n"
 "\tkm_to_nm=0.539957\t\t(Kilometers to nautical Mile)\n"
 "\tftm*LWL\t\t\t(waterline length in meters)\n"
 "\n"
@@ -121,7 +128,7 @@ msgid ""
 "log2 \t1 \tlogarithm to the base 2\n"
 "log10 \t1 \tlogarithm to the base 10\n"
 "log \t1 \tlogarithm to the base 10\n"
-"ln \t\t1 \tlogarithm to base e (2.71828...)\n"
+"ln \t1 \tlogarithm to base e (2.71828...)\n"
 "exp \t1 \te raised to the power of x\n"
 "sqrt \t1 \tsquare root of a value\n"
 "sign \t1 \tsign function -1 if x<0; 1 if x>0\n"
@@ -137,21 +144,21 @@ msgid ""
 "\n"
 "The following table lists the default binary operators supported by the "
 "parser.\n"
-"Operator \tMeaning \tPriority\n"
-"= \t\tassignement \t\t\t-1\n"
-"&& \tlogical and \t\t\t1\n"
+"Operator \t\tMeaning \t\t\t\tPriority\n"
+"= \t\tassignment \t\t\t-1\n"
+"&& \t\tlogical and \t\t\t1\n"
 "|| \t\tlogical or\t \t\t\t2\n"
 "<= \t\tless or equal \t\t\t4\n"
-">= \t\tgreater or equal \t\t4\n"
+">= \t\tgreater or equal \t\t\t4\n"
 "!= \t\tnot equal \t\t\t\t4\n"
-"== \t\tequal \t\t\t\t\t4\n"
+"== \t\tequal \t\t\t\t4\n"
 "> \t\tgreater than \t\t\t4\n"
 "< \t\tless than \t\t\t\t4\n"
 "+ \t\taddition \t\t\t\t5\n"
 "- \t\tsubtraction \t\t\t5\n"
-"* \t\tmultiplication \t\t6\n"
+"* \t\tmultiplication \t\t\t6\n"
 "/ \t\tdivision \t\t\t\t6\n"
-"^ \t\traise x to the power of y \t7\n"
+"^ \t\traise x to the power of y \t\t7\n"
 "*The assignment operator is special since it changes one of its arguments and "
 "can only by applied to variables.\n"
 "Other operators\n"
@@ -190,7 +197,7 @@ msgid ""
 "\"Enter\" or press \"Calculate\".\n"
 "\tIf you are using \"History\" the results will appear there. If not the "
 "result will appear in the input box.\n"
-"\tIf you make a mistake, press \"Calculate\" to clear the input box.  "
+"\tIf you make a mistake, press \"C/CE\" to clear the input box.  "
 msgstr ""
 #
 msgid "Calculator Preferences"
@@ -275,8 +282,27 @@ msgid ""
 "Manilla \t\t\t1.0"
 msgstr ""
 #
+msgid ""
+"Each type of line, natural fiber, synthetic and wire rope, have different "
+"breaking strengths and safe working loads. Natural breaking strength of "
+"manila line is the standard against which other lines are compared. Synthetic "
+"lines have been assigned comparison factors against which they are compared "
+"to manila line. The basic breaking strength factor for manila line is found "
+"by multiplying the square of the circumference of the line by 900 lbs. Knots "
+"and splices only have 50-60 percent of line strength.\n"
+"\n"
+"Line Material\tComparison Factor \n"
+"Nylon\t\t\t2.5\n"
+"Dacron\t\t\t2.0\n"
+"Polypropylene\t\t1.4\n"
+"Manilla \t\t\t1.0"
+msgstr ""
+#
 msgid "Error"
 msgstr "Error"
+#
+msgid "Error:Missing parenthesis"
+msgstr ""
 #
 msgid "Extra Functions"
 msgstr ""
@@ -288,7 +314,7 @@ msgid "Flow rate of leak in boat"
 msgstr ""
 #
 msgid ""
-"Flow rate of leak in boat:\tQ = 3,600 (A) (H)\n"
+"Flow rate of leak in boat:\tQ = 7.48*A*(2gH)^0.5\n"
 "\n"
 "Q = volume per minute of water coming in\n"
 "A = area of hole\n"
@@ -375,9 +401,9 @@ msgstr ""
 msgid ""
 "If the Earth is assumed to be a sphere with no atmosphere then the distance "
 "to the horizon can easily be calculated. (The Earths radius of curvature "
-"actually varies by 1 between the Equator and the Poles, so this formula isnt "
+"actually varies between the Equator and the Poles, so this formula isnt "
 "absolutely exact even assuming no refraction.) This formula assumes earth "
-"diameter of 12 756.32 km."
+"diameter of 12756.32 km."
 msgstr ""
 #
 msgid ""
@@ -478,7 +504,7 @@ msgstr ""
 msgid "Patch over hole"
 msgstr ""
 #
-msgid "Precise (Default)"
+msgid "Precise"
 msgstr ""
 #
 msgid "Precise, thousands separator"
@@ -541,6 +567,9 @@ msgid ""
 "  Would you like to know your hull speed?"
 msgstr ""
 #
+msgid "Three decimal places (Default)"
+msgstr ""
+#
 msgid ""
 "To compute the greatest distance at which an observer can see the top of an "
 "object above the horizon, compute the distance to the horizon for a "
@@ -549,9 +578,6 @@ msgid ""
 msgstr ""
 #
 msgid "Velocity Made Good (angle)"
-msgstr ""
-#
-msgid "Velocity Made Good (delta)"
 msgstr ""
 #
 msgid ""
@@ -589,6 +615,9 @@ msgstr ""
 msgid "calculator"
 msgstr "Calculadora"
 #
+msgid "ere"
+msgstr ""
+#
 msgid "fetch = distance over water that the wind blows"
 msgstr ""
 #
@@ -605,9 +634,6 @@ msgid ""
 "prods_servs/normals_documentation_e.html"
 msgstr ""
 #
-msgid "http://lagoon-inside.com/en/faster-thanks-to-the-vmg-concept/"
-msgstr ""
-#
 msgid "http://planetcalc.com/384/"
 msgstr ""
 #
@@ -622,16 +648,31 @@ msgid ""
 "Saltypaws"
 msgstr ""
 #
+msgid ""
+"https://en.wikipedia.org/wiki/Horizon#Exact_formula_for_a_spherical_Earth"
+msgstr ""
+#
 msgid "https://en.wikipedia.org/wiki/Horizon, Objects above horizon"
 msgstr ""
 #
-msgid "https://en.wikipedia.org/wiki/Horizon, geometrical model"
+msgid "https://en.wikipedia.org/wiki/Velocity_made_good"
 msgstr ""
+#
+msgid "https://www.boatdesign.net/threads/water-intrusion-formula.38075/"
+msgstr ""
+#
+#
+#
+#
 #
 #
 #, fuzzy
 #~ msgid "Calculator Reporting"
 #~ msgstr "Preferencias Calculadora"
+#
+#
+#
+#
 #
 #
 #
@@ -677,9 +718,17 @@ msgstr ""
 #
 #
 #
+#
+#
+#
+#
 #, fuzzy
 #~ msgid "HideCalculate"
 #~ msgstr "Calcular"
+#
+#
+#
+#
 #
 #
 #
@@ -707,9 +756,17 @@ msgstr ""
 #
 #
 #
+#
+#
+#
+#
 #, fuzzy
 #~ msgid "ShowCalculate"
 #~ msgstr "Calcular"
+#
+#
+#
+#
 #
 #
 #
@@ -737,9 +794,17 @@ msgstr ""
 #
 #
 #
+#
+#
+#
+#
 #, fuzzy
 #~ msgid "hidecalculate"
 #~ msgstr "Calcular"
+#
+#
+#
+#
 #
 #
 #

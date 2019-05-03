@@ -36,6 +36,12 @@ DlgDef::DlgDef( wxWindow* parent, wxWindowID id, const wxString& title, const wx
 
 	bSizer41->Add( Calculate, 0, wxALL|wxEXPAND, 5 );
 
+	CCE = new wxButton(m_Overview, wxID_ANY, _T("C/CE"), wxDefaultPosition, wxSize(-1, -1), 0);
+	CCE->SetMinSize(wxSize(80, 30));
+	CCE->SetMaxSize(wxSize(80, 40));
+
+	bSizer41->Add(CCE, 0, wxALL | wxEXPAND, 5);
+
 	m_Function = new wxButton( m_Overview, wxID_ANY, _("Function"), wxDefaultPosition, wxDefaultSize, 0 );
 	bSizer41->Add( m_Function, 0, wxALL|wxEXPAND, 5 );
 
@@ -83,6 +89,7 @@ DlgDef::DlgDef( wxWindow* parent, wxWindowID id, const wxString& title, const wx
 	m_result->Connect( wxEVT_KEY_DOWN, wxKeyEventHandler( DlgDef::key_shortcut ), NULL, this );
 	m_result->Connect( wxEVT_COMMAND_TEXT_ENTER, wxCommandEventHandler( DlgDef::OnCalculate ), NULL, this );
 	Calculate->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( DlgDef::OnCalculate ), NULL, this );
+	CCE->Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(DlgDef::OnClear), NULL, this);
 	m_Function->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( DlgDef::OnFunction ), NULL, this );
 	m_Help->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( DlgDef::OnToggle ), NULL, this );
 	m_HelpButton->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( DlgDef::OnHelp ), NULL, this );
@@ -97,6 +104,7 @@ DlgDef::~DlgDef()
 	m_result->Disconnect( wxEVT_KEY_DOWN, wxKeyEventHandler( DlgDef::key_shortcut ), NULL, this );
 	m_result->Disconnect( wxEVT_COMMAND_TEXT_ENTER, wxCommandEventHandler( DlgDef::OnCalculate ), NULL, this );
 	Calculate->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( DlgDef::OnCalculate ), NULL, this );
+	CCE->Disconnect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(DlgDef::OnClear), NULL, this);
 	m_Function->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( DlgDef::OnFunction ), NULL, this );
 	m_Help->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( DlgDef::OnToggle ), NULL, this );
 	m_HelpButton->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( DlgDef::OnHelp ), NULL, this );
@@ -105,16 +113,6 @@ DlgDef::~DlgDef()
 
 }
 
-///////////////////////////////////////////////////////////////////////////
-// C++ code generated with wxFormBuilder (version Oct 26 2018)
-// http://www.wxformbuilder.org/
-//
-// PLEASE DO *NOT* EDIT THIS FILE!
-///////////////////////////////////////////////////////////////////////////
-
-#include "calculatorgui.h"
-
-///////////////////////////////////////////////////////////////////////////
 
 CfgDlgDef::CfgDlgDef(wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style) : wxDialog(parent, id, title, pos, size, style)
 {
@@ -129,7 +127,7 @@ CfgDlgDef::CfgDlgDef(wxWindow* parent, wxWindowID id, const wxString& title, con
 	wxStaticBoxSizer* sbSizer12;
 	sbSizer12 = new wxStaticBoxSizer(new wxStaticBox(this, wxID_ANY, _("Display Accuracy")), wxVERTICAL);
 
-	wxString m_Calc_ReportingChoices[] = { _("Precise (Default)"), _("Precise, thousands separator"), _("Succinct"), _("Succinct, thousands separator"), _("Scientific"), _("Humanised"), wxEmptyString };
+	wxString m_Calc_ReportingChoices[] = { _("Three decimal places (Default)"),_("Precise"), _("Precise, thousands separator"), _("Succinct"), _("Succinct, thousands separator"), _("Scientific"), _("Humanised"), wxEmptyString };
 	int m_Calc_ReportingNChoices = sizeof(m_Calc_ReportingChoices) / sizeof(wxString);
 	m_Calc_Reporting = new wxChoice(sbSizer12->GetStaticBox(), wxID_ANY, wxDefaultPosition, wxDefaultSize, m_Calc_ReportingNChoices, m_Calc_ReportingChoices, 0);
 	m_Calc_Reporting->SetSelection(0);
@@ -238,68 +236,55 @@ CfgDlgDef::~CfgDlgDef()
 }
 
 
-HlpDlgDef::HlpDlgDef( wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style ) : wxDialog( parent, id, title, pos, size, style )
-{
-	this->SetSizeHints( wxDefaultSize, wxDefaultSize );
+HlpDlgDef::HlpDlgDef(wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style) : wxDialog(parent, id, title, pos, size, style)
+		{
+			this->SetSizeHints(wxSize(-1, -1), wxDefaultSize);
 
-	wxBoxSizer* bSizer7;
-	bSizer7 = new wxBoxSizer( wxVERTICAL );
+			wxBoxSizer* bSizer7;
+			bSizer7 = new wxBoxSizer(wxVERTICAL);
 
-	HelpPanel = new wxPanel( this, wxID_ANY, wxDefaultPosition, wxSize( -1,-1 ), wxTAB_TRAVERSAL );
-	wxBoxSizer* bSizer11;
-	bSizer11 = new wxBoxSizer( wxVERTICAL );
+			m_scrolledWindow2 = new wxScrolledWindow(this, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxHSCROLL | wxVSCROLL);
+			m_scrolledWindow2->SetScrollRate(5, 5);
+			wxBoxSizer* bSizer10;
+			bSizer10 = new wxBoxSizer(wxVERTICAL);
 
-	wxBoxSizer* bSizer10;
-	bSizer10 = new wxBoxSizer( wxHORIZONTAL );
+			m_textCtrl3 = new wxTextCtrl(m_scrolledWindow2, wxID_ANY, _("Calculator Plugin for OpenCPN by SaltyPaws aka Walbert Schulpen/Updated by Mike Rossiter(Rasbats)\n=======================================\n\nThis is a light weight yet powerful calculator plugin for OpenCPN. Would you like to know your hull speed? \n\nKey features are:\n* Storing results in variables\n* Shows historic calculations\n* Full complement of nautical functions\n* Screen footprint can be optimised & minimised as required\n\nAdding formulas is easy. If your favorite nautical equation is missing, please let me know your equation via flyspray, and I will add it.\n\nMany formulas are based on U.S. units. Formulas use a 'base' unit, for example US Gallons per Minute. Conversion factors are used to display the result in other units. Using other units the result may not be exactly as expected. For example \"Convert Flowrate\": 10 m3/s converts to 599999.999365987 liter per minute, not 600000 exactly, using the 'precise' accuracy.\n\nHelp\n=========\nType help in the calculator to get these instructions.\n\nExamples of expression that work in the calculator are: (comments are in brackets, some results depend on other example calculations):\n=========\nHull speed:\n\tLWL=48\t\t\t(water line lenght in feet)\n\tvhull=1.34*LWL^(1/2)\t(hull speed in knots)\n\nConversions:\n\tftm=0.3048\t\t(feet to meters)\n\tkm_to_nm=0.539957\t\t(Kilometers to nautical Mile)\n\tftm*LWL\t\t\t(waterline length in meters)\n\nDistance to horizon\n\tR=6378.1*1000\t\t(Radius of the earth in m)\n\tH=2.5\t\t\t(Height of the eye above sea-level in m)\n\td = R * acos(R/(R + h))\t(Distance to horizon in m)   \n\tans*km_to_nm\t\t(Distance to horizon in nm)\n\nDistance to lighthouse\n\tH1=200\t\t\t(height of lighthouse in m)\n\td1 = R*acos(R/(R + H1))\t(Distance to horizon in m)\n\tdistance=d1+d\t\t(visibility range of lighthouse in m)\n\nBuilt-in functions\n\nThe following table gives an overview of the functions supported by the default implementation. It lists the function names, the number of arguments and a brief description.\nName \tArgc. \tExplanation\nsin \t1 \tsine function\ncos \t1 \tcosine function\ntan \t1 \ttangens function\nasin \t1 \tarcus sine function\nacos \t1 \tarcus cosine function\natan \t1 \tarcus tangens function\nsinh \t1 \thyperbolic sine function\ncosh \t1 \thyperbolic cosine\ntanh \t1 \thyperbolic tangens function\nasinh \t1 \thyperbolic arcus sine function\nacosh \t1 \thyperbolic arcus tangens function\natanh \t1 \thyperbolic arcur tangens function\nlog2 \t1 \tlogarithm to the base 2\nlog10 \t1 \tlogarithm to the base 10\nlog \t1 \tlogarithm to the base 10\nln \t1 \tlogarithm to base e (2.71828...)\nexp \t1 \te raised to the power of x\nsqrt \t1 \tsquare root of a value\nsign \t1 \tsign function -1 if x<0; 1 if x>0\nrint \t1 \tround to nearest integer\nabs \t1 \tabsolute value\nmin \tvar. \tmin of all arguments\nmax \tvar. \tmax of all arguments\nsum \tvar. \tsum of all arguments\navg \tvar. \tmean value of all arguments\n\n\nBuilt-in binary operators\n\nThe following table lists the default binary operators supported by the parser.\nOperator \t\tMeaning \t\t\t\tPriority\n= \t\tassignment \t\t\t-1\n&& \t\tlogical and \t\t\t1\n|| \t\tlogical or\t \t\t\t2\n<= \t\tless or equal \t\t\t4\n>= \t\tgreater or equal \t\t\t4\n!= \t\tnot equal \t\t\t\t4\n== \t\tequal \t\t\t\t4\n> \t\tgreater than \t\t\t4\n< \t\tless than \t\t\t\t4\n+ \t\taddition \t\t\t\t5\n- \t\tsubtraction \t\t\t5\n* \t\tmultiplication \t\t\t6\n/ \t\tdivision \t\t\t\t6\n^ \t\traise x to the power of y \t\t7\n*The assignment operator is special since it changes one of its arguments and can only by applied to variables.\nOther operators\n\nmuParser has built in support for the if then else operator. It uses lazy evaluation in order to make sure only the necessary branch of the expression is evaluated.\nOperator \tMeaning \tRemarks\n?: \tif then else operator \tC++ style syntax\n \nVariables:\n\tpi, e\n\tans is the result of the previous calulation\n\tdtr is the conversion factor from degrees to radians\t\t\n\tyou can define your own variables (e.g. myvariable=10/8*cos(dtr*90) or yourvariable=ans)\n\tclear removes results in the history, but leaves your defined variables in tact\n\nUser Interface - type these commands in the command window:\n\thistory - Toggle the history panel\n\tshowhelp - Show/Hide the Help button\n\tshowcalculate - Show/Hide the Calculate button\n\tshowhistory - Show/Hide the history toggle\n\thelp - show the help menu\n\nSettings/Plugins/Preferences:\n\tShow/Hide Function, Calculate and Help buttons\n\tHistory Settings: max Results -this is the number of results that will be stored in the history pulldown. The history pulldown will contain five times this value\n\tLog to opencpn: Enable/Disable logging of results to opencpn logfile.\n\nCalculate Button:\n\tEnter the expression in the input box: e.g. 4+2. Do NOT use the = sign. \"Enter\" or press \"Calculate\".\n\tIf you are using \"History\" the results will appear there. If not the result will appear in the input box.\n\tIf you make a mistake, press \"C/CE\" to clear the input box.  "), wxDefaultPosition, wxDefaultSize, wxTE_MULTILINE);
+			m_textCtrl3->SetMinSize(wxSize(600, 400));
 
-	m_textCtrl3 = new wxTextCtrl(HelpPanel, wxID_ANY, _("Calculator Plugin for OpenCPN by SaltyPaws aka Walbert Schulpen/Updated by Mike Rossiter(Rasbats)\n=======================================\n\nThis is a light weight yet powerful calculator plugin for OpenCPN. Would you like to know your hull speed? \n\nKey features are:\n* Storing results in variables\n* Shows historic calculations\n* Full complement of nautical functions\n* Screen footprint can be optimised & minimised as required\n\nAdding formulas is easy. If your favorite nautical equation is missing, please let me know your equation via flyspray, and I will add it.\n\nHelp\n=========\nType help in the calculator to get these instructions.\n\nExamples of expression that work in the calculator are: (comments are in brackets, some results depend on other example calculations):\n=========\nHull speed:\n\tLWL=48\t\t\t(water line lenght in feet)\n\tvhull=1.34*LWL^(1/2)\t(hull speed in knots)\n\nConversions:\n\tftm=0.3048\t\t\t(feet to meters)\n\tkm_to_nm=0.539957\t\t(Kilometers to nautical Mile)\n\tftm*LWL\t\t\t(waterline length in meters)\n\nDistance to horizon\n\tR=6378.1*1000\t\t(Radius of the earth in m)\n\tH=2.5\t\t\t(Height of the eye above sea-level in m)\n\td = R * acos(R/(R + h))\t(Distance to horizon in m)   \n\tans*km_to_nm\t\t(Distance to horizon in nm)\n\nDistance to lighthouse\n\tH1=200\t\t\t(height of lighthouse in m)\n\td1 = R*acos(R/(R + H1))\t(Distance to horizon in m)\n\tdistance=d1+d\t\t(visibility range of lighthouse in m)\n\nBuilt-in functions\n\nThe following table gives an overview of the functions supported by the default implementation. It lists the function names, the number of arguments and a brief description.\nName \tArgc. \tExplanation\nsin \t1 \tsine function\ncos \t1 \tcosine function\ntan \t1 \ttangens function\nasin \t1 \tarcus sine function\nacos \t1 \tarcus cosine function\natan \t1 \tarcus tangens function\nsinh \t1 \thyperbolic sine function\ncosh \t1 \thyperbolic cosine\ntanh \t1 \thyperbolic tangens function\nasinh \t1 \thyperbolic arcus sine function\nacosh \t1 \thyperbolic arcus tangens function\natanh \t1 \thyperbolic arcur tangens function\nlog2 \t1 \tlogarithm to the base 2\nlog10 \t1 \tlogarithm to the base 10\nlog \t1 \tlogarithm to the base 10\nln \t\t1 \tlogarithm to base e (2.71828...)\nexp \t1 \te raised to the power of x\nsqrt \t1 \tsquare root of a value\nsign \t1 \tsign function -1 if x<0; 1 if x>0\nrint \t1 \tround to nearest integer\nabs \t1 \tabsolute value\nmin \tvar. \tmin of all arguments\nmax \tvar. \tmax of all arguments\nsum \tvar. \tsum of all arguments\navg \tvar. \tmean value of all arguments\n\n\nBuilt-in binary operators\n\nThe following table lists the default binary operators supported by the parser.\nOperator \tMeaning \tPriority\n= \t\tassignement \t\t\t-1\n&& \tlogical and \t\t\t1\n|| \t\tlogical or\t \t\t\t2\n<= \t\tless or equal \t\t\t4\n>= \t\tgreater or equal \t\t4\n!= \t\tnot equal \t\t\t\t4\n== \t\tequal \t\t\t\t\t4\n> \t\tgreater than \t\t\t4\n< \t\tless than \t\t\t\t4\n+ \t\taddition \t\t\t\t5\n- \t\tsubtraction \t\t\t5\n* \t\tmultiplication \t\t6\n/ \t\tdivision \t\t\t\t6\n^ \t\traise x to the power of y \t7\n*The assignment operator is special since it changes one of its arguments and can only by applied to variables.\nOther operators\n\nmuParser has built in support for the if then else operator. It uses lazy evaluation in order to make sure only the necessary branch of the expression is evaluated.\nOperator \tMeaning \tRemarks\n?: \tif then else operator \tC++ style syntax\n \nVariables:\n\tpi, e\n\tans is the result of the previous calulation\n\tdtr is the conversion factor from degrees to radians\t\t\n\tyou can define your own variables (e.g. myvariable=10/8*cos(dtr*90) or yourvariable=ans)\n\tclear removes results in the history, but leaves your defined variables in tact\n\nUser Interface - type these commands in the command window:\n\thistory - Toggle the history panel\n\tshowhelp - Show/Hide the Help button\n\tshowcalculate - Show/Hide the Calculate button\n\tshowhistory - Show/Hide the history toggle\n\thelp - show the help menu\n\nSettings/Plugins/Preferences:\n\tShow/Hide Function, Calculate and Help buttons\n\tHistory Settings: max Results -this is the number of results that will be stored in the history pulldown. The history pulldown will contain five times this value\n\tLog to opencpn: Enable/Disable logging of results to opencpn logfile.\n\nCalculate Button:\n\tEnter the expression in the input box: e.g. 4+2. Do NOT use the = sign. \"Enter\" or press \"Calculate\".\n\tIf you are using \"History\" the results will appear there. If not the result will appear in the input box.\n\tIf you make a mistake, press \"Calculate\" to clear the input box.  "), wxDefaultPosition, wxDefaultSize, wxTE_MULTILINE);
-	m_textCtrl3->SetMinSize( wxSize( 600,400 ) );
+			bSizer10->Add(m_textCtrl3, 100, wxALL | wxEXPAND, 5);
 
-	bSizer10->Add( m_textCtrl3, 100, wxALL|wxEXPAND, 5 );
+			m_sdbSizer2 = new wxStdDialogButtonSizer();
+			m_sdbSizer2OK = new wxButton(m_scrolledWindow2, wxID_OK);
+			m_sdbSizer2->AddButton(m_sdbSizer2OK);
+			m_sdbSizer2->Realize();
 
-
-	bSizer11->Add( bSizer10, 5, wxEXPAND, 5 );
-
-	m_sdbSizer2 = new wxStdDialogButtonSizer();
-	m_sdbSizer2OK = new wxButton( HelpPanel, wxID_OK );
-	m_sdbSizer2->AddButton( m_sdbSizer2OK );
-	m_sdbSizer2->Realize();
-
-	bSizer11->Add( m_sdbSizer2, 0, wxALIGN_CENTER_HORIZONTAL, 5 );
+			bSizer10->Add(m_sdbSizer2, 0, wxALIGN_CENTER_HORIZONTAL, 5);
 
 
-	HelpPanel->SetSizer( bSizer11 );
-	HelpPanel->Layout();
-	bSizer11->Fit( HelpPanel );
-	bSizer7->Add( HelpPanel, 3, wxALL|wxBOTTOM|wxEXPAND|wxTOP, 5 );
+			m_scrolledWindow2->SetSizer(bSizer10);
+			m_scrolledWindow2->Layout();
+			bSizer10->Fit(m_scrolledWindow2);
+			bSizer7->Add(m_scrolledWindow2, 1, wxALL | wxBOTTOM | wxEXPAND | wxTOP, 5);
 
 
-	this->SetSizer( bSizer7 );
-	this->Layout();
-	bSizer7->Fit( this );
+			this->SetSizer(bSizer7);
+			this->Layout();
+			bSizer7->Fit(this);
 
-	this->Centre( wxBOTH );
+			this->Centre(wxBOTH);
 
-	// Connect Events
-	m_sdbSizer2OK->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( HlpDlgDef::OnClose ), NULL, this );
-}
+			// Connect Events
+			m_sdbSizer2OK->Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(HlpDlgDef::OnClose), NULL, this);
+		}
 
-HlpDlgDef::~HlpDlgDef()
-{
-	// Disconnect Events
-	m_sdbSizer2OK->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( HlpDlgDef::OnClose ), NULL, this );
+		HlpDlgDef::~HlpDlgDef()
+		{
+			// Disconnect Events
+			m_sdbSizer2OK->Disconnect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(HlpDlgDef::OnClose), NULL, this);
 
-}
-///////////////////////////////////////////////////////////////////////////
-// C++ code generated with wxFormBuilder (version Oct 26 2018)
-// http://www.wxformbuilder.org/
-//
-// PLEASE DO *NOT* EDIT THIS FILE!
-///////////////////////////////////////////////////////////////////////////
+		}
 
-#include "calculatorgui.h"
 
-///////////////////////////////////////////////////////////////////////////
 
 MyDialog5::MyDialog5( wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style ) : wxDialog( parent, id, title, pos, size, style )
 {
@@ -571,8 +556,8 @@ MyDialog5::MyDialog5( wxWindow* parent, wxWindowID id, const wxString& title, co
 
 	degline = deg + _T(" ' \"");
 	m_wxNotebook234->AddPage( m_panelDegreesMinutesSeconds, degline);
-
-	bSizer35->Add( m_wxNotebook234, 0, wxALL, 5 );
+	
+	bSizer35->Add(m_wxNotebook234, 0, wxALL | wxEXPAND, 5);
 
 	wxBoxSizer* bSizer4811;
 	bSizer4811 = new wxBoxSizer( wxHORIZONTAL );
@@ -580,9 +565,11 @@ MyDialog5::MyDialog5( wxWindow* parent, wxWindowID id, const wxString& title, co
 	m_button811 = new wxButton( m_panel14, wxID_ANY, _("Convert"), wxDefaultPosition, wxDefaultSize, 0 );
 	bSizer4811->Add( m_button811, 0, wxALL, 5 );
 
+	m_buttonClose = new wxButton(m_panel14, wxID_ANY, _("Close"), wxDefaultPosition, wxDefaultSize, 0);
+	bSizer4811->Add(m_buttonClose, 0, wxALL, 5);
 
 	bSizer35->Add( bSizer4811, 0, wxALIGN_CENTER_HORIZONTAL, 5 );
-
+	
 
 	m_panel14->SetSizer( bSizer35 );
 	m_panel14->Layout();
@@ -599,6 +586,8 @@ MyDialog5::MyDialog5( wxWindow* parent, wxWindowID id, const wxString& title, co
 	this->Connect(wxEVT_CLOSE_WINDOW, wxCloseEventHandler(MyDialog5::OnCloseDegreeDlg));
 	m_wxNotebook234->Connect( wxEVT_COMMAND_NOTEBOOK_PAGE_CHANGED, wxNotebookEventHandler( MyDialog5::OnNoteBookFit ), NULL, this );
 	m_button811->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyDialog5::OnConvertToDegree ), NULL, this );
+	m_buttonClose->Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(MyDialog5::OnClose), NULL, this);
+
 }
 
 MyDialog5::~MyDialog5()
@@ -607,6 +596,8 @@ MyDialog5::~MyDialog5()
 	this->Connect(wxEVT_CLOSE_WINDOW, wxCloseEventHandler(MyDialog5::OnCloseDegreeDlg));
 	m_wxNotebook234->Disconnect( wxEVT_COMMAND_NOTEBOOK_PAGE_CHANGED, wxNotebookEventHandler( MyDialog5::OnNoteBookFit ), NULL, this );
 	m_button811->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyDialog5::OnConvertToDegree ), NULL, this );
+	m_buttonClose->Disconnect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(MyDialog5::OnClose), NULL, this);
+
 
 }
 
@@ -621,6 +612,10 @@ MyDialog5::~MyDialog5()
 
 ///////////////////////////////////////////////////////////////////////////
 
+#include "calculatorgui.h"
+
+///////////////////////////////////////////////////////////////////////////
+
 FunDlgDef::FunDlgDef(wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style) : wxDialog(parent, id, title, pos, size, style)
 {
 	this->SetSizeHints(wxSize(-1, -1), wxSize(-1, -1));
@@ -628,12 +623,14 @@ FunDlgDef::FunDlgDef(wxWindow* parent, wxWindowID id, const wxString& title, con
 	wxBoxSizer* bSizer7;
 	bSizer7 = new wxBoxSizer(wxVERTICAL);
 
-	m_panel152 = new wxPanel(this, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxHSCROLL | wxVSCROLL);
+	m_scrolledWindow1 = new wxScrolledWindow(this, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxHSCROLL | wxVSCROLL);
+	m_scrolledWindow1->SetScrollRate(5, 5);
+	m_scrolledWindow1->SetMinSize(wxSize(500, 600));
 	wxBoxSizer* bSizer26;
 	bSizer26 = new wxBoxSizer(wxVERTICAL);
 
 	wxStaticBoxSizer* sbSizer11;
-	sbSizer11 = new wxStaticBoxSizer(new wxStaticBox(m_panel152, wxID_ANY, _("Select Function Category")), wxHORIZONTAL);
+	sbSizer11 = new wxStaticBoxSizer(new wxStaticBox(m_scrolledWindow1, wxID_ANY, _("Select Function Category")), wxHORIZONTAL);
 
 	wxString m_Function_CategoriesChoices[] = { _("All") };
 	int m_Function_CategoriesNChoices = sizeof(m_Function_CategoriesChoices) / sizeof(wxString);
@@ -645,7 +642,7 @@ FunDlgDef::FunDlgDef(wxWindow* parent, wxWindowID id, const wxString& title, con
 	bSizer26->Add(sbSizer11, 0, wxEXPAND, 5);
 
 	wxStaticBoxSizer* sbSizer12;
-	sbSizer12 = new wxStaticBoxSizer(new wxStaticBox(m_panel152, wxID_ANY, _("Select Function")), wxHORIZONTAL);
+	sbSizer12 = new wxStaticBoxSizer(new wxStaticBox(m_scrolledWindow1, wxID_ANY, _("Select Function")), wxHORIZONTAL);
 
 	wxString m_Function_DropdownChoices[] = { _("All") };
 	int m_Function_DropdownNChoices = sizeof(m_Function_DropdownChoices) / sizeof(wxString);
@@ -657,7 +654,7 @@ FunDlgDef::FunDlgDef(wxWindow* parent, wxWindowID id, const wxString& title, con
 	bSizer26->Add(sbSizer12, 0, wxEXPAND, 5);
 
 	wxStaticBoxSizer* sbSizer14;
-	sbSizer14 = new wxStaticBoxSizer(new wxStaticBox(m_panel152, wxID_ANY, _("Function And Description")), wxVERTICAL);
+	sbSizer14 = new wxStaticBoxSizer(new wxStaticBox(m_scrolledWindow1, wxID_ANY, _("Function And Description")), wxVERTICAL);
 
 	m_textExtraDescription = new wxTextCtrl(sbSizer14->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxTE_MULTILINE);
 	m_textExtraDescription->Hide();
@@ -668,7 +665,7 @@ FunDlgDef::FunDlgDef(wxWindow* parent, wxWindowID id, const wxString& title, con
 	wxBoxSizer* bSizer113;
 	bSizer113 = new wxBoxSizer(wxVERTICAL);
 
-	m_Function = new wxStaticText(m_panel101, wxID_ANY, _("Function"), wxDefaultPosition, wxDefaultSize, 0);
+	m_Function = new wxStaticText(m_panel101, wxID_ANY, _("ere"), wxDefaultPosition, wxDefaultSize, 0);
 	m_Function->Wrap(400);
 	bSizer113->Add(m_Function, 0, wxALL, 5);
 
@@ -686,7 +683,7 @@ FunDlgDef::FunDlgDef(wxWindow* parent, wxWindowID id, const wxString& title, con
 	bSizer26->Add(sbSizer14, 0, wxEXPAND, 5);
 
 	wxStaticBoxSizer* sbSizer13;
-	sbSizer13 = new wxStaticBoxSizer(new wxStaticBox(m_panel152, wxID_ANY, _("Input Parameters")), wxVERTICAL);
+	sbSizer13 = new wxStaticBoxSizer(new wxStaticBox(m_scrolledWindow1, wxID_ANY, _("Input Parameters")), wxVERTICAL);
 
 	m_panel = new wxPanel(sbSizer13->GetStaticBox(), wxID_ANY, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL);
 	bSizer = new wxBoxSizer(wxHORIZONTAL);
@@ -902,7 +899,7 @@ FunDlgDef::FunDlgDef(wxWindow* parent, wxWindowID id, const wxString& title, con
 	bSizer26->Add(sbSizer13, 1, wxEXPAND, 5);
 
 	wxStaticBoxSizer* sbSizer15;
-	sbSizer15 = new wxStaticBoxSizer(new wxStaticBox(m_panel152, wxID_ANY, _("Function Result Select Units")), wxVERTICAL);
+	sbSizer15 = new wxStaticBoxSizer(new wxStaticBox(m_scrolledWindow1, wxID_ANY, _("Function Result Select Units")), wxVERTICAL);
 
 	m_panel100 = new wxPanel(sbSizer15->GetStaticBox(), wxID_ANY, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL);
 	wxBoxSizer* bSizer64;
@@ -934,13 +931,13 @@ FunDlgDef::FunDlgDef(wxWindow* parent, wxWindowID id, const wxString& title, con
 	wxBoxSizer* bSizer39;
 	bSizer39 = new wxBoxSizer(wxHORIZONTAL);
 
-	m_button7 = new wxButton(m_panel152, wxID_ANY, _("Calculate"), wxDefaultPosition, wxDefaultSize, 0);
+	m_button7 = new wxButton(m_scrolledWindow1, wxID_ANY, _("Calculate"), wxDefaultPosition, wxDefaultSize, 0);
 	bSizer39->Add(m_button7, 0, wxALL | wxALIGN_CENTER_HORIZONTAL, 5);
 
-	m_button10 = new wxButton(m_panel152, wxID_ANY, _("Close"), wxDefaultPosition, wxDefaultSize, 0);
+	m_button10 = new wxButton(m_scrolledWindow1, wxID_ANY, _("Close"), wxDefaultPosition, wxDefaultSize, 0);
 	bSizer39->Add(m_button10, 0, wxALL, 5);
 
-	m_checkBox8 = new wxCheckBox(m_panel152, wxID_ANY, _("Description"), wxDefaultPosition, wxDefaultSize, 0);
+	m_checkBox8 = new wxCheckBox(m_scrolledWindow1, wxID_ANY, _("Description"), wxDefaultPosition, wxDefaultSize, 0);
 	m_checkBox8->SetValue(true);
 	bSizer39->Add(m_checkBox8, 0, wxALL, 5);
 
@@ -948,10 +945,10 @@ FunDlgDef::FunDlgDef(wxWindow* parent, wxWindowID id, const wxString& title, con
 	bSizer26->Add(bSizer39, 0, wxEXPAND, 5);
 
 
-	m_panel152->SetSizer(bSizer26);
-	m_panel152->Layout();
-	bSizer26->Fit(m_panel152);
-	bSizer7->Add(m_panel152, 1, wxEXPAND | wxALL, 5);
+	m_scrolledWindow1->SetSizer(bSizer26);
+	m_scrolledWindow1->Layout();
+	bSizer26->Fit(m_scrolledWindow1);
+	bSizer7->Add(m_scrolledWindow1, 1,  wxALL | wxBOTTOM | wxEXPAND | wxTOP, 5);
 
 
 	this->SetSizer(bSizer7);
@@ -960,7 +957,7 @@ FunDlgDef::FunDlgDef(wxWindow* parent, wxWindowID id, const wxString& title, con
 
 	this->Centre(wxBOTH);
 
-	// Connect Events
+	// Connect Events	
 	m_Function_Categories->Connect(wxEVT_COMMAND_CHOICE_SELECTED, wxCommandEventHandler(FunDlgDef::OnCategorySelect), NULL, this);
 	m_Function_Dropdown->Connect(wxEVT_COMMAND_CHOICE_SELECTED, wxCommandEventHandler(FunDlgDef::OnItemSelect), NULL, this);
 	m_Output_Parameter_UnitC->Connect(wxEVT_COMMAND_CHOICE_SELECTED, wxCommandEventHandler(FunDlgDef::OnOutputParameterChange), NULL, this);

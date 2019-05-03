@@ -78,6 +78,7 @@ public:
 	void OnConvertToDegree(wxCommandEvent& event);
 	void OnNoteBookFit(wxBookCtrlEvent& event);
 	void OnCloseDegreeDlg(wxCloseEvent& event);
+	void OnClose(wxCommandEvent& event);
 	Dlg *Plugin_Dialog;
 
 private:
@@ -91,7 +92,7 @@ class FunDlg : public FunDlgDef
         CFormula testf;
         Units_Conversion Units_conv;
         void OnClose( wxCommandEvent& event );
-        void OnToggle( wxCommandEvent& event );
+        void OnToggle( wxCommandEvent& event );		
 		void OnOutputParameterChange(wxCommandEvent& event);
         void OnExtraCalculate( wxCommandEvent& event );
         void OnItemSelect( wxCommandEvent& event );
@@ -116,6 +117,7 @@ public:
 		mu::Parser MuParser; //MuParser class.  Here all the functions and variables are stored.
 
         void OnCalculate( wxCommandEvent& event );
+		void OnClear(wxCommandEvent& event);
         wxString OnCalculate( void );
         void OnHelp( wxCommandEvent& event );
         void OnHelp( void );
@@ -142,16 +144,20 @@ public:
         calculator_pi *plugin;
 
         void SetMaxResults          (int x){Max_Results = x;};
-        void setm_bshowhelpB        (bool x){m_bshowhelpB = x; };
-        void setm_bshowhistoryB     (bool x){m_bshowhistoryB = x;};
+        void setm_bshowhelpB        (bool x){m_bshowhelpB = x; };       
         void setm_bCalculateB       (bool x){m_bCalculateB = x;};
-        void setm_bshowfunction     (bool x){m_bshowFunction = x;};
-        void setm_bshowhistory      (bool x){m_bshowhistory = x;};
+
+		void setm_bshowhistory      (bool x){m_bshowhistory = x;};
+		void setm_bshowhistoryB     (bool x){m_bshowhistoryB = x;};
+		void setm_bshowhistoryP     (bool x){m_bshowhistoryP = x;};
+
+
+        void setm_bshowfunction     (bool x){m_bshowFunction = x;};      
         //void setm_bcapturehidden    (bool x){m_bcapturehidden = x;};
         void setm_blogresults       (bool x){m_blogresults = x;};
 
         void setm_iCalc_Reporting   (int x){m_iCalc_Reporting = x;};
-        void setm_bshowhistoryP     (bool x){m_bshowhistoryP = x;};
+        
         void setm_bshowfunction_Open_CPN_BAR (bool x){m_bshowfunction_Open_CPN_BAR = x;};
 
         void set_Buttons (void);

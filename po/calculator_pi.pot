@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calculator_pi 2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-14 19:26+0100\n"
+"POT-Creation-Date: 2019-05-01 07:56+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,26 +21,26 @@ msgstr ""
 msgid "calculator"
 msgstr ""
 
-#: src/calculator_pi.cpp:108 src/calculator_pi.cpp:181 src/calculatorgui.h:69
-#: src/calculatorgui.h:382
+#: src/calculator_pi.cpp:108 src/calculator_pi.cpp:184 src/calculatorgui.h:72
+#: src/calculatorgui.h:440
 msgid "Calculator"
 msgstr ""
 
-#: src/calculator_pi.cpp:186
+#: src/calculator_pi.cpp:189
 msgid "Calculator Plugin"
 msgstr ""
 
-#: src/calculator_pi.cpp:191
+#: src/calculator_pi.cpp:194
 msgid ""
 "This is a light weight yet powerful calculator plugin for OpenCPN.\n"
 "  Would you like to know your hull speed?"
 msgstr ""
 
-#: src/calculator_pi.cpp:364
+#: src/calculator_pi.cpp:368
 msgid "Calculator Preferences"
 msgstr ""
 
-#: src/calculatorgui_impl.h:64 src/calculatorgui.h:128
+#: src/calculatorgui_impl.h:64 src/calculatorgui.h:131
 msgid "Calculator preferences"
 msgstr ""
 
@@ -52,176 +52,184 @@ msgstr ""
 msgid "Degree Conversions"
 msgstr ""
 
-#: src/calculatorgui_impl.h:90
+#: src/calculatorgui_impl.h:91
 msgid "Extra Functions"
 msgstr ""
 
-#: src/calculatorgui_impl.cpp:88 src/calculatorgui.cpp:638
-#: src/calculatorgui.cpp:650
+#: src/calculatorgui_impl.cpp:88 src/calculatorgui.cpp:635
+#: src/calculatorgui.cpp:647
 msgid "All"
 msgstr ""
 
-#: src/calculatorgui_impl.cpp:133
+#: src/calculatorgui_impl.cpp:137
 msgid ""
 "LWL = Length of water line\n"
 "Vhull = Hull speed"
 msgstr ""
 
-#: src/calculatorgui_impl.cpp:137
+#: src/calculatorgui_impl.cpp:141
 msgid "fetch = distance over water that the wind blows"
 msgstr ""
 
-#: src/calculatorgui_impl.cpp:141
+#: src/calculatorgui_impl.cpp:145
 msgid ""
 "fetch = distance over water that the wind blows\n"
 "U10 - windspeed (10m) must be entered as m/s"
 msgstr ""
 
-#: src/calculatorgui_impl.cpp:145
+#: src/calculatorgui_impl.cpp:149
 msgid ""
 "Height_observer is the height of the observer\n"
 "Height_object is the height of the object"
 msgstr ""
 
-#: src/calculatorgui_impl.cpp:499
+#: src/calculatorgui_impl.cpp:518
 msgid "Test"
 msgstr ""
 
-#: src/calculatorgui_impl.cpp:503
+#: src/calculatorgui_impl.cpp:522
 msgid "Mouse"
 msgstr ""
 
-#: src/calculatorgui_impl.cpp:507
+#: src/calculatorgui_impl.cpp:526
 msgid "List"
 msgstr ""
 
-#: src/calculatorgui_impl.cpp:558
+#: src/calculatorgui_impl.cpp:584
 msgid "Error"
 msgstr ""
 
-#: src/calculatorgui_impl.cpp:644
+#: src/calculatorgui_impl.cpp:591
+msgid "Error:Missing parenthesis"
+msgstr ""
+
+#: src/calculatorgui_impl.cpp:678
 msgid "Calculator INPUT:"
 msgstr ""
 
-#: src/calculatorgui_impl.cpp:644
+#: src/calculatorgui_impl.cpp:678
 msgid " Calculator output:"
 msgstr ""
 
-#: src/calculatorgui.cpp:33 src/calculatorgui.cpp:937
+#: src/calculatorgui.cpp:33 src/calculatorgui.cpp:934
 msgid "Calculate"
 msgstr ""
 
-#: src/calculatorgui.cpp:39 src/calculatorgui.cpp:671
+#: src/calculatorgui.cpp:45
 msgid "Function"
 msgstr ""
 
-#: src/calculatorgui.cpp:42
+#: src/calculatorgui.cpp:48
 msgid "History"
 msgstr ""
 
-#: src/calculatorgui.cpp:45
+#: src/calculatorgui.cpp:51
 msgid "Help"
 msgstr ""
 
-#: src/calculatorgui.cpp:130
+#: src/calculatorgui.cpp:128
 msgid "Display Accuracy"
 msgstr ""
 
-#: src/calculatorgui.cpp:132
-msgid "Precise (Default)"
+#: src/calculatorgui.cpp:130
+msgid "Three decimal places (Default)"
 msgstr ""
 
-#: src/calculatorgui.cpp:132
+#: src/calculatorgui.cpp:130
+msgid "Precise"
+msgstr ""
+
+#: src/calculatorgui.cpp:130
 msgid "Precise, thousands separator"
 msgstr ""
 
-#: src/calculatorgui.cpp:132
+#: src/calculatorgui.cpp:130
 msgid "Succinct"
 msgstr ""
 
-#: src/calculatorgui.cpp:132
+#: src/calculatorgui.cpp:130
 msgid "Succinct, thousands separator"
 msgstr ""
 
-#: src/calculatorgui.cpp:132
+#: src/calculatorgui.cpp:130
 msgid "Scientific"
 msgstr ""
 
-#: src/calculatorgui.cpp:132
+#: src/calculatorgui.cpp:130
 msgid "Humanised"
 msgstr ""
 
-#: src/calculatorgui.cpp:142
+#: src/calculatorgui.cpp:140
 msgid "Show/Hide Buttons"
 msgstr ""
 
-#: src/calculatorgui.cpp:144
+#: src/calculatorgui.cpp:142
 msgid "Help Button"
 msgstr ""
 
-#: src/calculatorgui.cpp:146
+#: src/calculatorgui.cpp:144
 msgid "Show/Hide help button (you can always type \"help\" from input window)."
 msgstr ""
 
-#: src/calculatorgui.cpp:150
+#: src/calculatorgui.cpp:148
 msgid "Calculate Button"
 msgstr ""
 
-#: src/calculatorgui.cpp:152
+#: src/calculatorgui.cpp:150
 msgid ""
 "Show/Hide Calculate button (you can always press enter at the end of input)."
 msgstr ""
 
-#: src/calculatorgui.cpp:156
+#: src/calculatorgui.cpp:154
 msgid "Function Button"
 msgstr ""
 
-#: src/calculatorgui.cpp:164
+#: src/calculatorgui.cpp:162
 msgid "History Settings"
 msgstr ""
 
-#: src/calculatorgui.cpp:171
+#: src/calculatorgui.cpp:169
 msgid "Max Results"
 msgstr ""
 
-#: src/calculatorgui.cpp:173
+#: src/calculatorgui.cpp:171
 msgid ""
 "More results use up more memory. Memory is only allocated if required (e.g. "
 "if number is 30000, corresponding memory will only be used after this many "
 "calculations)."
 msgstr ""
 
-#: src/calculatorgui.cpp:178
+#: src/calculatorgui.cpp:176
 msgid ""
 "More results use more memory. Memory will be cleared if Max Results is "
 "reached. NB variables are kept"
 msgstr ""
 
-#: src/calculatorgui.cpp:185
+#: src/calculatorgui.cpp:183
 msgid "Opacity"
 msgstr ""
 
-#: src/calculatorgui.cpp:196
+#: src/calculatorgui.cpp:194
 msgid "Show History Window"
 msgstr ""
 
-#: src/calculatorgui.cpp:198
+#: src/calculatorgui.cpp:196
 msgid "Show/Hide history"
 msgstr ""
 
-#: src/calculatorgui.cpp:206
+#: src/calculatorgui.cpp:204
 msgid "Other"
 msgstr ""
 
-#: src/calculatorgui.cpp:208
+#: src/calculatorgui.cpp:206
 msgid "Log results to opencpn"
 msgstr ""
 
-#: src/calculatorgui.cpp:209
+#: src/calculatorgui.cpp:207
 msgid "Log calculator results in OpenCPN log file"
 msgstr ""
 
-#: src/calculatorgui.cpp:255
+#: src/calculatorgui.cpp:251
 msgid ""
 "Calculator Plugin for OpenCPN by SaltyPaws aka Walbert Schulpen/Updated by "
 "Mike Rossiter(Rasbats)\n"
@@ -239,6 +247,13 @@ msgid ""
 "Adding formulas is easy. If your favorite nautical equation is missing, "
 "please let me know your equation via flyspray, and I will add it.\n"
 "\n"
+"Many formulas are based on U.S. units. Formulas use a 'base' unit, for "
+"example US Gallons per Minute. Conversion factors are used to display the "
+"result in other units. Using other units the result may not be exactly as "
+"expected. For example \"Convert Flowrate\": 10 m3/s converts to "
+"599999.999365987 liter per minute, not 600000 exactly, using the 'precise' "
+"accuracy.\n"
+"\n"
 "Help\n"
 "=========\n"
 "Type help in the calculator to get these instructions.\n"
@@ -251,7 +266,7 @@ msgid ""
 "\tvhull=1.34*LWL^(1/2)\t(hull speed in knots)\n"
 "\n"
 "Conversions:\n"
-"\tftm=0.3048\t\t\t(feet to meters)\n"
+"\tftm=0.3048\t\t(feet to meters)\n"
 "\tkm_to_nm=0.539957\t\t(Kilometers to nautical Mile)\n"
 "\tftm*LWL\t\t\t(waterline length in meters)\n"
 "\n"
@@ -287,7 +302,7 @@ msgid ""
 "log2 \t1 \tlogarithm to the base 2\n"
 "log10 \t1 \tlogarithm to the base 10\n"
 "log \t1 \tlogarithm to the base 10\n"
-"ln \t\t1 \tlogarithm to base e (2.71828...)\n"
+"ln \t1 \tlogarithm to base e (2.71828...)\n"
 "exp \t1 \te raised to the power of x\n"
 "sqrt \t1 \tsquare root of a value\n"
 "sign \t1 \tsign function -1 if x<0; 1 if x>0\n"
@@ -303,21 +318,21 @@ msgid ""
 "\n"
 "The following table lists the default binary operators supported by the "
 "parser.\n"
-"Operator \tMeaning \tPriority\n"
-"= \t\tassignement \t\t\t-1\n"
-"&& \tlogical and \t\t\t1\n"
+"Operator \t\tMeaning \t\t\t\tPriority\n"
+"= \t\tassignment \t\t\t-1\n"
+"&& \t\tlogical and \t\t\t1\n"
 "|| \t\tlogical or\t \t\t\t2\n"
 "<= \t\tless or equal \t\t\t4\n"
-">= \t\tgreater or equal \t\t4\n"
+">= \t\tgreater or equal \t\t\t4\n"
 "!= \t\tnot equal \t\t\t\t4\n"
-"== \t\tequal \t\t\t\t\t4\n"
+"== \t\tequal \t\t\t\t4\n"
 "> \t\tgreater than \t\t\t4\n"
 "< \t\tless than \t\t\t\t4\n"
 "+ \t\taddition \t\t\t\t5\n"
 "- \t\tsubtraction \t\t\t5\n"
-"* \t\tmultiplication \t\t6\n"
+"* \t\tmultiplication \t\t\t6\n"
 "/ \t\tdivision \t\t\t\t6\n"
-"^ \t\traise x to the power of y \t7\n"
+"^ \t\traise x to the power of y \t\t7\n"
 "*The assignment operator is special since it changes one of its arguments and "
 "can only by applied to variables.\n"
 "Other operators\n"
@@ -356,66 +371,70 @@ msgid ""
 "\"Enter\" or press \"Calculate\".\n"
 "\tIf you are using \"History\" the results will appear there. If not the "
 "result will appear in the input box.\n"
-"\tIf you make a mistake, press \"Calculate\" to clear the input box.  "
+"\tIf you make a mistake, press \"C/CE\" to clear the input box.  "
 msgstr ""
 
-#: src/calculatorgui.cpp:418 src/calculatorgui.cpp:513
+#: src/calculatorgui.cpp:403 src/calculatorgui.cpp:498
 msgid "N"
 msgstr ""
 
-#: src/calculatorgui.cpp:418 src/calculatorgui.cpp:513
+#: src/calculatorgui.cpp:403 src/calculatorgui.cpp:498
 msgid "S"
 msgstr ""
 
-#: src/calculatorgui.cpp:448 src/calculatorgui.cpp:550
+#: src/calculatorgui.cpp:433 src/calculatorgui.cpp:535
 msgid "E"
 msgstr ""
 
-#: src/calculatorgui.cpp:448 src/calculatorgui.cpp:550
+#: src/calculatorgui.cpp:433 src/calculatorgui.cpp:535
 msgid "W"
 msgstr ""
 
-#: src/calculatorgui.cpp:580
+#: src/calculatorgui.cpp:565
 msgid "Convert"
 msgstr ""
 
-#: src/calculatorgui.cpp:636
+#: src/calculatorgui.cpp:568 src/calculatorgui.cpp:937
+msgid "Close"
+msgstr ""
+
+#: src/calculatorgui.cpp:633
 msgid "Select Function Category"
 msgstr ""
 
-#: src/calculatorgui.cpp:648
+#: src/calculatorgui.cpp:645
 msgid "Select Function"
 msgstr ""
 
-#: src/calculatorgui.cpp:660
+#: src/calculatorgui.cpp:657
 msgid "Function And Description"
 msgstr ""
 
-#: src/calculatorgui.cpp:675 src/calculatorgui.cpp:943
+#: src/calculatorgui.cpp:668
+msgid "ere"
+msgstr ""
+
+#: src/calculatorgui.cpp:672 src/calculatorgui.cpp:940
 msgid "Description"
 msgstr ""
 
-#: src/calculatorgui.cpp:689
+#: src/calculatorgui.cpp:686
 msgid "Input Parameters"
 msgstr ""
 
-#: src/calculatorgui.cpp:697 src/calculatorgui.cpp:718 src/calculatorgui.cpp:739
-#: src/calculatorgui.cpp:760 src/calculatorgui.cpp:781 src/calculatorgui.cpp:802
-#: src/calculatorgui.cpp:823 src/calculatorgui.cpp:844 src/calculatorgui.cpp:865
-#: src/calculatorgui.cpp:886
+#: src/calculatorgui.cpp:694 src/calculatorgui.cpp:715 src/calculatorgui.cpp:736
+#: src/calculatorgui.cpp:757 src/calculatorgui.cpp:778 src/calculatorgui.cpp:799
+#: src/calculatorgui.cpp:820 src/calculatorgui.cpp:841 src/calculatorgui.cpp:862
+#: src/calculatorgui.cpp:883
 msgid "Parameter"
 msgstr ""
 
-#: src/calculatorgui.cpp:905
+#: src/calculatorgui.cpp:902
 msgid "Function Result Select Units"
 msgstr ""
 
-#: src/calculatorgui.cpp:916
+#: src/calculatorgui.cpp:913
 msgid "MyLabel"
-msgstr ""
-
-#: src/calculatorgui.cpp:940
-msgid "Close"
 msgstr ""
 
 #: src/functions.cpp:34
@@ -437,8 +456,7 @@ msgid "Design"
 msgstr ""
 
 #: src/functions.cpp:37 src/functions.cpp:64 src/functions.cpp:91
-#: src/functions.cpp:118 src/functions.cpp:145 src/functions.cpp:226
-#: src/functions.cpp:253
+#: src/functions.cpp:118 src/functions.cpp:145 src/functions.cpp:254
 msgid "http://www.bootkeyharbor.com/Formulas.htm"
 msgstr ""
 
@@ -448,8 +466,7 @@ msgstr ""
 
 #: src/functions.cpp:63 src/functions.cpp:90 src/functions.cpp:117
 #: src/functions.cpp:144 src/functions.cpp:171 src/functions.cpp:198
-#: src/functions.cpp:333 src/functions.cpp:360 src/functions.cpp:522
-#: src/functions.cpp:549
+#: src/functions.cpp:334 src/functions.cpp:523 src/functions.cpp:550
 msgid "Navigation"
 msgstr ""
 
@@ -511,23 +528,27 @@ msgstr ""
 
 #: src/functions.cpp:224
 msgid ""
-"Flow rate of leak in boat:\tQ = 3,600 (A) (H)\n"
+"Flow rate of leak in boat:\tQ = 7.48*A*(2gH)^0.5\n"
 "\n"
 "Q = volume per minute of water coming in\n"
 "A = area of hole\n"
 "H = height of water over hole, to bottom of the opening"
 msgstr ""
 
-#: src/functions.cpp:225 src/functions.cpp:252 src/functions.cpp:279
-#: src/functions.cpp:306
+#: src/functions.cpp:225 src/functions.cpp:253 src/functions.cpp:280
+#: src/functions.cpp:307
 msgid "Safety"
 msgstr ""
 
-#: src/functions.cpp:250
-msgid "Patch over hole"
+#: src/functions.cpp:226
+msgid "https://www.boatdesign.net/threads/water-intrusion-formula.38075/"
 msgstr ""
 
 #: src/functions.cpp:251
+msgid "Patch over hole"
+msgstr ""
+
+#: src/functions.cpp:252
 msgid ""
 "Patch or cover thickness to withstand water pressure (patch over hole):\n"
 "\n"
@@ -537,11 +558,36 @@ msgid ""
 "\tL = length of patch, longest distance between supports"
 msgstr ""
 
-#: src/functions.cpp:277
+#: src/functions.cpp:278
 msgid "Line Break strength (circumference)"
 msgstr ""
 
-#: src/functions.cpp:278 src/functions.cpp:305
+#: src/functions.cpp:279
+msgid ""
+"Each type of line, natural fiber, synthetic and wire rope, have different "
+"breaking strengths and safe working loads. Natural breaking strength of "
+"manila line is the standard against which other lines are compared. Synthetic "
+"lines have been assigned comparison factors against which they are compared "
+"to manila line. The basic breaking strength factor for manila line is found "
+"by multiplying the square of the circumference of the line by 900 lbs. Knots "
+"and splices only have 50-60 percent of line strength.\n"
+"\n"
+"Line Material\tComparison Factor \n"
+"Nylon\t\t\t2.5\n"
+"Dacron\t\t\t2.0\n"
+"Polypropylene\t\t1.4\n"
+"Manilla \t\t\t1.0"
+msgstr ""
+
+#: src/functions.cpp:281 src/functions.cpp:308
+msgid "http://www.boatsafe.com/marlinespike/breaking.htm"
+msgstr ""
+
+#: src/functions.cpp:305
+msgid "Line Break strength (diameter)"
+msgstr ""
+
+#: src/functions.cpp:306
 msgid ""
 "Each type of line, natural fiber, synthetic and wire rope, have different "
 "breaking strengths and safe working loads. Natural breaking strength of "
@@ -558,19 +604,11 @@ msgid ""
 "Manilla \t\t\t1.0"
 msgstr ""
 
-#: src/functions.cpp:280 src/functions.cpp:307
-msgid "http://www.boatsafe.com/marlinespike/breaking.htm"
-msgstr ""
-
-#: src/functions.cpp:304
-msgid "Line Break strength (diameter)"
-msgstr ""
-
-#: src/functions.cpp:331
+#: src/functions.cpp:332
 msgid "Velocity Made Good (angle)"
 msgstr ""
 
-#: src/functions.cpp:332 src/functions.cpp:359
+#: src/functions.cpp:333
 msgid ""
 "Velocity made good, or vmg, is a term in sailing, and specifically yacht "
 "racing, that refers to the component of a sailboats velocity that is in the "
@@ -582,19 +620,15 @@ msgid ""
 "sail that optimizes velocity made good."
 msgstr ""
 
-#: src/functions.cpp:334 src/functions.cpp:361
-msgid "http://lagoon-inside.com/en/faster-thanks-to-the-vmg-concept/"
-msgstr ""
-
-#: src/functions.cpp:358
-msgid "Velocity Made Good (delta)"
-msgstr ""
-
-#: src/functions.cpp:385
-msgid "Wind Chill"
+#: src/functions.cpp:335
+msgid "https://en.wikipedia.org/wiki/Velocity_made_good"
 msgstr ""
 
 #: src/functions.cpp:386
+msgid "Wind Chill"
+msgstr ""
+
+#: src/functions.cpp:387
 msgid ""
 "In November 2001 Canada, U.S. and U.K. implemented a new wind chill index "
 "developed by scientists and medical experts on the Joint Action Group for "
@@ -608,22 +642,22 @@ msgid ""
 "approximated, to within one degree, from the following formula:"
 msgstr ""
 
-#: src/functions.cpp:387 src/functions.cpp:414 src/functions.cpp:441
-#: src/functions.cpp:468
+#: src/functions.cpp:388 src/functions.cpp:415 src/functions.cpp:442
+#: src/functions.cpp:469
 msgid "Weather"
 msgstr ""
 
-#: src/functions.cpp:388
+#: src/functions.cpp:389
 msgid ""
 "http://en.wikipedia.org/wiki/Wind_chill, http://climate.weatheroffice.gc.ca/"
 "prods_servs/normals_documentation_e.html"
 msgstr ""
 
-#: src/functions.cpp:412
+#: src/functions.cpp:413
 msgid "Humidex"
 msgstr ""
 
-#: src/functions.cpp:413
+#: src/functions.cpp:414
 msgid ""
 "Humidex is an index to indicate how hot or humid the weather feels to the "
 "average person. It is derived by combining temperature and humidity values "
@@ -633,34 +667,34 @@ msgid ""
 "degrees and the air is dry. "
 msgstr ""
 
-#: src/functions.cpp:415
+#: src/functions.cpp:416
 msgid "http://climate.weather.gc.ca/glossary_e.html"
 msgstr ""
 
-#: src/functions.cpp:439
+#: src/functions.cpp:440
 msgid "Beaufort to Wind Velocity"
 msgstr ""
 
-#: src/functions.cpp:440 src/functions.cpp:467
+#: src/functions.cpp:441 src/functions.cpp:468
 msgid ""
 "Beaufort scale was created in 1805 by Sir Francis Beaufort, British admiral "
 "and hydrographer. It describes wind speed based mainly on observed sea "
 "conditions."
 msgstr ""
 
-#: src/functions.cpp:442 src/functions.cpp:469
+#: src/functions.cpp:443 src/functions.cpp:470
 msgid "http://planetcalc.com/384/"
 msgstr ""
 
-#: src/functions.cpp:466
+#: src/functions.cpp:467
 msgid "Wind Velocity to Beaufort"
 msgstr ""
 
-#: src/functions.cpp:493
+#: src/functions.cpp:494
 msgid "Pressure at depth"
 msgstr ""
 
-#: src/functions.cpp:494
+#: src/functions.cpp:495
 msgid ""
 "If a fluid is within a container then the depth of an object placed in that "
 "fluid can be measured. The deeper the object is placed in the fluid, the more "
@@ -672,38 +706,39 @@ msgid ""
 "Density Fresh Water = 1.0 kg/liter"
 msgstr ""
 
-#: src/functions.cpp:495
+#: src/functions.cpp:496
 msgid "Diving"
 msgstr ""
 
-#: src/functions.cpp:496
+#: src/functions.cpp:497
 msgid ""
 "http://www.grc.nasa.gov/WWW/k-12/WindTunnel/Activities/fluid_pressure.html\n"
 "Saltypaws"
 msgstr ""
 
-#: src/functions.cpp:520
+#: src/functions.cpp:521
 msgid "Distance to horizon"
 msgstr ""
 
-#: src/functions.cpp:521
+#: src/functions.cpp:522
 msgid ""
 "If the Earth is assumed to be a sphere with no atmosphere then the distance "
 "to the horizon can easily be calculated. (The Earths radius of curvature "
-"actually varies by 1 between the Equator and the Poles, so this formula isnt "
+"actually varies between the Equator and the Poles, so this formula isnt "
 "absolutely exact even assuming no refraction.) This formula assumes earth "
-"diameter of 12 756.32 km."
+"diameter of 12756.32 km."
 msgstr ""
 
-#: src/functions.cpp:523
-msgid "https://en.wikipedia.org/wiki/Horizon, geometrical model"
-msgstr ""
-
-#: src/functions.cpp:547
-msgid "Objects above horizon"
+#: src/functions.cpp:524
+msgid ""
+"https://en.wikipedia.org/wiki/Horizon#Exact_formula_for_a_spherical_Earth"
 msgstr ""
 
 #: src/functions.cpp:548
+msgid "Objects above horizon"
+msgstr ""
+
+#: src/functions.cpp:549
 msgid ""
 "To compute the greatest distance at which an observer can see the top of an "
 "object above the horizon, compute the distance to the horizon for a "
@@ -711,53 +746,53 @@ msgid ""
 "distance to the horizon. This formula assumes earth diameter of 12 756.32 km."
 msgstr ""
 
-#: src/functions.cpp:550
+#: src/functions.cpp:551
 msgid "https://en.wikipedia.org/wiki/Horizon, Objects above horizon"
 msgstr ""
 
-#: src/functions.cpp:574 src/functions.cpp:575
+#: src/functions.cpp:575 src/functions.cpp:576
 msgid "Convert Distance"
-msgstr ""
-
-#: src/functions.cpp:576 src/functions.cpp:603 src/functions.cpp:630
-#: src/functions.cpp:657 src/functions.cpp:684 src/functions.cpp:711
-#: src/functions.cpp:739
-msgid "Conversions"
 msgstr ""
 
 #: src/functions.cpp:577 src/functions.cpp:604 src/functions.cpp:631
 #: src/functions.cpp:658 src/functions.cpp:685 src/functions.cpp:712
+#: src/functions.cpp:740
+msgid "Conversions"
+msgstr ""
+
+#: src/functions.cpp:578 src/functions.cpp:605 src/functions.cpp:632
+#: src/functions.cpp:659 src/functions.cpp:686 src/functions.cpp:713
 msgid "Saltypaws"
 msgstr ""
 
-#: src/functions.cpp:601 src/functions.cpp:602
+#: src/functions.cpp:602 src/functions.cpp:603
 msgid "Convert Temperature"
 msgstr ""
 
-#: src/functions.cpp:628 src/functions.cpp:629
+#: src/functions.cpp:629 src/functions.cpp:630
 msgid "Convert Speed"
 msgstr ""
 
-#: src/functions.cpp:655 src/functions.cpp:656
+#: src/functions.cpp:656 src/functions.cpp:657
 msgid "Convert Pressure"
 msgstr ""
 
-#: src/functions.cpp:682 src/functions.cpp:683
+#: src/functions.cpp:683 src/functions.cpp:684
 msgid "Convert Angle"
 msgstr ""
 
-#: src/functions.cpp:709 src/functions.cpp:710
+#: src/functions.cpp:710 src/functions.cpp:711
 msgid "Convert Flowrate"
 msgstr ""
 
-#: src/functions.cpp:737
+#: src/functions.cpp:738
 msgid "Convert Degrees (All formats)"
 msgstr ""
 
-#: src/functions.cpp:738
+#: src/functions.cpp:739
 msgid "Convert (All formats)"
 msgstr ""
 
-#: src/functions.cpp:740
+#: src/functions.cpp:741
 msgid "Rasbats"
 msgstr ""

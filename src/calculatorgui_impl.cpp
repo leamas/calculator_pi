@@ -104,6 +104,8 @@ void FunDlg::LoadCategories(void)
 void FunDlg::OnCategorySelect( wxCommandEvent& event )
 {
     this->LoadFunctions(event.GetString(),wxT("All"));
+	this->Fit();
+	this->Layout();
 }
 
 void FunDlg::OnClose( wxCommandEvent& event )
@@ -114,6 +116,8 @@ void FunDlg::OnClose( wxCommandEvent& event )
 void FunDlg::OnItemSelect( wxCommandEvent& event )
 {
     this->OnItemSelect();
+	this->Fit();
+	this->Layout();
 }
 
 void FunDlg::OnItemSelect(void)
@@ -395,7 +399,8 @@ Dlg::Dlg(wxWindow *parent, calculator_pi *ppi)
     this->Fit();
     this->m_Overview->Fit();
     this->m_Overview->Layout();
-    this->SetSize(wh);
+    wh = this->GetSize();
+	xy = this->GetPosition();
     i_counter=0;
     item_counter=0;
     MemoryFull=false;
@@ -405,7 +410,7 @@ Dlg::Dlg(wxWindow *parent, calculator_pi *ppi)
 }
 Dlg::~Dlg()
 {
-
+	
 }
 
 void Dlg::OnCalculateDegrees(void)
@@ -413,8 +418,10 @@ void Dlg::OnCalculateDegrees(void)
 	if (NULL == m_pDegreeDialog)
 	{
 		m_pDegreeDialog = new DegreeDlg(this);	
+		m_pDegreeDialog->SetSize(400, 500);
 		m_pDegreeDialog->Plugin_Dialog = this;
-		
+		m_pDegreeDialog->Fit();
+		m_pDegreeDialog->Layout();
 	}
 	m_pDegreeDialog->Show(!m_pDegreeDialog->IsShown());
 }
@@ -440,12 +447,12 @@ void Dlg::OnHelp( void )
     {
         //HlpDlg *m_pHelpdialog = new HlpDlg(this);m_pHelpdialog->Show(true);
         m_pHelpdialog = new HlpDlg(this);
-        m_pHelpdialog->HelpPanel->Fit();
+		m_pHelpdialog->SetSize(650, 500);
+		m_pHelpdialog->m_scrolledWindow2->Fit();
         m_pHelpdialog->m_textCtrl3->Fit();
         m_pHelpdialog->m_textCtrl3->Layout();
     }
     m_pHelpdialog->Show(!m_pHelpdialog->IsShown());
-
 }
 
 void Dlg::OnFunction( wxCommandEvent& event )
@@ -457,8 +464,11 @@ void Dlg::OnFunction( void )
 {
         if(NULL == m_pFunctiondialog){
             //FunDlg *m_pFunctiondialog = new FunDlg(this);
-            m_pFunctiondialog = new FunDlg(this);
-            m_pFunctiondialog->Plugin_Dialog = this;
+			m_pFunctiondialog = new FunDlg(this); 
+			m_pFunctiondialog->Plugin_Dialog = this;
+			m_pFunctiondialog->SetSize(600, 700);
+			m_pFunctiondialog->m_scrolledWindow1->Fit();
+			m_pFunctiondialog->Layout();
         }
         m_pFunctiondialog->Show(!m_pFunctiondialog->IsShown());
 }
@@ -467,21 +477,28 @@ void Dlg::set_History(void)
 {
     if(this->m_Help->GetValue())
     {
-        //Capture dialog position
+		m_bshowhistory = true;
+		m_bshowhistoryP = true;
+		//Capture dialog position
         xy=this->GetPosition();
         //Capture dialog size
         wh=this->GetSize();
         wh.y=-1; //Set default dialog height
+		this->m_HistoryPulldown->Show(true);
     	this->m_listCtrl->Show(true);
     	this->m_listCtrl->Show(true);
     	this->m_listCtrl->Fit();
         this->m_Overview->Layout();
-        this->Fit();
-        this->Layout();
+        this->Fit();  
+
+		pPlugIn->SaveConfig();
     }
     else
     {
-    	this->m_listCtrl->Show(false);
+		m_bshowhistory = false;
+		m_bshowhistoryP = false;
+		this->m_HistoryPulldown->Show(false);
+		this->m_listCtrl->Show(false);
     	this->m_listCtrl->Show(false);
     	this->m_listCtrl->Fit();
         this->m_Overview->Layout();
@@ -490,6 +507,8 @@ void Dlg::set_History(void)
         this->SetPosition(xy);
         //Capture dialog size
         this->SetSize(wh);
+
+		pPlugIn->SaveConfig();
     }
     wxMilliSleep(50);
 }
@@ -509,25 +528,26 @@ void Dlg::OnTest(wxListEvent& event){
 #endif // DEBUG
 void Dlg::OnItem(wxListEvent& event){
     long item = -1;
-    wxString ItemText;
+    wxString ItemText;	
     for ( ;; )
     {
         item = this->m_listCtrl->GetNextItem(item,
                                      wxLIST_NEXT_ALL,
                                      wxLIST_STATE_SELECTED);
-        if ( item == -1 )
-            break;
-
-        ItemText=this->m_listCtrl->GetItemText(item);
+		if (item == -1) break;
+		
+        ItemText=this->m_listCtrl->GetItemText(item);		
         ItemText=ItemText.BeforeFirst('=');
         //ItemText=ItemText.BeforeFirst(' ');
         m_result->AppendText(ItemText);
     }
+	
 }
 
 void Dlg::OnToggle( wxCommandEvent& event )
 {
         this->set_History();
+		
 }
 
 void Dlg::set_Buttons(void)
@@ -536,18 +556,24 @@ void Dlg::set_Buttons(void)
     this->m_Help->Show(m_bshowhistoryB);
     this->Calculate->Show(m_bCalculateB);
     this->m_Function->Show(m_bshowFunction);
-    this->m_HistoryPulldown->Show(m_HistoryPulldown);
+	
     this->m_Overview->Fit();
     this->m_Overview->Layout();
     this->m_Help->SetValue(m_bshowhistory);
 
-    this->set_History();
+    if (m_bshowhistory||m_bshowhistoryP)this->set_History();
 }
 
 void Dlg::OnCalculate( wxCommandEvent& event )
 {
     OnCalculate();
 }
+
+void Dlg::OnClear(wxCommandEvent& event)
+{
+	m_result->SetValue(_T(""));
+}
+
 
 wxString Dlg::OnCalculate( void )
 {
@@ -558,6 +584,14 @@ wxString Dlg::OnCalculate( void )
     if ((Text.StartsWith(_("Error"))) ){
         error_check=true;
     }
+
+	if (Text.StartsWith(_T("min")) || Text.StartsWith(_T("max")) || Text.StartsWith(_T("sum")) || Text.StartsWith(_T("avg"))) {
+		if (!Text.Contains(_T("(")) && !Text.Contains(_T(")"))) {
+			error_check = true;
+			m_result->SetValue(_("Error:Missing parenthesis"));
+			return wxT("");
+		}
+	}
 
     if ((Text.StartsWith(_T("clear"))) || (Text.StartsWith(_T("Clear")))|| (Text.StartsWith(_T("CLEAR")))){ //clear old results
         m_listCtrl->ClearAll();
@@ -754,32 +788,33 @@ wxString Dlg::Report_Value(double in_Value, int in_mode){
     int human_magnitude=0;
     double result=0;
     switch(in_mode) {
-        case 0:
-            //printf("Precise (Default)\n");
+		case 0:
+			//printf("Three decimal places (Default)\n");
+			return wxString::Format(wxT("%15.3f"), in_Value);
+			break;	
+		case 1:
+            //printf("Precise\n");
             return wxString::Format(wxT("%15.15g"), in_Value);
             break;
-        case 1:
+        case 2:
             //printf("Precise, thousands separator\n");
             //setlocale(LC_ALL,""); //Causes Serious errors in OPENCPN, rounding all tracks waypoints and incoming data.
             return ThousandSeparator(wxString::Format(wxT("%15.15g"), in_Value));
             //return Temp_String;
             break;
-
-
-
-        case 2:
+        case 3:
             //printf("Succinct\n");
             return wxString::Format(wxT("%15.7g"), in_Value);
             break;
-        case 3:
+        case 4:
             //printf("Succinct, thousands separator\n");
             return ThousandSeparator(wxString::Format(wxT("%15.7g"), in_Value));
             break;
-        case 4:
+        case 5:
             //printf("Scientific\n");
             return wxString::Format(wxT("%.15e"), in_Value);
             break;
-        case 5:
+        case 6:
             //printf("Humanise\n");
             try{
                 Temp_String=wxT("log10(abs(")+double2wxT(in_Value)+wxT("))/3");
@@ -1131,6 +1166,21 @@ void DegreeDlg::OnNoteBookFit(wxBookCtrlEvent& event) {
 
 void DegreeDlg::OnCloseDegreeDlg(wxCloseEvent& event) {
 	Plugin_Dialog->m_pDegreeDialog->Hide();
+	Plugin_Dialog->m_pFunctiondialog->m_button7->Show();
+	Plugin_Dialog->m_pFunctiondialog->LoadFunctions(wxT("All"), wxT("All"));
+	Plugin_Dialog->m_pFunctiondialog->m_scrolledWindow1->Fit();
+	Plugin_Dialog->m_pFunctiondialog->Layout();
+	//Plugin_Dialog->m_pFunctiondialog->Refresh();
+	Refresh(m_parent);
+}
+
+void DegreeDlg::OnClose(wxCommandEvent& event) {
+	Plugin_Dialog->m_pDegreeDialog->Hide();
+	Plugin_Dialog->m_pFunctiondialog->m_button7->Show();
+	Plugin_Dialog->m_pFunctiondialog->LoadFunctions(wxT("All"), wxT("All"));
+	Plugin_Dialog->m_pFunctiondialog->m_scrolledWindow1->Fit();
+	Plugin_Dialog->m_pFunctiondialog->Layout();
+	//Plugin_Dialog->m_pFunctiondialog->Refresh();
 	Refresh(m_parent);
 }
 

@@ -42,7 +42,7 @@
 
 
 #define     PLUGIN_VERSION_MAJOR    2
-#define     PLUGIN_VERSION_MINOR    1
+#define     PLUGIN_VERSION_MINOR    2
 
 #define     MY_API_VERSION_MAJOR    1
 #define     MY_API_VERSION_MINOR    8
@@ -93,6 +93,11 @@ public:
       //void GetMaxResults                (int x){ m_iMaxResults = x;}
 	  wxBitmap m_panelBitmap;
 	  void				OnCalculatorDialogClose();
+	  bool              SaveConfig(void);
+	  
+	  bool              m_bshowhistory;
+	  bool              m_bshowhistoryB;
+	  bool              m_bshowhistoryP;
 
 private:
       Dlg               *m_pDialog;
@@ -100,7 +105,7 @@ private:
       wxFileConfig      *m_pconfig;
       wxWindow          *m_parent_window;
       bool              LoadConfig(void);
-      bool              SaveConfig(void);
+      
 
       int               m_calculator_dialog_x, m_calculator_dialog_y,m_calculator_dialog_width,m_calculator_dialog_height;
       int               m_display_width, m_display_height;
@@ -109,15 +114,15 @@ private:
       int               m_Calculator_tool_id;
       int               m_CalculatorFX_tool_id;
       bool              m_bshowhelpB;
-      bool              m_bshowhistoryB;
+      
       bool              m_bCalculateB;
       bool              m_bshowFunction;
-      bool              m_bshowhistory;
+     
       //bool              m_bcapturehidden;
       bool              m_blogresults;
 
       int               m_iCalc_Reporting;
-      bool              m_bshowhistoryP;
+      
       bool              m_bshowfunction_Open_CPN_BAR;
 	  bool			    m_bShowCalculator;
 	  bool			    m_bShowCalculatorFX;

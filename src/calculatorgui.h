@@ -46,8 +46,9 @@ class DlgDef : public wxDialog
 	protected:
 		wxPanel* m_Overview;
 		wxButton* Calculate;
+		wxButton* CCE;
 		wxButton* m_Function;
-		wxCheckBox* m_Help;
+		
 		wxButton* m_HelpButton;
 		wxChoice* m_HistoryPulldown;
 
@@ -55,6 +56,7 @@ class DlgDef : public wxDialog
 		virtual void OnClose( wxCloseEvent& event ) { event.Skip(); }
 		virtual void key_shortcut( wxKeyEvent& event ) { event.Skip(); }
 		virtual void OnCalculate( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnClear(wxCommandEvent& event) { event.Skip(); }
 		virtual void OnFunction( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnToggle( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnHelp( wxCommandEvent& event ) { event.Skip(); }
@@ -65,8 +67,9 @@ class DlgDef : public wxDialog
 	public:
 		wxTextCtrl* m_result;
 		wxListCtrl* m_listCtrl;
+		wxCheckBox* m_Help;
 
-		DlgDef( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Calculator"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 665,91 ), long style = wxCAPTION|wxDEFAULT_DIALOG_STYLE|wxMAXIMIZE_BOX|wxRESIZE_BORDER );
+		DlgDef( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Calculator"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 665,91 ), long style = wxCAPTION|wxDEFAULT_DIALOG_STYLE|wxMAXIMIZE_BOX|wxRESIZE_BORDER);
 		~DlgDef();
 
 };
@@ -132,29 +135,83 @@ public:
 
 
 
+///////////////////////////////////////////////////////////////////////////
+// C++ code generated with wxFormBuilder (version Oct 26 2018)
+// http://www.wxformbuilder.org/
+//
+// PLEASE DO *NOT* EDIT THIS FILE!
+///////////////////////////////////////////////////////////////////////////
+
+#pragma once
+
+#include <wx/artprov.h>
+#include <wx/xrc/xmlres.h>
+#include <wx/intl.h>
+#include <wx/string.h>
+#include <wx/textctrl.h>
+#include <wx/gdicmn.h>
+#include <wx/font.h>
+#include <wx/colour.h>
+#include <wx/settings.h>
+#include <wx/sizer.h>
+#include <wx/scrolwin.h>
+#include <wx/button.h>
+#include <wx/dialog.h>
+
+///////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////
+// C++ code generated with wxFormBuilder (version Oct 26 2018)
+// http://www.wxformbuilder.org/
+//
+// PLEASE DO *NOT* EDIT THIS FILE!
+///////////////////////////////////////////////////////////////////////////
+
+#pragma once
+
+#include <wx/artprov.h>
+#include <wx/xrc/xmlres.h>
+#include <wx/intl.h>
+#include <wx/string.h>
+#include <wx/textctrl.h>
+#include <wx/gdicmn.h>
+#include <wx/font.h>
+#include <wx/colour.h>
+#include <wx/settings.h>
+#include <wx/sizer.h>
+#include <wx/button.h>
+#include <wx/scrolwin.h>
+#include <wx/dialog.h>
+
+///////////////////////////////////////////////////////////////////////////
+
+
 ///////////////////////////////////////////////////////////////////////////////
 /// Class HlpDlgDef
 ///////////////////////////////////////////////////////////////////////////////
 class HlpDlgDef : public wxDialog
 {
-	private:
+private:
 
-	protected:
-		wxStdDialogButtonSizer* m_sdbSizer2;
-		wxButton* m_sdbSizer2OK;
+protected:
+	wxStdDialogButtonSizer* m_sdbSizer2;
+	wxButton* m_sdbSizer2OK;
 
-		// Virtual event handlers, overide them in your derived class
-		virtual void OnClose( wxCommandEvent& event ) { event.Skip(); }
+	// Virtual event handlers, overide them in your derived class
+	virtual void OnClose(wxCommandEvent& event) { event.Skip(); }
 
 
-	public:
-		wxPanel* HelpPanel;
-		wxTextCtrl* m_textCtrl3;
+public:
+	wxScrolledWindow* m_scrolledWindow2;
+	wxTextCtrl* m_textCtrl3;
 
-		HlpDlgDef( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxEmptyString, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( -1,-1 ), long style = wxCAPTION|wxDEFAULT_DIALOG_STYLE|wxMAXIMIZE_BOX|wxRESIZE_BORDER );
-		~HlpDlgDef();
+	HlpDlgDef(wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxEmptyString, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize(-1, -1), long style = wxCAPTION | wxDEFAULT_DIALOG_STYLE | wxMAXIMIZE_BOX | wxRESIZE_BORDER);
+	~HlpDlgDef();
 
 };
+
+
 
 ///////////////////////////////////////////////////////////////////////////////
 /// Class MyDialog5
@@ -224,11 +281,14 @@ protected:
 	wxStaticText* m_staticText11412;
 	wxStaticText* m_staticText11512;
 	wxButton* m_button811;
+	wxButton* m_buttonClose;
+
 
 	// Virtual event handlers, overide them in your derived class
 	virtual void OnCloseDegreeDlg(wxCloseEvent& event) { event.Skip(); }
 	virtual void OnNoteBookFit(wxBookCtrlEvent& event) { event.Skip(); }
 	virtual void OnConvertToDegree(wxCommandEvent& event) { event.Skip(); }
+	virtual void OnClose(wxCommandEvent& event) { event.Skip(); }
 
 
 public:
@@ -291,9 +351,6 @@ public:
 #include <wx/checkbox.h>
 #include <wx/dialog.h>
 
-///////////////////////////////////////////////////////////////////////////
-
-
 ///////////////////////////////////////////////////////////////////////////////
 /// Class FunDlgDef
 ///////////////////////////////////////////////////////////////////////////////
@@ -302,16 +359,17 @@ class FunDlgDef : public wxDialog
 private:
 
 protected:
-	wxPanel* m_panel152;
+	
 	wxChoice* m_Function_Categories;
 	wxPanel* m_panel101;
 	wxStaticText* m_Function;
 	wxPanel* m_panel100;
-	wxChoice* m_Output_Parameter_UnitC;	
+	wxChoice* m_Output_Parameter_UnitC;
+	
 	wxButton* m_button10;
 	wxCheckBox* m_checkBox8;
 
-	// Virtual event handlers, overide them in your derived class
+	// Virtual event handlers, overide them in your derived class	
 	virtual void OnCategorySelect(wxCommandEvent& event) { event.Skip(); }
 	virtual void OnItemSelect(wxCommandEvent& event) { event.Skip(); }
 	virtual void OnOutputParameterChange(wxCommandEvent& event) { event.Skip(); }
@@ -321,8 +379,8 @@ protected:
 
 
 public:
-	
-	wxButton* m_button7;
+wxButton* m_button7;
+	wxScrolledWindow* m_scrolledWindow1;
 	wxChoice* m_Function_Dropdown;
 	wxTextCtrl* m_textExtraDescription;
 	wxStaticText* m_Description;
@@ -379,10 +437,8 @@ public:
 	wxTextCtrl* m_Function_Result;
 	wxStaticText* m_Output_Parameter;
 
-	FunDlgDef(wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Calculator"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize(-1, -1), long style = wxCAPTION | wxDEFAULT_DIALOG_STYLE | wxMAXIMIZE_BOX | wxRESIZE_BORDER);
+	FunDlgDef(wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Calculator"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize(-1, -1), long style = wxCAPTION | wxDEFAULT_DIALOG_STYLE | wxMAXIMIZE_BOX | wxRESIZE_BORDER | wxHSCROLL | wxVSCROLL);
 	~FunDlgDef();
 
 };
-
-
 

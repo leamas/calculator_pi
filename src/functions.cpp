@@ -221,10 +221,11 @@ this->m_Input_parameter9.Add(_T(""));
 this->m_Input_unit9.Add(_T(""));
 
 this->m_ShortDesc.Add(_("Flow rate of leak in boat"));
-this->m_LongDesc.Add(_("Flow rate of leak in boat:\tQ = 3,600 (A) (H)\n\nQ = volume per minute of water coming in\nA = area of hole\nH = height of water over hole, to bottom of the opening"));
+this->m_LongDesc.Add(_("Flow rate of leak in boat:\tQ = 7.48*A*(2gH)^0.5\n\nQ = volume per minute of water coming in\nA = area of hole\nH = height of water over hole, to bottom of the opening"));
 this->m_Category.Add(_("Safety"));
-this->m_Source.Add(_("http://www.bootkeyharbor.com/Formulas.htm"));
-this->m_Formula.Add(_T("Q = 3600 *(A)* (H)"));
+this->m_Source.Add(_("https://www.boatdesign.net/threads/water-intrusion-formula.38075/"));
+// Q = 7.48* A x (2gh)^0.5
+this->m_Formula.Add(_T("Q = 7.48 * A * (2*32.174*H)^0.5"));
 this->m_Result_Unit.Add(_T("US gallons per minute"));
 this->m_Input_parameter.Add(_T("A"));
 this->m_Input_unit.Add(_T("Square feet"));
@@ -275,7 +276,7 @@ this->m_Input_parameter9.Add(_T(""));
 this->m_Input_unit9.Add(_T(""));
 
 this->m_ShortDesc.Add(_("Line Break strength (circumference)"));
-this->m_LongDesc.Add(_("Each type of line, natural fiber, synthetic and wire rope, have different breaking strengths and safe working loads. Natural breaking strength of manila line is the standard against which other lines are compared. Synthetic lines have been assigned comparison factors against which they are compared to manila line. The basic breaking strength factor for manila line is found by multiplying the square of the circumference of the line by 900 lbs. Knots and splices only have 50-60 of line strenght.\n\nLine Material\tComparison Factor \nNylon\t\t\t2.5\nDacron\t\t\t2.0\nPolypropylene\t\t1.4\nManilla \t\t\t1.0"));
+this->m_LongDesc.Add(_("Each type of line, natural fiber, synthetic and wire rope, have different breaking strengths and safe working loads. Natural breaking strength of manila line is the standard against which other lines are compared. Synthetic lines have been assigned comparison factors against which they are compared to manila line. The basic breaking strength factor for manila line is found by multiplying the square of the circumference of the line by 900 lbs. Knots and splices only have 50-60 percent of line strength.\n\nLine Material\tComparison Factor \nNylon\t\t\t2.5\nDacron\t\t\t2.0\nPolypropylene\t\t1.4\nManilla \t\t\t1.0"));
 this->m_Category.Add(_("Safety"));
 this->m_Source.Add(_("http://www.boatsafe.com/marlinespike/breaking.htm"));
 this->m_Formula.Add(_T("breaking_strength= 900 * comparison_factor * circumference^2 "));
@@ -354,7 +355,7 @@ this->m_Input_parameter8.Add(_T(""));
 this->m_Input_unit8.Add(_T(""));
 this->m_Input_parameter9.Add(_T(""));
 this->m_Input_unit9.Add(_T(""));
-
+/*
 this->m_ShortDesc.Add(_("Velocity Made Good (delta)"));
 this->m_LongDesc.Add(_("Velocity made good, or vmg, is a term in sailing, and specifically yacht racing, that refers to the component of a sailboats velocity that is in the direction of the true wind. The concept is useful in sailing, because a sailboat often cannot, or should not, sail directly to a mark to reach the mark as quickly as possible. Sailboats cannot sail directly upwind, and it is usually less than optimal, and sometimes dangerous, to sail directly downwind. Instead of sailing toward the mark, the helmsman chooses a point of sail that optimizes velocity made good."));
 this->m_Category.Add(_("Navigation"));
@@ -381,7 +382,7 @@ this->m_Input_parameter8.Add(_T(""));
 this->m_Input_unit8.Add(_T(""));
 this->m_Input_parameter9.Add(_T(""));
 this->m_Input_unit9.Add(_T(""));
-
+*/
 this->m_ShortDesc.Add(_("Wind Chill"));
 this->m_LongDesc.Add(_("In November 2001 Canada, U.S. and U.K. implemented a new wind chill index developed by scientists and medical experts on the Joint Action Group for Temperature Indices (JAG/TI). It is determined by iterating a model of skin temperature under various wind speeds and temperatures using standard engineering correlations of wind speed and heat transfer rate. Heat transfer was calculated for a bare face in wind, facing the wind, while walking into it at 1.4 metre per second (3.1mph). The model corrects the officially measured wind speed (at 10 meter height) to the wind speed at face height, assuming the person is in an open field. The results of this model may be approximated, to within one degree, from the following formula:"));
 this->m_Category.Add(_("Weather"));
@@ -518,9 +519,9 @@ this->m_Input_parameter9.Add(_T(""));
 this->m_Input_unit9.Add(_T(""));
 
 this->m_ShortDesc.Add(_("Distance to horizon"));
-this->m_LongDesc.Add(_("If the Earth is assumed to be a sphere with no atmosphere then the distance to the horizon can easily be calculated. (The Earths radius of curvature actually varies by 1 between the Equator and the Poles, so this formula isnt absolutely exact even assuming no refraction.) This formula assumes earth diameter of 12 756.32 km."));
+this->m_LongDesc.Add(_("If the Earth is assumed to be a sphere with no atmosphere then the distance to the horizon can easily be calculated. (The Earths radius of curvature actually varies between the Equator and the Poles, so this formula isnt absolutely exact even assuming no refraction.) This formula assumes earth diameter of 12756.32 km."));
 this->m_Category.Add(_("Navigation"));
-this->m_Source.Add(_("https://en.wikipedia.org/wiki/Horizon, geometrical model"));
+this->m_Source.Add(_("https://en.wikipedia.org/wiki/Horizon#Exact_formula_for_a_spherical_Earth"));
 this->m_Formula.Add(_T("distance_horizon=sqrt(height* (height + 12756.32))"));
 this->m_Result_Unit.Add(_T("kilometer"));
 this->m_Input_parameter.Add(_T("height"));
@@ -548,7 +549,7 @@ this->m_ShortDesc.Add(_("Objects above horizon"));
 this->m_LongDesc.Add(_("To compute the greatest distance at which an observer can see the top of an object above the horizon, compute the distance to the horizon for a hypothetical observer on top of that object, and add it to the real observers distance to the horizon. This formula assumes earth diameter of 12 756.32 km."));
 this->m_Category.Add(_("Navigation"));
 this->m_Source.Add(_("https://en.wikipedia.org/wiki/Horizon, Objects above horizon"));
-this->m_Formula.Add(_T("distance_visible=sqrt(height_observer * (height_observer + 12756.32)) + sqrt(height_object * (height_object + 12756.32))"));
+this->m_Formula.Add(_T("distance_visible=(sqrt(height_observer * (height_observer + 12756.32)) + sqrt(height_object * (height_object + 12756.32)))"));
 this->m_Result_Unit.Add(_T("kilometer"));
 this->m_Input_parameter.Add(_T("height_observer"));
 this->m_Input_unit.Add(_T("kilometer"));
