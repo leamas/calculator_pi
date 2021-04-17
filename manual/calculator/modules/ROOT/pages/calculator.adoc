@@ -1,6 +1,6 @@
 == Calculator
 
-image:calculator.png[]]
+image:calculator.png[]
 
 === Links
 
