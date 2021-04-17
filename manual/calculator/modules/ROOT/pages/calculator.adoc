@@ -234,7 +234,7 @@ the expression is evaluated.
 |===
 
 
-===== Variables:
+=== Variables:
 
 [cols=",",]
 |===
