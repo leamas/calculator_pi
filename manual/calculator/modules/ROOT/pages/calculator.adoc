@@ -23,7 +23,7 @@ http://www.cruisersforum.com/forums/f134/plugin-calculator[Plugin-calculator]
 http://www.cruisersforum.com/forums/f134/plugin-calculator-windows-version-178199.html[Plugin
 calculator windows version]
 
-==== Goals
+=== Goals
 
 This is a light weight yet powerful calculator plugin for OpenCPN which
 includes functions to solve nautical questions.
@@ -42,7 +42,7 @@ Key features are:
 Adding formulas is easy. If your favorite nautical equation is missing,
 please let me know your equation via flyspray, and I will add it.
 
-==== Requirements
+=== Requirements
 
 [source,code]
 ----
@@ -77,40 +77,40 @@ interface and resizes the menu to the original size.
 evaluation. Press the up or down button, to retrieve historic input and
 results (max 30).
 
-==== Help
+=== Help
 
 Type help in the calculator to get these instructions.
 
-==== Examples
+=== Examples
 
 *Examples* of expressions that work in the calculator are: _(comments
 are in brackets, some results depend on other example calculations)_:
 
-===== Hull speed:
+=== Hull speed:
 
 * LWL=48 _(water line length in feet)_
 * vhull=1.34*LWL^(1/2) _(hull speed in knots)_
 
-===== Conversions:
+=== Conversions:
 
 * ftm=0.3048 _(feet to meters)_
 * km_to_nm=0.539957 _(Kilometers to nautical Mile)_
 * ftm*LWL _(waterline length in meters)_
 
-===== Distance to horizon
+=== Distance to horizon
 
 * R=6378.1*1000 _(Radius of the earth in m)_
 * H=2.5 _(Height of the eye above sea-level in m)_
 * d = R * acos(R/(R + h)) _(Distance to horizon in m)_
 * ans*km_to_nm _(Distance to horizon in nm)_
 
-===== Distance to lighthouse
+=== Distance to lighthouse
 
 * H1=200 _(height of lighthouse in m)_
 * d1 = R*acos(R/(R + H1)) _(Distance to horizon in m)_
 * distance=d1+d _(visibility range of lighthouse in m)_
 
-===== Useful Notes
+=== Useful Notes
 
 * *Ans* is the result of the previous calculation
 * *Variables* can be defined (e.g. myvariable=10/8*cos(dtr*90) or
@@ -190,7 +190,7 @@ in degrees
 |avg |var. |mean value of all arguments
 |===
 
-==== Built-in binary operators
+=== Built-in binary operators
 
 The following table lists the default binary operators supported by the
 parser.
@@ -215,14 +215,12 @@ parser.
 |^ |use ^(1/2) for square root |7
 |===
 
-[.np_break]# #
-
 * The assignment operator is special since it changes one of its
 arguments and can only by applied to variables.
 
-==== Other operators
+=== Other operators
 
-===== MuParser
+=== MuParser
 
 *muParser* has built in support for the _if.. then.. else_ operator. It
 uses lazy evaluation in order to make sure only the necessary branch of
@@ -253,7 +251,7 @@ tact
 |===
 
 
-===== User Interface:
+=== User Interface:
 
 Type these commands in the command window:
 
@@ -266,8 +264,6 @@ Type these commands in the command window:
 |help |show the help menu
 |===
 
-[.np_break]# #
-
 ==== Settings/Plugins/Preferences:
 
 * Show/Hide Calculate
@@ -277,12 +273,12 @@ be stored in the history pull down. The history pulldown will contain
 five times this value.
 * Log to opencpn: Enable/Disable logging of results to opencpn logfile.
 
-==== Other:
+=== Other:
 
 * Error handling supported
 * MuParser has been compiled with C++ Double for internal precision.
 
-==== Compiling
+=== Compiling
 
 You have to be able to compile OpenCPN itself - Get the info
 athttp://opencpn.org/ocpn/developers_manual[Developers Manual]
@@ -303,7 +299,7 @@ After using wxformbuilder to modify the interface, use degreefix.sh, to
 facilitate the windows build. When updating the Excel file with formulas
 and conversions, convert to cpp code by running the supplied perl script
 
-==== Changes to version 1.6
+=== Changes to version 1.6
 
 * Added Willson Fetch Equation
 * Added wind speed to Beaufort equation
@@ -316,7 +312,7 @@ from plugin settings
 
 SaltyPaws aka Walbert Schulpen
 
-==== Support for Diagrams
+=== Support for Diagrams
 
 I believe the plugin supports small jpg & png images for the purpose of
 better visualization. What is needed to implement this system is some
@@ -327,13 +323,13 @@ diagrams and more knowledge about the plugin. Rgleason
 Earlier compiled library files can be downloaded/uploaded here.
 https://sourceforge.net/projects/opencpnplugins/
 
-==== License
+=== License
 
 The plugin is licensed under the terms of GPL v2 or, at your will,
 later. The MuParser files are by Ingo Berg and is open source. For full
 licence, please see the muparser source files.
 
-==== Sources
+=== Sources
 
 https://www.movable-type.co.uk/scripts/latlong.html[Calculations
 Lat/Long]
