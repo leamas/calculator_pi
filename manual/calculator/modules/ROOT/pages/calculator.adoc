@@ -6,22 +6,17 @@ image:calculator.png[]
 
 This plugin is available for Linux and Windows.
 
-* Source SaltyPaws: https://github.com/SaltyPaws/calculator_pi[Github
-Calculator Plugin] +
+* Source SaltyPaws: https://github.com/SaltyPaws/calculator_pi[Github Calculator Plugin]
 * Source Rasbats (with windows):
-https://github.com/Rasbats/calculator_pi[Github Calculator muparser
-Windows fix] +
-* Release: https://github.com/Rasbats/calculator_pi/releases[Linux and
-Windows release]
-* Download: https://opencpn.org/OpenCPN/plugins/calculator.html +
+https://github.com/Rasbats/calculator_pi[Github Calculator muparser Windows fix]
+* Release: https://github.com/Rasbats/calculator_pi/releases[Linux and Windows release]
+* Download: https://opencpn.org/OpenCPN/plugins/calculator.html
 * Forum:
-http://www.cruisersforum.com/forums/f134/calculator_pi-new-finished-plugin-for-opencpn-86028.html[CF
-Calculator_pi Thread]
+http://www.cruisersforum.com/forums/f134/calculator_pi-new-finished-plugin-for-opencpn-86028.html[CF Calculator_pi Thread]
 * Forum:
 http://www.cruisersforum.com/forums/f134/plugin-calculator[Plugin-calculator]
 * Forum:
-http://www.cruisersforum.com/forums/f134/plugin-calculator-windows-version-178199.html[Plugin
-calculator windows version]
+http://www.cruisersforum.com/forums/f134/plugin-calculator-windows-version-178199.html[Plugin calculator windows version]
 
 === Goals
 
@@ -55,7 +50,7 @@ Linux or Windows
 *The calculator plugin allows you to carry out all nautical
 calculations, without having to leave the OpenCPN environment. The
 scientific calculator is capable of working with, and retaining
-variables*. +
+variables*.
 * When starting the plugin for the first time, go to
 
 image:settings.png[]
@@ -101,13 +96,13 @@ are in brackets, some results depend on other example calculations)_:
 
 * R=6378.1*1000 _(Radius of the earth in m)_
 * H=2.5 _(Height of the eye above sea-level in m)_
-* d = R * acos(R/(R + h)) _(Distance to horizon in m)_
+* d = R * acos(R/(R h)) _(Distance to horizon in m)_
 * ans*km_to_nm _(Distance to horizon in nm)_
 
 === Distance to lighthouse
 
 * H1=200 _(height of lighthouse in m)_
-* d1 = R*acos(R/(R + H1)) _(Distance to horizon in m)_
+* d1 = R*acos(R/(R H1)) _(Distance to horizon in m)_
 * distance=d1+d _(visibility range of lighthouse in m)_
 
 === Useful Notes
@@ -283,7 +278,7 @@ five times this value.
 You have to be able to compile OpenCPN itself - Get the info
 athttp://opencpn.org/ocpn/developers_manual[Developers Manual]
 
-* git clone https://github.com/SaltyPaws/Calc_pi_muparser.git
+* git clone https://github.com/Rasbats/calculator_pi.git
 
 Build out of OpenCPN branch!
 
