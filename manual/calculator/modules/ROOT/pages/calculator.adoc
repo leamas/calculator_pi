@@ -278,7 +278,7 @@ five times this value.
 You have to be able to compile OpenCPN itself - Get the info
 athttp://opencpn.org/ocpn/developers_manual[Developers Manual]
 
-* git clone https://github.com/Rasbats/calculator_pi.git
+* git clone https://github.com/Rasbats/calculator_pi
 
 Build out of OpenCPN branch!
 
