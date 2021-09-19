@@ -126,62 +126,33 @@ arguments and a brief description.
 [width="100%",cols="8%,8%,84%",options="header",][cols=",,",]
 |==
 |Name |Argc. |Explanation
-
-|TRIGONOMETRY | |default entry use radians e.g. sin(dtr*90) to calculate
-in degrees
-
+|TRIGONOMETRY | |default entry use radians e.g. sin(dtr*90) to calculate in degrees
 |sin |1 |sine function
-
 |cos |1 |cosine function
-
 |tan |1 |tangens function
-
 |asin |1 |arcus sine function
-
 |acos |1 |arcus cosine function
-
 |atan |1 |arcus tangens function
-
 |sinh |1 |hyperbolic sine function
-
 |cosh |1 |hyperbolic cosine
-
 |tanh |1 |hyperbolic tangens function
-
 |asinh |1 |hyperbolic arcus sine function
-
 |acosh |1 |hyperbolic arcus tangens function
-
 |atanh |1 |hyperbolic arcur tangens function
-
 |LOGARITHMIC | |
-
 |log2 |1 |logarithm to the base 2
-
 |log10 |1 |logarithm to the base 10
-
 |log |1 |logarithm to the base 10
-
 |ln |1 |logarithm to base e (2.71828…)
-
 |OTHER | |
-
 |exp |1 |e raised to the power of x
-
 |sqrt |1 |square root of a value
-
 |sign |1 |sign function -1 if x<0; 1 if x>0
-
 |rint |1 |round to nearest integer
-
 |abs |1 |absolute value
-
 |min |var. |min of all arguments
-
 |max |var. |max of all arguments
-
 |sum |var. |sum of all arguments
-
 |avg |var. |mean value of all arguments
 |==
 
