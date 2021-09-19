@@ -123,7 +123,7 @@ The following table gives an overview of the functions supported by the
 default implementation. It lists the function names, the number of
 arguments and a brief description.
 
-[cols=",,",]
+[width="100%",cols="8%,8%,84%",options="header",][cols=",,",]
 |==
 |Name |Argc. |Explanation
 
@@ -190,7 +190,7 @@ in degrees
 The following table lists the default binary operators supported by the
 parser.
 
-[cols=",,",]
+[width="100%",cols="35%,25%,40%",options="header",]
 |==
 |Operator |Meaning |Priority
 |= |assignment |-1
@@ -222,7 +222,7 @@ uses lazy evaluation in order to make sure only the necessary branch of
 the expression is evaluated.
 
 
-[cols=",",]
+[width="100%",cols="50%,50%",options="header",]
 |==
 |Operator |Meaning
 |?: |if then else operator
@@ -231,18 +231,13 @@ the expression is evaluated.
 
 == Variables:
 
-[cols=",",]
+[width="100%",cols="50%,50%",options="header",]
 |==
 |pi, e |well known
-
 |ans |the result of the previous calculation
-
 |dtr |conversion factor from degrees to radians
-
 |Define variables |e.g. myvariable=10/8*cos(dtr*90) or yourvariable=ans
-
-|clear |removes results in the history and leaves defined variables in
-tact
+|clear |removes results in the history and leaves defined variables intact
 |==
 
 
@@ -250,7 +245,7 @@ tact
 
 Type these commands in the command window:
 
-[cols=",",]
+[width="100%",cols="50%,50%",options="header",]
 |==
 |history |Toggle the history panel
 |showhelp |Show/Hide the Help button
