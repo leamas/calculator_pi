@@ -1,5 +1,5 @@
 site:
-  title: calculator Plugin Manual
+  title: Calculator
   url:  https://nowhere.net
   start_page: calculator:ROOT:index.adoc
 

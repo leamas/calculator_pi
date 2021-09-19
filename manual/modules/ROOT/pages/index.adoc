@@ -123,8 +123,8 @@ The following table gives an overview of the functions supported by the
 default implementation. It lists the function names, the number of
 arguments and a brief description.
 
-[width="100%",cols="8%,8%,84%",options="header",][cols=",,",]
-|==
+[width="100%",cols="8%,8%,84%",options="header",]
+|===
 |Name |Argc. |Explanation
 |TRIGONOMETRY | |default entry use radians e.g. sin(dtr*90) to calculate in degrees
 |sin |1 |sine function
@@ -154,19 +154,19 @@ arguments and a brief description.
 |max |var. |max of all arguments
 |sum |var. |sum of all arguments
 |avg |var. |mean value of all arguments
-|==
+|===
 
-== Built-in binary operators
+== Binary Operators
 
 The following table lists the default binary operators supported by the
 parser.
 
 [width="100%",cols="35%,25%,40%",options="header",]
-|==
+|===
 |Operator |Meaning |Priority
 |= |assignment |-1
 |&& |logical and |1
-||| |logical or |2
+| or |logical or |2
 |⇐ |less or equal |4
 |>= |greater or equal |4
 |!= |not equal |4
@@ -179,7 +179,7 @@ parser.
 |/ |division |6
 |^ |raise x to the power of y |7
 |^ |use ^(1/2) for square root |7
-|==
+|===
 
 * The assignment operator is special since it changes one of its
 arguments and can only by applied to variables.
@@ -194,22 +194,22 @@ the expression is evaluated.
 
 
 [width="100%",cols="50%,50%",options="header",]
-|==
+|===
 |Operator |Meaning
 |?: |if then else operator
-|==
+|===
 
 
 == Variables:
 
 [width="100%",cols="50%,50%",options="header",]
-|==
+|===
 |pi, e |well known
 |ans |the result of the previous calculation
 |dtr |conversion factor from degrees to radians
 |Define variables |e.g. myvariable=10/8*cos(dtr*90) or yourvariable=ans
 |clear |removes results in the history and leaves defined variables intact
-|==
+|===
 
 
 == User Interface:
@@ -217,13 +217,13 @@ the expression is evaluated.
 Type these commands in the command window:
 
 [width="100%",cols="50%,50%",options="header",]
-|==
+|===
 |history |Toggle the history panel
 |showhelp |Show/Hide the Help button
 |showcalculate |Show/Hide the Calculate button
 |showhistory |Show/Hide the history toggle
 |help |show the help menu
-|==
+|===
 
 === Settings/Plugins/Preferences:
 
@@ -241,8 +241,8 @@ five times this value.
 
 == Compiling
 
-You have to be able to compile OpenCPN itself - Get the info
-athttp://opencpn.org/ocpn/developers_manual[Developers Manual]
+You have to be able to compile OpenCPN itself - Get the info at
+http://opencpn.org/ocpn/developers_manual[Developers Manual]
 
 * git clone https://github.com/Rasbats/calculator_pi
 
