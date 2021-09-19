@@ -7,16 +7,12 @@ image:calculator.png[]
 This plugin is available for Linux and Windows.
 
 * Source SaltyPaws: https://github.com/SaltyPaws/calculator_pi[Github Calculator Plugin]
-* Source Rasbats (with windows):
-https://github.com/Rasbats/calculator_pi[Github Calculator muparser Windows fix]
+* Source Rasbats (with windows): https://github.com/Rasbats/calculator_pi[Github Calculator muparser Windows fix]
 * Release: https://github.com/Rasbats/calculator_pi/releases[Linux and Windows release]
 * Download: https://opencpn.org/OpenCPN/plugins/calculator.html
-* Forum:
-http://www.cruisersforum.com/forums/f134/calculator_pi-new-finished-plugin-for-opencpn-86028.html[CF Calculator_pi Thread]
-* Forum:
-http://www.cruisersforum.com/forums/f134/plugin-calculator[Plugin-calculator]
-* Forum:
-http://www.cruisersforum.com/forums/f134/plugin-calculator-windows-version-178199.html[Plugin calculator windows version]
+* Forum: http://www.cruisersforum.com/forums/f134/calculator_pi-new-finished-plugin-for-opencpn-86028.html[CF Calculator_pi Thread]
+* Forum: http://www.cruisersforum.com/forums/f134/plugin-calculator[Plugin-calculator]
+* Forum: http://www.cruisersforum.com/forums/f134/plugin-calculator-windows-version-178199.html[Plugin calculator windows version]
 
 == Goals
 
