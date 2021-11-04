@@ -30,9 +30,9 @@
 #include <stack>
 #include <vector>
 
-#include "muparser/muParserDef.h"
-#include "muparser/muParserError.h"
-#include "muparser/muParserToken.h"
+#include "muParserDef.h"
+#include "muParserError.h"
+#include "muParserToken.h"
 
 /** \file
     \brief Definition of the parser bytecode class.

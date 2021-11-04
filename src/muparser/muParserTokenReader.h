@@ -35,8 +35,8 @@
 #include <stack>
 #include <string>
 
-#include "muparser/muParserDef.h"
-#include "muparser/muParserToken.h"
+#include "muParserDef.h"
+#include "muParserToken.h"
 
 /** \file
     \brief This file contains the parser token reader definition.

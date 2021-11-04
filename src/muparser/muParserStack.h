@@ -31,8 +31,8 @@
 #include <stack>
 #include <vector>
 
-#include "muparser/muParserError.h"
-#include "muparser/muParserToken.h"
+#include "muParserError.h"
+#include "muParserToken.h"
 
 /** \file
     \brief This file defines the stack used by muparser.

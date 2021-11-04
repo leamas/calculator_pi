@@ -30,7 +30,7 @@
 #include <sstream>
 #include <map>
 
-#include "muparser/muParserFixes.h"
+#include "muParserFixes.h"
 
 /** \file
     \brief This file contains standard definitions used by the parser.

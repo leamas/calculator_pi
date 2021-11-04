@@ -1,80 +1,112 @@
-##---------------------------------------------------------------------------
-## Author:      Sean D'Epagnier
-## Copyright:   
-## License:     GPLv3+
-##---------------------------------------------------------------------------
- 
-# define minimum cmake version
-CMAKE_MINIMUM_REQUIRED(VERSION 2.6.2)
+# ~~~
+# Summary:      Main plugin build script
+# Copyright (c) 2020-2021 Mike Rossiter
+# License:      GPLv3+
+# ~~~
 
-PROJECT(calculator_pi)
-SET(PACKAGE_NAME calculator_pi)
-SET(CPACK_PACKAGE_CONTACT "SaltyPaws ")
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
 
-SET(VERSION_MAJOR "2")
-SET(VERSION_MINOR "2")
+# -------- Cmake setup ---------
+#
+cmake_minimum_required(VERSION 3.12.0)
+include(${CMAKE_SOURCE_DIR}/cmake/CmakeSetup.cmake NO_POLICY_SCOPE)
+message(STATUS "Cmake version: ${CMAKE_VERSION}.")
 
-#SET(CMAKE_BUILD_TYPE Debug)
-SET( wxWidgets_USE_DEBUG OFF)
-SET( wxWidgets_USE_UNICODE ON)
-SET( wxWidgets_USE_UNIVERSAL OFF)
-SET( wxWidgets_USE_STATIC OFF)
 
-SET(NAME_SUFFIX "ov50")
-set (CMAKE_CXX_STANDARD 11)
+# -------- Build setup  --------
+#
+include(PluginOptions)
+if (BUILD_TYPE)
+  message(STATUS "Building: ${BUILD_TYPE}")
+else ()
+  message(STATUS "Configuring")
+endif ()
 
-#SET(CMAKE_BUILD_TYPE Debug)
-OPTION(CALCULATOR_USE_SVG "Use SVG graphics" ON)
+include(Plugin.cmake)
 
-INCLUDE("cmake/PluginConfigure.cmake")
+# -------- Setup completed, build the plugin --------
+#
+project(calculator_pi VERSION ${PKG_VERSION})
+include(PluginCompiler)
 
-IF(CALCULATOR_USE_SVG)
-  ADD_DEFINITIONS(-DCALCULATOR_USE_SVG)
-ENDIF(CALCULATOR_USE_SVG)
+add_library(${CMAKE_PROJECT_NAME} SHARED ${SRC} ${MUPARS})
+include_directories(BEFORE ${CMAKE_BINARY_DIR}/include)
 
-SET(SRC_CALCULATOR
-	src/calculator_pi.h
-	src/calculator_pi.cpp
-	src/icons.h
-	src/icons.cpp
-	src/calculatorgui.h
-	src/calculatorgui.cpp
-	src/calculatorgui_impl.cpp
-	src/calculatorgui_impl.h
-	src/functions.h
-	src/functions.cpp
-	src/units_conversion.h
-	src/units_conversion.cpp
-	src/ocpn_plugin.h
-	src/VariableFactory.h
-	src/VariableFactory.cpp
-	)
+add_subdirectory("libs/${PKG_API_LIB}")
+target_link_libraries(${CMAKE_PROJECT_NAME} ocpn::api)
 
-SET(SRC_MUPARS
-	src/muparser/muParserBase.cpp
-	src/muparser/muParserBase.h
-	src/muparser/muParserBytecode.cpp
-	src/muparser/muParserBytecode.h
-	src/muparser/muParserCallback.cpp
-	src/muparser/muParserCallback.h
-	src/muparser/muParser.cpp
-	src/muparser/muParserDef.h
-	src/muparser/muParserError.cpp
-	src/muparser/muParserError.h
-	src/muparser/muParserFixes.h
-	src/muparser/muParser.h
-	src/muparser/muParserStack.h
-	src/muparser/muParserToken.h
-	src/muparser/muParserTokenReader.cpp
-	src/muparser/muParserTokenReader.h
-	src/muparser/muParserTemplateMagic.h
+set(VERSION_MAJOR ${PROJECT_VERSION_MAJOR})
+set(VERSION_MINOR ${PROJECT_VERSION_MINOR})
+set(VERSION_PATCH ${PROJECT_VERSION_PATCH})
+
+set(PACKAGE_NAME ${CMAKE_PROJECT_NAME})
+
+# Create the minimim ocpn version id string like ov50
+string(REGEX REPLACE "\([0-9]\)\.\([0-9]\).*" "ov\\1\\2"
+       OCPN_MIN_VERSION ${API_OCPN_MIN_VERSION})
+
+if (COMMAND late_init)
+  late_init()
+endif ()
+
+# Set up targets. Targets sets up new targets with BUILD_TYPE set to
+# 'flatpak', 'android' or 'tarball'. The initial call without BUILD_TYPE ends
+# here.
+#
+file(GLOB FLATPAK_MANIFEST
+  ${PROJECT_SOURCE_DIR}/flatpak/org.opencpn.OpenCPN.Plugin.*.yaml
+)
+include(Targets)
+create_targets(${FLATPAK_MANIFEST})
+if ("${BUILD_TYPE}" STREQUAL "")
+  return ()
+endif ()
+
+if (NOT ${BUILD_TYPE} STREQUAL "flatpak")
+  # Build package as required (flatpak already dealt with).
+  #
+  include(PluginInstall)
+  if (QT_ANDROID)
+    include(AndroidLibs)
+  else ()
+    include(PluginLibs)
+  endif ()
+  include(PluginLocalization)
+
+  include_directories(BEFORE ${CMAKE_BINARY_DIR}/include)
+
+  add_subdirectory("libs/jsoncpp")
+  target_link_libraries(${PACKAGE_NAME} ocpn::jsoncpp)
+
+  if (COMMAND add_plugin_libraries)
+    add_plugin_libraries()
+  endif ()
+
+endif ()
+
+configure_file(
+  ${CMAKE_SOURCE_DIR}/config.h.in ${CMAKE_BINARY_DIR}/include//config.h
+  @ONLY
 )
 
+configure_file(
+  # The cloudsmith upload script
+  ${CMAKE_SOURCE_DIR}/ci/upload.sh.in ${CMAKE_BINARY_DIR}/upload.sh
+  @ONLY
+)
+configure_file(
+  # The cloudsmith upload script, windows bat file.
+  ${CMAKE_SOURCE_DIR}/ci/upload.bat.in ${CMAKE_BINARY_DIR}/upload.bat
+  @ONLY
+)
 
-
-
-ADD_LIBRARY(${PACKAGE_NAME} SHARED ${SRC_CALCULATOR} ${SRC_MUPARS})
-
-INCLUDE("cmake/PluginInstall.cmake")
-INCLUDE("cmake/PluginLocalization.cmake")
-INCLUDE("cmake/PluginPackage.cmake")
+set(checksum "@checksum@")
+configure_file(
+  # The XML metadata file
+  ${CMAKE_SOURCE_DIR}/plugin.xml.in
+  ${CMAKE_BINARY_DIR}/${pkg_displayname}.xml.in
+  @ONLY
+)

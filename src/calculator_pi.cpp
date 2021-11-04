@@ -60,21 +60,34 @@ extern "C" DECL_EXP void destroy_pi(opencpn_plugin* p)
 //---------------------------------------------------------------------------------------------------------
 
 calculator_pi::calculator_pi(void *ppimgr)
-      :opencpn_plugin_18(ppimgr)
+      :opencpn_plugin_116(ppimgr)
 {
-      // Create the PlugIn icons
-      initialize_images();
+    // Create the PlugIn icons
+    initialize_images();
 
-	  wxString shareLocn = *GetpSharedDataLocation() +
-		  _T("plugins") + wxFileName::GetPathSeparator() +
-		  _T("calculator_pi") + wxFileName::GetPathSeparator()
-		  + _T("data") + wxFileName::GetPathSeparator();
-	  wxImage panelIcon(shareLocn + _T("calculator_panel_icon.png"));
-	  if (panelIcon.IsOk())
-		  m_panelBitmap = wxBitmap(panelIcon);
-	  else
-		  wxLogMessage(_T("    calculator_pi panel icon NOT loaded"));
-	  m_bShowCalculator = false;
+	wxFileName fn;
+
+    auto path = GetPluginDataDir("ShipDriver_pi");
+    fn.SetPath(path);
+    fn.AppendDir("data");
+    fn.SetFullName("calculator_panel_icon.png");
+
+    path = fn.GetFullPath();
+
+    wxInitAllImageHandlers();
+
+    wxLogDebug(wxString("Using icon path: ") + path);
+    if (!wxImage::CanRead(path)) {
+        wxLogDebug("Initiating image handlers.");
+        wxInitAllImageHandlers();
+    }
+    wxImage panelIcon(path);
+    if (panelIcon.IsOk())
+        m_panelBitmap = wxBitmap(panelIcon);
+    else
+        wxLogWarning("Calculator panel icon has NOT been loaded");
+
+     m_bShowCalculator = false;
 	  
 }
 
@@ -156,12 +169,14 @@ bool calculator_pi::DeInit(void)
 
 int calculator_pi::GetAPIVersionMajor()
 {
-      return MY_API_VERSION_MAJOR;
+      return API_VERSION_MAJOR;
 }
 
 int calculator_pi::GetAPIVersionMinor()
 {
-      return MY_API_VERSION_MINOR;
+          std::string v(API_VERSION);
+    size_t dotpos = v.find('.');
+    return atoi(v.substr(dotpos + 1).c_str());
 }
 
 int calculator_pi::GetPlugInVersionMajor()

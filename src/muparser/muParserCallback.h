@@ -26,7 +26,7 @@
 #ifndef MU_PARSER_CALLBACK_H
 #define MU_PARSER_CALLBACK_H
 
-#include "muparser/muParserDef.h"
+#include "muParserDef.h"
 
 /** \file
     \brief Definition of the parser callback class.

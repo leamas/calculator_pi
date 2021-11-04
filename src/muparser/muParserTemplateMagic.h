@@ -2,7 +2,7 @@
 #define MU_PARSER_TEMPLATE_MAGIC_H
 
 #include <cmath>
-#include "muparser/muParserError.h"
+#include "muParserError.h"
 
 
 namespace mu

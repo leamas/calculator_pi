@@ -39,13 +39,7 @@
 
 #include "ocpn_plugin.h"
 #include "calculatorgui_impl.h"
-
-
-#define     PLUGIN_VERSION_MAJOR    2
-#define     PLUGIN_VERSION_MINOR    2
-
-#define     MY_API_VERSION_MAJOR    1
-#define     MY_API_VERSION_MINOR    8
+#include "config.h"
 
 //#define DEBUG  //No debugging text in production plugin!
 
@@ -57,7 +51,7 @@ class Dlg;
 
 #define CALCULATOR_TOOL_POSITION    -1          // Request default positioning of toolbar tool
 
-class calculator_pi : public opencpn_plugin_18
+class calculator_pi : public opencpn_plugin_116
 {
 public:
       calculator_pi(void *ppimgr);

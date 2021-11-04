@@ -33,7 +33,7 @@
 #include <vector>
 #include <memory>
 
-#include "muparser/muParserDef.h"
+#include "muParserDef.h"
 
 /** \file
     \brief This file defines the error class used by the parser.

@@ -29,11 +29,13 @@ void initialize_images(void)
 
 #ifdef CALCULATOR_USE_SVG
 	wxFileName fn;
-	fn.SetPath(*GetpSharedDataLocation());
-	fn.AppendDir(_T("plugins"));
-	fn.AppendDir(_T("calculator_pi"));
-	fn.AppendDir(_T("data"));
-	fn.SetFullName(_T("calculator_pi.svg"));
+    wxString tmp_path;
+
+    tmp_path = GetPluginDataDir("ShipDriver_pi");
+    fn.SetPath(tmp_path);
+    fn.AppendDir(_T("data"));
+
+    fn.SetFullName(_T("calculator_pi.svg"));
 	_svg_calculator = fn.GetFullPath();
 	fn.SetFullName(_T("calculator_pi_toggled.svg"));
 	_svg_calculator_toggled = fn.GetFullPath();

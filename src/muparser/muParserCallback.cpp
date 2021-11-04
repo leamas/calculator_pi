@@ -23,7 +23,7 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include "muparser/muParserCallback.h"
+#include "muParserCallback.h"
 
 /** \file
     \brief Implementation of the parser callback class.

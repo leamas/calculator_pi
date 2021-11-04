@@ -34,11 +34,11 @@
 #include <locale>
 
 //--- Parser includes --------------------------------------------------------------------------
-#include "muparser/muParserDef.h"
-#include "muparser/muParserStack.h"
-#include "muparser/muParserTokenReader.h"
-#include "muparser/muParserBytecode.h"
-#include "muparser/muParserError.h"
+#include "muParserDef.h"
+#include "muParserStack.h"
+#include "muParserTokenReader.h"
+#include "muParserBytecode.h"
+#include "muParserError.h"
 
 
 namespace mu

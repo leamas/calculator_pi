@@ -23,8 +23,8 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include "muparser/muParserBase.h"
-#include "muparser/muParserTemplateMagic.h"
+#include "muParserBase.h"
+#include "muParserTemplateMagic.h"
 
 //--- Standard includes ------------------------------------------------------------------------
 #include <cassert>
