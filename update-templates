@@ -176,7 +176,6 @@ git add cmake/TemplateVersion
 
 cat << EOF
 
-
 Shipdriver templates has been updated. To review pending changes:
 
     $ git status
