@@ -11,7 +11,7 @@ rem http://opencpn.navnux.org/build_deps/OpenCPN_buildwin-4.99a.7z
 rem into C:\wxWidgets-3.2.1
 
 
-git clone  https://github.com/Rasbats/calculator_pi.git
+rem git clone  https://github.com/Rasbats/calculator_pi.git
 cd calculator_pi
 
 mkdir  build

@@ -67,7 +67,7 @@ calculator_pi::calculator_pi(void *ppimgr)
 
 	wxFileName fn;
 
-    auto path = GetPluginDataDir("ShipDriver_pi");
+    auto path = GetPluginDataDir("calculator_pi");
     fn.SetPath(path);
     fn.AppendDir("data");
     fn.SetFullName("calculator_panel_icon.png");
