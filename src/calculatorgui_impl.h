@@ -29,8 +29,8 @@
 #define _CALCULATORGUI_IMPL_H_
 
 #include "VariableFactory.h"
-#include "muparser/muParser.h" //Muparser needs to be included before wxidgets, otherwhise a linker conflict will occur.
-#include "muparser/muParserError.h"
+#include "muParser.h" //Muparser needs to be included before wxidgets, otherwhise a linker conflict will occur.
+#include "muParserError.h"
 
 
 //#include <locale.h> Dont touch locale, causes serious errors in OpenCPN.
