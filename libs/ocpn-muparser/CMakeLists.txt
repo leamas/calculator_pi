@@ -9,6 +9,7 @@ project(ocpn_muparser)
 set(ENABLE_SAMPLES OFF CACHE BOOL "Enable samples build" FORCE)
 set(ENABLE_OPENMP OFF CACHE BOOL "Use OpenMP multithreading" FORCE)
 set(BUILD_SHARED_LIBS OFF CACHE BOOL "Build shared libs" FORCE)
+set(CMAKE_BUILD_TYPE RelWithDebInfo CACHE STRING "build type, perhaps Debug")
 
 add_subdirectory(muparser)
 
