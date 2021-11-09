@@ -63,26 +63,6 @@ SET(SRC
 	src/units_conversion.cpp
 	src/VariableFactory.h
 	src/VariableFactory.cpp
-	)
-
-SET(MUPARS
-	src/muparser/muParserBase.cpp
-	src/muparser/muParserBase.h
-	src/muparser/muParserBytecode.cpp
-	src/muparser/muParserBytecode.h
-	src/muparser/muParserCallback.cpp
-	src/muparser/muParserCallback.h
-	src/muparser/muParser.cpp
-	src/muparser/muParserDef.h
-	src/muparser/muParserError.cpp
-	src/muparser/muParserError.h
-	src/muparser/muParserFixes.h
-	src/muparser/muParser.h
-	src/muparser/muParserStack.h
-	src/muparser/muParserToken.h
-	src/muparser/muParserTokenReader.cpp
-	src/muparser/muParserTokenReader.h
-	src/muparser/muParserTemplateMagic.h
 )
 
 set(PKG_API_LIB api-16)  #  A directory in libs/ e. g., api-17 or api-16
@@ -105,5 +85,8 @@ macro(add_plugin_libraries)
 
   add_subdirectory("libs/plugingl")
   target_link_libraries(${PACKAGE_NAME} ocpn::plugingl)
+
+  add_subdirectory("libs/ocpn-muparser")
+  target_link_libraries(${PACKAGE_NAME} muparser::muparser)
 endmacro ()
 
