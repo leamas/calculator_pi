@@ -827,7 +827,7 @@ wxString Dlg::Report_Value(double in_Value, int in_mode){
                 Temp_String=double2wxT(in_Value)+wxT("*10^(-3*")+double2wxT((double)human_magnitude)+wxT(")");
 
              //   MuParser.SetExpr(static_cast<const char*>(Temp_String.mb_str()));
-             MuParser.SetExpr(Temp_String.wx_str());
+             MuParser.SetExpr(Temp_String.wc_str());
                 result=MuParser.Eval();
                 if (in_Value==0) {human_magnitude=0;}
                 switch(human_magnitude){
