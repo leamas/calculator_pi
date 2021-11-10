@@ -388,6 +388,8 @@ Dlg::Dlg(wxWindow *parent, calculator_pi *ppi)
 	wxString pi = "pi";
 	wxString e = "e";
 	wxString dtr = "dtr";
+
+	
 	MuParser.ClearConst();
 	MuParser.DefineConst(WxString2StdString(pi), 3.141592653589793238462643);
 	MuParser.DefineConst(WxString2StdString(e), 2.718281828459045235360287);
@@ -920,7 +922,18 @@ mu::string_type Dlg::WxString2StdString(wxString wxString_in){
 }*/
 
 mu::string_type Dlg::WxString2StdString(wxString wxString_in){
-    return wxString_in.wchar_str();
+    std::string s = std::string(wxString_in.ToStdString().c_str());
+	std::wstring ws;
+	UTF82WC(s, ws);
+
+	//Translate the macros to C++ at a single point in the application
+#ifdef linux
+	return mu::string_type(s);
+#elif APPLE
+	return mu::string_type(s);
+#elif _WIN32
+	return mu::string_type(ws);
+#endif
 }
 
 void DegreeDlg::OnConvertToDegree(wxCommandEvent& event)
