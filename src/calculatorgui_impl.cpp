@@ -904,18 +904,13 @@ std::string Dlg::WxString2StdString(wxString wxString_in){
 
 
 mu::string_type Dlg::WxString2StdString(wxString wxString_in){
-	std::string s = std::string(wxString_in.mb_str());
+	
+
+	std::string s = std::string(wxString_in).c_str();
 	std::wstring ws;
 	UTF82WC(s, ws);
-
-	//Translate the macros to C++ at a single point in the application
-#ifdef linux
-	return mu::string_type(s);
-#elif APPLE
-	return mu::string_type(s);
-#elif _WIN32
-	return mu::string_type(ws);
-#endif
+	mu::string_type mws = ws;
+	return ws;
 }
 
 void DegreeDlg::OnConvertToDegree(wxCommandEvent& event)
