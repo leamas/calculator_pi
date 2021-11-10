@@ -139,7 +139,7 @@ public:
         void OnHistoryPulldown ( wxCommandEvent& event );
         void down(void);
         void up (void);
-        string WxString2StdString(wxString wxString_in);
+        mu::string_type WxString2StdString(wxString wxString_in);
 
         calculator_pi *plugin;
 
