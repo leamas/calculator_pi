@@ -920,7 +920,7 @@ mu::string_type Dlg::WxString2StdString(wxString wxString_in){
 }*/
 
 mu::string_type Dlg::WxString2StdString(wxString wxString_in){
-    return wxString_in.wc_str();
+    return wxString_in.wchar_str();
 }
 
 void DegreeDlg::OnConvertToDegree(wxCommandEvent& event)
