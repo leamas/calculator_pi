@@ -28,8 +28,6 @@
 #include "calculatorgui_impl.h"
 #include "wx/math.h"
 
-
-
 bool UTF82WC(const std::string  source, std::wstring & outstr)
 {
 	wxMBConvUTF8 conv;
@@ -381,19 +379,21 @@ void FunDlg::OnToggle( wxCommandEvent& event ){
     this->Fit();
 }
 
+	
+
 Dlg::Dlg(wxWindow *parent, calculator_pi *ppi)
 	: DlgDef(parent)
 {
 	pPlugIn = ppi;
+
 	wxString pi = "pi";
 	wxString e = "e";
 	wxString dtr = "dtr";
-
 	
 	MuParser.ClearConst();
-	MuParser.DefineConst(WxString2StdString(pi), 3.141592653589793238462643);
-	MuParser.DefineConst(WxString2StdString(e), 2.718281828459045235360287);
-	MuParser.DefineConst(WxString2StdString(dtr), 0.0174532925199433);
+	MuParser.DefineConst(string_type(pi), 3.141592653589793238462643);
+    MuParser.DefineConst(string_type(e), 2.718281828459045235360287);
+    MuParser.DefineConst(string_type(dtr),0.0174532925199433) ;
     MuParser.SetVarFactory(facfun_type(AddVariable),&MuParser);
 
     this->m_listCtrl->Show(false);
@@ -582,7 +582,7 @@ void Dlg::OnClear(wxCommandEvent& event)
 wxString Dlg::OnCalculate( void )
 {
     //char* test;
-    wxString Text = m_result->GetValue();
+   wxString Text = m_result->GetValue();
 
     bool error_check=false;
     if ((Text.StartsWith(_("Error"))) ){
@@ -654,7 +654,7 @@ wxString Dlg::OnCalculate( void )
         printf("Input: %s\n",(const char*) Text.mb_str() );
         #endif // DEBUG
 
-        MuParser.SetExpr(WxString2StdString(Text)); //Typecast to mu::stringtype
+		MuParser.SetExpr(string_type(Text)); //Typecast to mu::stringtype
         double Muparser_result=0;
         try
         {
@@ -662,7 +662,7 @@ wxString Dlg::OnCalculate( void )
             mystring=wxT("ans=")+double2wxT(Muparser_result);//set ans string (borrow the mystring);
            // mystring.Replace(wxT(","),wxT("."),TRUE);//dont think this is required when not using locale --->test
            // MuParser.SetExpr((mu::string_type) mystring.mb_str()); //This works in linux, but causes compiler error in windows
-             MuParser.SetExpr(WxString2StdString(mystring));//Store the answer in ans
+             MuParser.SetExpr(string_type(mystring));//Store the answer in ans
 			 mystring = Report_Value(Muparser_result, m_iCalc_Reporting); // m_iCalc_Reporting);//Format result as per setting.
             Muparser_result = MuParser.Eval();//Evaluate for ans
 
@@ -823,13 +823,13 @@ wxString Dlg::Report_Value(double in_Value, int in_mode){
             try{
                 Temp_String=wxT("log10(abs(")+double2wxT(in_Value)+wxT("))/3");
 
-                 MuParser.SetExpr(WxString2StdString(Temp_String));
+                 MuParser.SetExpr(string_type(Temp_String));
                 human_magnitude=(int) MuParser.Eval();
                 if (in_Value<1) {human_magnitude--;}
                 Temp_String=double2wxT(in_Value)+wxT("*10^(-3*")+double2wxT((double)human_magnitude)+wxT(")");
 
              //   MuParser.SetExpr(static_cast<const char*>(Temp_String.mb_str()));
-             MuParser.SetExpr(WxString2StdString(Temp_String));
+             MuParser.SetExpr(string_type(Temp_String));
                 result=MuParser.Eval();
                 if (in_Value==0) {human_magnitude=0;}
                 switch(human_magnitude){
@@ -919,7 +919,7 @@ mu::string_type Dlg::WxString2StdString(wxString wxString_in){
 	
 
 	return ws;
-}*/
+}
 
 mu::string_type Dlg::WxString2StdString(wxString wxString_in){
     std::string s = std::string(wxString_in.ToStdString().c_str());
@@ -934,7 +934,7 @@ mu::string_type Dlg::WxString2StdString(wxString wxString_in){
 #elif _WIN32
 	return mu::string_type(ws);
 #endif
-}
+}*/
 
 void DegreeDlg::OnConvertToDegree(wxCommandEvent& event)
 {
