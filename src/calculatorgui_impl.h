@@ -116,6 +116,10 @@ public:
 	    calculator_pi *pPlugIn;
 		mu::Parser MuParser; //MuParser class.  Here all the functions and variables are stored.
 
+#ifdef __OCPN__ANDROID__
+        void OnMouseEvent( wxMouseEvent& event );
+#endif
+
         void OnCalculate( wxCommandEvent& event );
 		void OnClear(wxCommandEvent& event);
         wxString OnCalculate( void );
