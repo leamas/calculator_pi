@@ -13,6 +13,7 @@ if (DEFINED _default_build_type)
   return ()
 endif ()
 
+
 # Set a default build type if none was specified
 # https://blog.kitware.com/cmake-and-the-default-build-type/
 set(_default_build_type "Release")
