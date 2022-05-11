@@ -1,8 +1,19 @@
-3.1.0-beta2 TBD
-* Install this Changelog in client plugins
-* Clean up the flatpak-wx315 build
+3.1.2 April 29, 2022
+* AndroidLibs: Update downloaded library hash (#446).
+* update-templates: Don't access non-existing Flatpak/wx31.patch
+* opencpn-libs: fixes to mute some warnings in plugin\_gl
 
-3.1.0-beta1 20 Feb, 2022
+3.1.1 Mar 27, 2022
+* Handle updated ubuntu repository keys (#436).
+* Remove too early ubuntu-wx315 which fails in validation (#437).
+
+3.1.0 Mar 18, 2022
+
+3.1.0-beta2 Mar 16, 2022
+* Install this Changelog in client plugins (#430).
+* Clean up the flatpak-wx315 build (#429).
+
+3.1.0-beta1 Feb 20, 2022
 * The drone.io builder is not longer used (#217).
 * The Xenial builds are removed (#399)
 * Raspbian armhf builds are replaced with Ubuntu (#380).
