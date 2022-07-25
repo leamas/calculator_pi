@@ -31,7 +31,7 @@ void initialize_images(void)
 	wxFileName fn;
     wxString tmp_path;
 
-    tmp_path = GetPluginDataDir("calculator_pi");
+    tmp_path = GetPluginDataDir("Calculator_pi");
     fn.SetPath(tmp_path);
     fn.AppendDir(_T("data"));
 
